@@ -1,0 +1,170 @@
+\chapter{Dynamics of First-Order Difference Equations}
+\section{Linear First-Order Difference Equations}
+\subsection{Exercises 1.1 and 1.2}
+\begin{enumerate}
+    \item Find the solution of each difference equation: \\
+        (a) $x(n+1)-(n+1)x(n)=0,\quad x(0)=c.$ \\
+        (b) $x(n+1)-3^n x(n)=0,\quad x(0)=c.$ \\
+        (c) $x(n+1)-e^{2n}x(n)=0,\quad x(0)=c.$ \\
+        (d) $x(n+1)-\frac{n}{n+1}x(n)=0,\quad n\geq 1,\,x(1)=c.$ \\
+        \textbf{Solution}
+        \begin{itemize}
+            \item[(a)] $x(n+1)=(n+1)x(n).$
+                $$
+                    \text{(1.2.3)}\to
+                    x(n)=\left[\prod_{i=0}^{n-1}(i+1)\right]c
+                    =(1\cdot 2\cdots n)c=cn!
+                $$
+            \item[(b)] $x(n+1)=3^n x(n).$
+                \begin{align*}
+                    \text{(1.2.3)}\to x(n) & =\left[\prod_{i=0}^{n-1}3^i\right]c \\
+                                           & =(3^0\cdot 3^1\cdots 3^{n-1})c \\
+                                           & =3^{1+\cdots+(n-1)}c \\
+                                           & =3^{\frac{(1+n-1)(n-1)}{2}}c \\
+                                           & =c3^{\frac{n(n-1)}{2}}
+                \end{align*}
+            \item[(c)] $x(n+1)=e^{2n}x(n)=0.$
+                \begin{align*}
+                    \text{(1.2.3)}\to x(n) & =\left[\prod_{i=0}^{n-1}e^{2i}\right]c \\
+                                           & =(e^0\cdot e^2\cdot e^4\cdots e^{2n-4}\cdot e^{2n-2})c \\
+                                           & =e^{2+4+\cdots+(2n-4)+(2n-2)}c \\
+                                           & =e^{\frac{2n(n-1)}{2}}c \\
+                                           & =ce^{n(n-1)}
+                \end{align*}
+            \item[(d)] $x(n+1)=\frac{n}{n+1}x(n).$
+                \begin{align*}
+                    \text{(1.2.3)}\to x(n) & =\left[\prod_{i=1}^{n-1}\frac{i}{i+1}\right]c \\
+                                           & =\left(\frac{1}{2}\cdot\frac{2}{3}\cdot\frac{3}{4}\cdots\frac{n-2}{n-1}\cdot\frac{n-1}{n}\right)c \\
+                                           & =\frac{1}{n}c=\frac{c}{n}
+                \end{align*}
+        \end{itemize}
+    \item Find the general solution of each difference equation: \\
+        (a) $y(n+1)-\frac{1}{2}y(n)=2,\quad y(0)=c.$  \\
+        (b) $y(n+1)-\frac{n}{n+1}y(n)=4,\quad y(1)=c.$ \\
+        \textbf{Solution}
+        \begin{itemize}
+            \item[(a)] $y(n+1)=\frac{1}{2}y(n)+2.$
+                \begin{align*}
+                    \text{(1.2.8)}\to y(n) & =\left(\frac{1}{2}\right)^n c+2\cdot\frac{(\frac{1}{2})^n -1}{\frac{1}{2}-1} \\
+                                           & =c2^{-n}+2\frac{2^{-n}-1}{2^{-1}-1}
+                \end{align*}
+            \item[(b)] $y(n+1)=\frac{n}{n+1}y(n)+4.$
+                \begin{align*}
+                    \text{(1.2.4)}\to y(n) & =c\left[\prod_{i=1}^{n-1}\frac{i}{i+1}\right]+\sum_{r=1}^{n-1}\left[\prod_{i=r+1}^{n-1}\frac{i}{i+1}\right]4 \\
+                                           & =c\left(\frac{1}{2}\cdot\frac{2}{3}\cdot\frac{3}{4}\cdots\frac{n-2}{n-1}\cdot\frac{n-1}{n}\right)+4\sum_{r=1}^{n-1}\left(\frac{r+1}{r+2}\cdot\frac{r+2}{r+3}\cdots\frac{n-2}{n-1}\cdot\frac{n-1}{n}\right) \\
+                                           & =c\frac{1}{n}+4\sum_{r=1}^{n-1}\frac{r+1}{n} \\
+                                           & =\frac{c}{n}+\frac{4}{n}\sum_{r=1}^{n-1}(r+1) \\
+                                           & =\frac{c+4(2+3+\cdots+n)}{n} \\
+                                           & =\frac{c+4\frac{(2+n)(n-1)}{2}}{n}=\frac{c+2(2+n)(n-1)}{n}
+                \end{align*}
+        \end{itemize}
+    \item Find a general solution of each difference equation: \\
+        (a) $y(n+1)-(n+1)y(n)=2^n (n+1)!,\quad y(0)=c.$ \\
+        (b) $(n+1)=y(n)+e^n,\quad y(0)=c.$ \\
+        \textbf{Solution}
+        \begin{itemize}
+            \item[(a)] $y(n+1)=(n+1)y(n)+2^n(n+1)!$
+                \begin{align*}
+                \text{(1.2.4)}\to y(n) & =c\left[\prod_{i=0}^{n-1}i+1\right]+\sum_{r=0}^{n-1}\left[\prod_{i=r+1}^{n-1}i+1\right]2^r (r+1)! \\
+                                       & =cn!+(2\cdot 3\cdots n)2^0\cdot 1!+(3\cdot 4\cdots n)2^1\cdot 2!+\cdots+1\cdot 2^{n-1} n! \\
+                                       & =cn!+2^0 n!+2^1 n!+\cdots+2^{n-1}n! \\
+                                       & =cn!+\sum_{i=0}^{n-1}2^i n!=cn!+\frac{2^n -1}{2-1}n!=(c+2^n-1)n!
+                \end{align*}
+            \item[(b)] \begin{align*}
+                    \text{(1.2.6)}\to y(n) & =c+\sum_{k=0}^{n-1}e^k \\
+                                           & =c+\frac{e^n -1}{e-1}
+                \end{align*}
+        \end{itemize}
+    \item \begin{itemize}
+            \item[(a)] Write a difference equation that describes the number of regions created by $n$ lines in the plane if it is required that every pair of lines meet and no more than two lines meet at one point.
+            \item[(b)] Find the number of these regions by solving the difference equation in case (a).
+        \end{itemize}
+        \textbf{Solution} 
+        \begin{itemize}
+            \item[(a)] The question is related to Lazy Caterer's Sequence. Let $r$ be the number of regions. \\
+                \begin{figure}[H]
+                    \centering
+                    \incfig{lazy-caterers-sequence} 
+                    \caption{Lazy Caterer's Sequence}
+                    \label{fig:lazy-caterers-sequence}
+                \end{figure}
+                The new line intersects the other $n-1$ lines. For each time it meet result in a region dividing into two. At last the new line run out of intersected lines and divide one remaining region into two, and thus the new line increases $n$ regions. The difference equation is
+                $$y(n+1)=y(n)+(n+1),\quad y(0)=1.$$
+            \item[(b)] \begin{align*}
+                    \text{(1.2.5)}\to y(n) & =1+\sum_{k=0}^{n-1}(n+1) \\
+                                     & =1+\frac{(1+n)n}{2}=1+\frac{n^2+n}{2}
+                \end{align*}
+        \end{itemize}
+    \item[9.] A debt of \$12,000 is to be amortized by equal payments of \$380 at the end of each month, plus a final partial payment one month after the last \$380 is paid. If interest is at an annual rate of 12\% compounded monthly, construct an amortization schedule to show the required payments. \\
+        \textbf{Solution} \\
+        Let $p\geq 0$ as outstanding principal, monthly interest rate $r=\frac{12\%}{12}=1\%=1/100$. \\
+        $$
+        \begin{cases}
+            p(x+1)=\left(1+\frac{1}{100}\right)p(x)-380, & \text{if }\left(1+\frac{1}{100}\right)p(x)>380. \\
+            p(x+1)=0, & \text{if }\left(1+\frac{1}{100}\right)p(x)\leq 380.
+        \end{cases}
+        \quad p(0)=12000.
+        $$
+        \begin{align*}
+            \text{(1.2.8)}\to p(n) & =12000\left(\frac{101}{100}\right)^n-380\frac{(\frac{101}{100})^n-1}{\frac{101}{100}-1} \\
+                                   & =12000\left(\frac{101}{100}\right)^n-38000\left[\left(\frac{101}{100}\right)^n-1\right] \\
+                                   & =-26000\left(\frac{101}{100}\right)^n+38000
+        \end{align*}
+        \begin{align*}
+            \because & p(n)\geq 0 \\
+            \therefore & -26000\left(\frac{101}{100}\right)^n+38000\geq 0 \\
+                       & \left(\frac{101}{100}\right)^n\leq\frac{19}{13} \\
+            \because & \frac{19}{13}\approx 1.4615,\,\left(\frac{101}{100}\right)^{39}\approx 1.4741,\,\left(\frac{101}{100}\right)^{38}\approx 1.4595 \\
+            \therefore & n\leq 38.\,\text{The last payment }p(39)=-26000\left(\frac{101}{100}\right)^{38}+38000\approx \$52.2919
+        \end{align*}
+    \item[11.] Suppose the constant sum $T$ is deposited at the end of each fixed period in a bank that pays interest at the rate $r$ per period. Let $A(n)$ be the amount accumulated in the bank after $n$ periods.
+        \begin{itemize}
+            \item[(a)] Write a difference equation that describes $A(n)$.
+            \item[(b)] Solve the difference equation obtained in (a), when $A(0)=0$, $T=\$200$, and $r=0.008$.
+        \end{itemize}
+        \textbf{Solution}
+        \begin{itemize}
+            \item[(a)] $A(n+1)=(1+r)A(n)+T$
+            \item[(b)] $A(n+1)=1.008A(n)+200,\,A(0)=0.$
+                \begin{align*}
+                    \text{(1.2.8)}\to A(n) & =0\cdot 1.008^n +200\frac{1.008^n -1}{1.008-1} \\
+                                           & =200\frac{1.008^n -1}{\frac{1}{125}}=25000(1.008^n -1)
+                \end{align*}
+        \end{itemize}
+    \item[13.] Suppose that you can get a 30-year mortgage at 8\% interest. How much can you afford to borrow if you can afford to make a monthly payment of \$1,000? \\
+        \textbf{Solution} \\
+        Monthly interest rate $\frac{0.008}{12}=\frac{1}{150}$, 30 years = 360 months. \\
+        $$y(n+1)=(1+\frac{1}{150})y(n)-1000,\,y(360)=0,\,y(0)=y_0\text{ is the answer.}$$
+        \begin{align*}
+            \text{(1.2.8)}\to y(n) & =y_0\left(\frac{151}{150}\right)^n -1000\frac{(\frac{151}{150})^n-1}{\frac{151}{150}-1} \\
+                                   & =y_0\left(\frac{151}{150}\right)^n -150000\left[\left(\frac{151}{150}\right)^n-1\right] \\
+                                   & =(y_0-150000)\left(\frac{151}{150}\right)^n +150000
+        \end{align*}
+        \begin{align*}
+            \because & y(360)=0 \\
+            \therefore & (y_0-150000)\left(\frac{151}{150}\right)^{360}+150000=0 \\
+            & y_0\approx \$136,283.4941
+        \end{align*}
+    \item[15.] (Carbon Dating). It has been observed that the proportion of carbon-14 in plants and animals is the same as that in the atmosphere as long as the plant or the animal is alive. When an animal or plant dies, the carbon-14 in its tissue starts decaying at the rate $r$.
+        \begin{itemize}
+            \item[(a)] If the half-life of carbon-14 is 5,700 years, find $r$.
+            \item[(b)] If the amount of carbon-14 present in a bone of an animal is 70\% of the original amount of carbon-14, how old is the bone?
+        \end{itemize}
+        \textbf{Solution}
+        \begin{itemize}
+            \item[(a)] Let $x$ as the age, ramaining presentage
+                $$A(x+1)=(1-r)A(x),\,A(0)=100\%,\,A(5700)=50\%.$$
+                 $$\text{(1.2.3)}\to A(n)=(1-r)^n$$
+                 \begin{align*}
+                    \because\, & A(5700)=\frac{1}{2} \\
+                    \therefore\, & (1-r)^{5700}=\frac{1}{2} \\
+                               & r=1-(2^{-1})^\frac{1}{5700}=1-2^{-\frac{1}{5700}}
+                 \end{align*}
+             \item[(b)] Let age as $a$, then $A(a)=70\%$, Solve
+                 \begin{align*}
+                     [1-(1-2^{-\frac{1}{5700}})]^{a} & =\frac{7}{10} \\
+                                 2^{-\frac{a}{5700}} & =\frac{7}{10} \\
+                                 a & \approx 2933.0671\text{ years}
+                \end{align*}
+        \end{itemize}
+\end{enumerate}
