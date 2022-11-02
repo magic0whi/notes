@@ -1,13 +1,11 @@
 \chapter{Dynamics of First-Order Difference Equations}
 \section{Introduction}
 \begin{itemize}
-    \item Starting from $x_0$, we have first iterate $f(x_0)$ whereas second iterate $f(f(x_0))=f^2(x_0)$; \\
-        more generally $n$th iterate $f^n(x_0)$. Especially $f^0(x_0)=x_0$.
+    \item Starting from $x_0$, we have first iterate $f(x_0)$ whereas second iterate $f(f(x_0))=f^2(x_0)$. \\
+        Generally $f^{n+1}(x_0)=f(f^{n}(x_0))$, particularly $f^0(x_0)=x_0$.
     \item The set of all (positive) iterates $\{f^n(x_0):n\geq 0\}=O(x_0)$, called (positive) orbit of $x_0$.
-    \item $x(n+1)$ is a function of the $n$th iterate number $x(n)$:
-        \[\text{Autonomous, time-invariant system }x(n+1)=f^{n+1}(x_0)=f(x(n)).\]
-    \item $x(n+1)$ might also have this form. (Here $g: \mathbb{Z}^+ \times\mathbb{R}\to\mathbb{R}$)
-        \[\text{Nonautonomous, time-variant system }x(n+1)=g(n,x(n))\]
+    \item $\text{Autonomous, time-invariant system }x(n+1)=f(x(n)).$
+    \item Nonautonomous, time-variant system $x(n+1)=g(n,x(n)),\quad g: \mathbb{Z}^+ \times\mathbb{R}\to\mathbb{R}$. \\
         If an initial condition $x(n_0)=x_0$ is given, then for $n\geq n_0$, there is a \textit{unique solution} $x(n)\equiv x(n,n_0,x_0)$ of nonautonomous $x(n+1)=g(n,x(n))$
         \begin{explanation}
             This may be shown easily by iteration:
@@ -179,18 +177,30 @@
 
 \section{Equilibrium Points}
 \begin{definition}
-    A point $x^*$ in the domain of $f$ is said to be an \textit{equilibrium point} of $x(n+1)=f(x(n))$ if it is a fixed point of $f$, i.e., $f(x^*)=x^*$
+    A point $x^*$ in the domain of $f$ is said to be an \textit{equilibrium point} of $x(n+1)=f(x(n))$ if it is a fixed point of $f$, i.e. $f(x^*)=x^*$
 \end{definition}
 
-In other words, $x^*$ is a \textit{constant solution} of $x(n+1)=f(x(n))$, since if $x(0)=x^*$ is an initial point, then $x(1)=f(x^*)=x^*$, and $x(2)=f(x(1))=f(x^*)=x^*$, and so on.
+In other words, $x^*$ is a \textit{constant solution}, since if $x(0)=x^*$ is an initial point, then $x(1)=f(x^*)=x^*$, and $x(2)=f(x(1))=f(x^*)=x^*$, and so on.
 
-Graphically, an equilibrium point is the $x$-coordinate of the point where the graph of $f$ intersects the diagonal line $x=y$ (Figures 1.1 and 1.2). For example, there are three equilibrium points for the equation
+Graphically, $x^*$ is the $x$-coordinate where $f$ intersects the diagonal line $x=y$. For example, there are three equilibrium points for the equation
 \[x(n+1)=x^3(n)\]
-where $f(x)=x^3$. To find these equilibrium points, we let $f(x^*)=x^*$, or $x^3=x$, or $x^3=x$, and solve for $x$. Hence there are three equilibrium points, $-1$, $0$, $1$ (Figure 1.1).
+where $f(x)=x^3$. To find these equilibrium points, we let $f(x^*)=x^*$, or $x^3=x$, and solve for $x$. Hence there are three equilibrium points, $-1$, $0$, $1$ (Figure 1.1).
+\begin{figure}[H]
+    \centering
+    \incfig{bitmap}
+    \caption{Fixed points of $f(x)=x^3$.}
+\end{figure}
 
 Figure 1.2 illustrates another example, where $f(x)=x^2-x+1$ and the difference equation is given by
 \[x(n+1)=x^2(n)-x(n)+1.\]
 Letting $x^2-x+1=x$, we find that $1$ is the only equilibrium point.
+\begin{figure}[H]
+    \centering
+    \incfig{1}
+    \caption{Fixed points of $f(x)=x^2-x+1$.}
+\end{figure}
+
+\subsection{Example: The Tent Map}
 
 \begin{definition}
     Let $x$ be a point in the domain of $f$. If there exists a positive integer $r$ and an equilibrium point $x^*$ of $x(n+1)=f(x(n))$ such that $f^r(x)=x^*$, $f^{r-1}(x)\neq x^*$, then $x$ is an \textit{eventually equilibrium (fixed) point}.
