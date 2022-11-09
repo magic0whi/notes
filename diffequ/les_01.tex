@@ -200,8 +200,6 @@ Letting $x^2-x+1=x$, we find that $1$ is the only equilibrium point.
     \caption{Fixed points of $f(x)=x^2-x+1$.}
 \end{figure}
 
-\subsection{Example: The Tent Map}
-
 \begin{definition}
     Let $x$ be a point in the domain of $f$. If there exists a positive integer $r$ and an equilibrium point $x^*$ of $x(n+1)=f(x(n))$ such that $f^r(x)=x^*$, $f^{r-1}(x)\neq x^*$, then $x$ is an \textit{eventually equilibrium (fixed) point}.
 \end{definition}
@@ -214,16 +212,21 @@ Letting $x^2-x+1=x$, we find that $1$ is the only equilibrium point.
         \[
             T(x)=\begin{cases}
                 2x & \text{for }0\leq x\leq\frac{1}{2}, \\
-                2(1-x) & \text{for }\frac{1}{2}<x<1
+                2(1-x) & \text{for }\frac{1}{2}<x<1.
             \end{cases}
         \]
         There are two equilibrium points, $0$ and $\frac{2}{3}$ (see Figure 1.3). The search or eventually equilibrium points is not as simple algebraically. If $x(0)=\frac{1}{4}$, then $x(1)=\frac{1}{2}$, $x(2)=1$, and $x(3)=0$. Thus $\frac{1}{4}$ is an eventually equilibrium point.
+\begin{figure}[H]
+    \centering
+    \incfig{tent_map}
+    \caption{Equilibrium points of the tent map.}
+\end{figure}
 \end{eg}
 
 One of the main objectives in the study of a dynamical system is to analyze the behavior of its solutions near an equilibrium point. This study constitutes the stability theory.
 
 \begin{definition}
-    (a) The equilibrium point $x*$ of $x(n+1)=f(x(n))$ is \textit{stable} (Figure 1.4) if given $\varepsilon>0$ there exists $\delta>0$ such that $|x_0-x^*|<\delta$ implies $|f^n(x_0)-x^*|<\varepsilon$ for all $n>0$. If $x^*$ is not stable, then it is called \textit{unstable} (Figure 1.5).
+    (a) The equilibrium point $x^*$ of $x(n+1)=f(x(n))$ is \textit{stable} if given $\varepsilon>0$ there exists $\delta>0$ such that $|x_0-x^*|<\delta$ implies $|f^n(x_0)-x^*|<\varepsilon$ for all $n>0$. If $x^*$ is not stable, then it is called \textit{unstable}.
 
     (b) The point $x^*$ is said to be \textit{attracting} if there exists $\eta>0$ such that
     \[|x(0)-x^*|<\eta\text{ implies }\lim_{n\to\infty} x(n)=x^*.\]
@@ -231,5 +234,31 @@ One of the main objectives in the study of a dynamical system is to analyze the 
     
     (c) The point $x^*$ is an \textit{asymptotically stable equilibrium point} if it is stable and attracting.
 
-    If $\eta=\infty$, $x^*$ is said to be \textit{globally asymptotically stable} (Figure 1.7).
+    If $\eta=\infty$, $x^*$ is said to be \textit{globally asymptotically stable}.
 \end{definition}
+
+\subsection{The Stair Step (Cobweb) Diagrams}
+
+Another important graphical method for analyzing the stability of equilibrium (and periodic) points for $x(n+1)=f(x(n))$: We may draw a graph of $f$ in the plane $(x(n),x(n+1))$. Given $x(0)=x_0$, we pinpoint the value $x(1)$ by drawing a vertical line through $x(0)$ so that it alse intersects the graph of $f$ at $(x(0),x(1))$. Next, draw a horizontal line from $(x(0),x(1))$ to meet the diagonal line $y=x$ at point $(x(1),x(1))$. A vertical line drawn from the point $(x(1),x(1))$ will meet the graph of $f$ at the point $(x(1),x(2))$. Continuing this process, one may find $x(n)$ for all $n>0$.
+
+\begin{eg}[The logistic Equation]
+    Let $y(n)$ be the size of a population at time $n$. If $\mu$ is the rate of growth of the population from one generation to another, then we may consider a mathematical model in the form
+    \[
+        y(n+1)=\mu y(n),\quad\mu>0.
+    \]
+    If the initial population is given by $y(0)=y_0$, then by simple iteration we find that
+    \[
+        y(n)=\mu^n y_0
+    \]
+    is the solution. If $\mu>1$, then $y(n)$ increases indefinitely, and $\lim_{n\to\infty}y(n)=\infty$. If $\mu=1$, then $y(n)=y_0$ for all $n>0$, which means that the size of the population is constant for the indefinite future. However, for $\mu<1$, we have $\lim_{n\to\infty}y(n)=0$, and the population eventually becomes extinct.
+
+    For most biological species, however, none of the above cases is valid as the population increases until it reaches a certain upper limit. Then, due to the limitations of available resources, the creatures will become testy and engage in competition for those limited resources. This competition is proportional to the number of squabbles among them, given by $by^2(n)$ which has a proportionality constant $b>0$,
+    \[
+        y(n+1)=\mu y(n)-by^2(n).
+    \]
+    Let $x(n)=\frac{b}{\mu}y(n)$, we obtain
+    \[
+        x(n+1)=\mu x(n)(1-x(n))=f(x(n))
+    \]
+    This equation is the simplest nonlinear first-order difference equation, commonly referred to as the (discrete) logistic equation.
+\end{eg}
