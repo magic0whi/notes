@@ -1,6 +1,6 @@
 %% Creator: Inkscape 1.2.1 (9c6d41e410, 2022-07-14, custom), www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
-%% Accompanies image file 'text8357.pdf' (pdf, eps, ps)
+%% Accompanies image file 'equilibrium_points_1.pdf' (pdf, eps, ps)
 %%
 %% To include the image in your LaTeX document, write
 %%   \input{<filename>.pdf_tex}
@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{156.28878976bp}%
+    \setlength{\unitlength}{303.61189234bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,12 +50,12 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.94156316)%
+  \begin{picture}(1,0.48705637)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
-    \put(0.74918241,0.39515168){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x_3^*=1$\end{tabular}}}}%
-    \put(0.46075477,0.39599965){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x_2^*=0$\end{tabular}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{text8357.pdf}}%
-    \put(0.14329465,0.47071582){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x_1^*=-1$\end{tabular}}}}%
+    \put(0.6266568,0.21115979){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x_3^*=1$\end{tabular}}}}%
+    \put(0.51770851,0.21115979){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x_2^*=0$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{equilibrium_points_1.pdf}}%
+    \put(0.33946957,0.24468061){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x_1^*=-1$\end{tabular}}}}%
   \end{picture}%
 \endgroup%

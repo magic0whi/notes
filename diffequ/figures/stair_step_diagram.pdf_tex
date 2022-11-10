@@ -1,6 +1,6 @@
 %% Creator: Inkscape 1.2.1 (9c6d41e410, 2022-07-14, custom), www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
-%% Accompanies image file 'bitmap.pdf' (pdf, eps, ps)
+%% Accompanies image file 'stair_step_diagram.pdf' (pdf, eps, ps)
 %%
 %% To include the image in your LaTeX document, write
 %%   \input{<filename>.pdf_tex}
@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{303.61189234bp}%
+    \setlength{\unitlength}{542.24506048bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,12 +50,19 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.48705637)%
+  \begin{picture}(1,0.36480427)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
-    \put(0.6266568,0.21115979){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x_3^*=1$\end{tabular}}}}%
-    \put(0.51770851,0.21115979){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x_2^*=0$\end{tabular}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{bitmap.pdf}}%
-    \put(0.33946957,0.24468061){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x_1^*=-1$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{stair_step_diagram.pdf}}%
+    \put(0.23760811,0.09588399){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x(0)$\end{tabular}}}}%
+    \put(0.25091492,0.14819271){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x(1)$\end{tabular}}}}%
+    \put(0.28705039,0.22635536){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x(2)$\end{tabular}}}}%
+    \put(0.40612523,0.31647264){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x(3)$\end{tabular}}}}%
+    \put(0.51558246,0.29359483){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x(4)$\end{tabular}}}}%
+    \put(0.43521968,0.28165096){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x(5)$\end{tabular}}}}%
+    \put(0.25974373,0.02783109){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0.1\end{tabular}}}}%
+    \put(0.47418043,0.02989658){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x_2^*=0.6$\end{tabular}}}}%
+    \put(0.18830307,0.00340803){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x_1^*=0$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{stair_step_diagram.pdf}}%
   \end{picture}%
 \endgroup%

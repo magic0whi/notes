@@ -187,7 +187,7 @@ Graphically, $x^*$ is the $x$-coordinate where $f$ intersects the diagonal line 
 where $f(x)=x^3$. To find these equilibrium points, we let $f(x^*)=x^*$, or $x^3=x$, and solve for $x$. Hence there are three equilibrium points, $-1$, $0$, $1$ (Figure 1.1).
 \begin{figure}[H]
     \centering
-    \incfig{bitmap}
+    \incfig{equilibrium_points_1}
     \caption{Fixed points of $f(x)=x^3$.}
 \end{figure}
 
@@ -196,7 +196,7 @@ Figure 1.2 illustrates another example, where $f(x)=x^2-x+1$ and the difference 
 Letting $x^2-x+1=x$, we find that $1$ is the only equilibrium point.
 \begin{figure}[H]
     \centering
-    \incfig{1}
+    \incfig{equilibrium_points_2}
     \caption{Fixed points of $f(x)=x^2-x+1$.}
 \end{figure}
 
@@ -260,5 +260,51 @@ Another important graphical method for analyzing the stability of equilibrium (a
     \[
         x(n+1)=\mu x(n)(1-x(n))=f(x(n))
     \]
-    This equation is the simplest nonlinear first-order difference equation, commonly referred to as the (discrete) logistic equation.
+    This equation is the simplest nonlinear first-order difference equation, commonly referred to as the (discrete) logistic equation. However, a closed-form solution is not available (except for certain values of $\mu$). In spite of its simplicity, this equation exhibits rather rich and complicated dynamics. To find the equilibrium we let $f(x^*)=\mu x^*(1-x^*)=x^*$. Thus, we pinpoint two equilibrium points: $x^*=0$ and $x^*=(\mu-1)/\mu$.
+    Figure 1.4 gives the stair step diagram of $(x(n),x(n+1))$ when $\mu=2.5$ and $x(0)=0.1$. In this case we also have two equilibrium points. One, $x^*=0$, is unstable, and the other $x^*=0.6$, is asymptotically stable.
+\begin{figure}[H]
+    \centering
+    \incfig{stair_step_diagram}
+    \caption{Stair step diagram for $\mu=2.5$.}
+\end{figure}
+\end{eg}
+
+\begin{eg}[The Cobweb Phenomenon (Economics Application)]
+Here we study the pricing of a certain commodity. Let $S(n)$ be the number of units supplied in period $n$, $D(n)$ the number of units demanded in period $n$, and $p(n)$ the price per unit in period $n$.
+
+For simplicity, we assume that $D(n)$ depends only linearly on $p(n)$ and is denoted by
+\[
+    D(n)=-m_d p(n)+b_d,\quad m_d>0, b_d>0.
+\]
+This equation is referred to as the price-demand curve. The constant $m_d$ represents the sensitivity of consumers to price. We also assume that the price-supply curve relates the supply in any period to the price one period before, i.e.,
+\[
+    S(n+1)=m_s p(n)+b_s,\quad m_s>0, b_s>0.
+\]
+The constant $m_s$ is the sensitivity of suppliers to price. The slope of the demand curve is negative because an increase of one unit in price produces a decrease of $m_d$ units in demand. Correspondingly, an increase of one unit in price causes an increase of $m_s$ units in supply, creating a positive slope for that curve.
+
+A third assumption we make here is that the market price is the price at which the quantity demanded and the quantity supplied are equal, that is, at which $D(n+1)=S(n+1)$.
+
+Thus
+\[
+    -m_d p(n+1)+b_d=m_s p(n)+b_s,
+\]
+or
+\[
+    p(n+1)=Ap(n)+B=f(p(n)),
+\]
+where $A=-m_s/m_d$, $B=(b_d-b_s)/m_d$. This equation is a first-order linear difference equation. The equilibrium price $p^*$ is defined in economics as the price that results in an intersection of the supply $S(n+1)$ and demand $D(n)$ curves. Also, since $p^*$ is the unique fixed point of $f(p)$, $p^*=B/(1-A)$. Because $A$ is the ratio of the slopes of the supply and demand curves, this ratio determines the behavior of the price sequence. There are three cases to be considered: \\
+(a) $-1<A<0$, \\
+(b) $A=-1$, \\
+(c) $A<-1$. \\
+The three cases are now depicted graphically using our old standby, the stair step diagram.
+\begin{figure}[H]
+    \centering
+    \incfig{cobweb_phenomenon_1}
+    \caption{Asymptotically stable equilibrium price.}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \incfig{cobweb_phenomenon_2}
+    \caption{Stable equilibrium price.}
+\end{figure}
 \end{eg}
