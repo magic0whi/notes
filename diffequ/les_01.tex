@@ -307,4 +307,24 @@ The three cases are now depicted graphically using our old standby, the stair st
     \incfig{cobweb_phenomenon_2}
     \caption{Stable equilibrium price.}
 \end{figure}
+\begin{figure}[H]
+    \centering
+    \incfig{cobweb_phenomenon_3}
+    \caption{Unstable equilibrium price.}
+\end{figure}
+\begin{enumerate}
+    \item In case (a), prices alternate above and below but converge to the equilibrium price $p^*$. In economics lingo, the price $p^*$ is considered ``stable''; in mathematics, we refer to it as ``asymptotically stable'' (Figure 1.5).
+    \item In case (b), prices oscillate between two values only. If $p(0)=p_0$, then $p(1)=-p_0+B$ and $p(2)=p_0$. Hence the equilibrium point $p^*$ is stable (Figure 1.6).
+    \item in case (c), prices oscillate infinitely about the equilibrium point $p^*$ but progressively move further away from it. Thus, the equilibrium point is considered unstable (Figure 1.7).
+\end{enumerate}
+
+An explicit solution of $p(n)$ with $p(0)=p_0$ is given by
+\[
+    p(n)=\left(p_0+\frac{B}{A-1}\right)A^n-\frac{B}{A-1}.
+\]
+This explicit solution allows us to restate cases (a) and (b) as follows.
+
+\textit{The cobweb Theorem of Economics}
+
+If the suppliers are less sensitive to price than the consumers (i.e., $m_s<m_d$, the market will then be stable. If the suppliers are more sensitive than the consumers, the market will be unstable.
 \end{eg}
