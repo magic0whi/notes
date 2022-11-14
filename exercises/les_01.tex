@@ -84,7 +84,7 @@
             \item[(a)] The question is related to Lazy Caterer's Sequence. Let $r$ be the number of regions. \\
                 \begin{figure}[H]
                     \centering
-                    \incfig{lazy-caterers-sequence} 
+                    \incfig{exercises1.1_4} 
                     \caption{Lazy Caterer's Sequence}
                     \label{fig:lazy-caterers-sequence}
                 \end{figure}
@@ -168,3 +168,86 @@
                 \end{align*}
         \end{itemize}
 \end{enumerate}
+
+\subsection{Exercises 1.3}
+\begin{enumerate}
+    \item[3.] (Pielou's Logistic Equation) \\
+        E.C. Pielou [119] referred to the following equation as the discrete logistic equation:
+        $$
+            x(n+1)=\frac{\alpha x(n)}{1+\beta x(n)},\quad\alpha>1,\,\beta>0.
+        $$
+        \begin{itemize}
+            \item[(a)] Find the positive equilibrium point.
+            \item[(b)] Demonstrate, using the stair step diagram, that the positive equilibrium point is asymptotically stable, taking $\alpha=2$ and $\beta=1$.
+        \end{itemize}
+        \textbf{Solution}
+        \begin{itemize}
+            \item[(a)] Let $x(x^*)=x^*$, from
+                $$x^*=\frac{\alpha x^*}{1+\beta x^*},$$
+                we get $x^*=0\text{ and }(\alpha-1)/\beta$.
+            \item[(b)] $x(n+1)=(2x(n))/(1+x(n))$.
+                \begin{figure}[H]
+                    \centering
+                    \incfig{exercises1.3_3} 
+                    \caption{Exercises 1.3.3.b}
+                    \label{fig:exercises-1.3.3.b}
+                \end{figure}
+        \end{itemize}
+    \item[5.]
+        \begin{itemize}
+            \item[(a)] Draw a stair diagram for $x(n+1)=\mu x(n)(1-x(n))$ for $\mu=0.5,\,3\text{ and }3.3$. What can you conclude from these diagrams?
+            \item[(b)] Determine whether these values for $\mu$ give rise to periodic solutions of period 2.
+        \end{itemize}
+        \textbf{Solution}
+        \begin{itemize}
+            \item[(a)] 
+                \begin{figure}[H]
+                    \centering
+                    \incfig{exercises1.3_5} 
+                    \caption{Exercises 1.3.5 (a)}
+                    \label{fig:exercises-1.3.5.a}
+                \end{figure}
+            \item[(b)] From the figure in (a) we can see only $\mu=3.3$ give rise to periodic solutions of period 2.
+        \end{itemize}
+    \item[6.] (The Cobweb Phenomenon). Economists define the equilibrium price $p^*$ of a commodity as the price at which the demand function $D(n)=-m_dp(n)+b_d$ is equal to the supply function $S(n+1)=m_sp(n)+b_s$.
+        \begin{itemize}
+            \item[(a)] Show that $p^*=B/(1-A)$, where $A=-m_s/m_d$ and $B=(b_d-b_s)/m_d$.
+            \item[(b)] Let $m_s=2$, $b_s=3$, $m_d=1$, and $b_d=15$. Find the equilibrium price $p^*$. Then draw a stair step diagram, for $p(0)=2$.
+        \end{itemize}
+        \textbf{Solution}
+        \begin{itemize}
+            \item[(a)] Let $p(x^*)=x^*$, then
+                \begin{alignat*}{2}
+                    && Ap^*+B & =p^*, \\
+                    \Leftrightarrow && (A-1)p^* & =-B, \\
+                    \Leftrightarrow && p^* & =-\frac{B}{A-1}=\frac{B}{1-A}.
+                \end{alignat*}
+            \item[(b)] Because $A=-2$, $B=12$, therefore $p^*=12/[1-(-2)]=4$.
+                \begin{figure}[H]
+                    \centering
+                    \incfig{exercises1.3_6} 
+                    \caption{Exercises 1.3.6 (b)}
+                    \label{fig:exercises-1.3.6.b}
+                \end{figure}
+        \end{itemize}
+    \setcounter{enumi}{6}
+    \item Continuation of Problem 6:
+        Economists use a different stair step diagram, as we will explain in the follow steps:
+        \begin{itemize}
+            \item[(i)] Let the $x$-axis represent the price $p(n)$ and the $y$-axis represent $S(n+1)$ or $D(n)$. Draw the supply line and the demand line and find their point of intersection $p^*$.
+            \item[(ii)] Starting with $p(0)=2$ we find $S(1)$ by moving vertically to the supply line, then moving horizontally to find $D(1)$ (since $D(n+1)=S(n+1)$), which determines $p(1)$ on the price axis. The supply $S(2)$ is found on the supply line directly above $p(1)$, and then $D(2)$ ($=S(2)$) is found by moving horizontally to the demand line, etc.
+            \item[(iii)] Is $p^*$ stable?
+        \end{itemize}
+        \textbf{Solution}
+        \begin{itemize}
+            \item[(i) and (ii)]
+                \begin{figure}[H]
+                    \centering
+                    \incfig{exercises1.3_7} 
+                    \caption{Exercises 1.3.7 (i) and (ii)}
+                    \label{fig:exercises-1.3.7-i&ii}
+                \end{figure}
+            \item[(iii)] From the figure we can see $p^*$ is unstable.
+        \end{itemize}
+\end{enumerate}
+
