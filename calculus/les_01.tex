@@ -81,3 +81,26 @@
         If $f$ is a function which is continuous on the interval $[a, b]$ and $M$ lies between the values of $f(a)$ and $f(b)$, then there is at least one point $c$ between $a$ and $b$ such that $f(c)=M$. \\
         (A function is \textbf{continuous on a closed interval} $[a, b]$ if it is continuous on interval $(a, b)$, right-continuous at $a$, and left-continuous at $b$.)
 \end{enumerate}
+
+\section{Limit Law for Division}
+If $lim_{x\to a} f(x)=L$ and $\lim_{x\to a} g(x)=M$, then:
+\begin{enumerate}
+    \item[(Part 1)] If $M\neq 0$, then $\lim_{x\to a} \frac{f(x)}{g(x)}=\frac{L}{M}$
+    \item[(Part 2)] If $M=0$ but $L\neq 0$, then $\lim_{x\to a} \frac{f(x)}{g(x)}$ does not exist.
+    \item[(Part 3)] If both $M=0$ and $L=0$, then $\lim_{x\to a} \frac{f(x)}{g(x)}$ might exist, or it might not exist. More work is necessary to determine whether the last type of limit exists, and what it is if it does exist.
+\end{enumerate}
+
+\chapter{The derivative}
+\section{Definition of the Derivative}
+\begin{enumerate}
+    \item The definition of the average rate of change. \\
+        The \textbf{average rate of change} of a function $f(x)$ over an interval $a\leq x\leq b$ is defined to be
+        $$
+        \frac{f(b)-f(a)}{b-a}.
+        $$
+    \item Definition of the derivative. \\
+        The \textbf{derivative} of a function $f(x)$ at a point $x=a$ is defined to be
+        $$
+        f^\prime(a)=\lim_{b\to a}\frac{f(b)-f(a)}{b-a}.
+        $$
+\end{enumerate}
