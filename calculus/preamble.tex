@@ -15,6 +15,13 @@
 \usepackage{float}
 \usepackage{booktabs}
 \usepackage{enumitem}
+\setlist[enumerate]{align=left, leftmargin=0pt, labelwidth=11pt, labelsep=3pt, itemindent=15pt, listparindent=15pt}
+% Because the package enumitem has algorithm:
+% leftmargin+itemindent=labelindent+labelwidth+labelsep.
+% To make paragraph align with label, which means leftmargin equals to labelindent, and itemindent=labelwidth+lalbelsep.
+% A debug command \DrawEnumitemLabel draws 4 rules from top to bottom: labelindent, labelwidth, labelsep, itemindent.
+
+ 
 % \usepackage{parskip}
 \usepackage{emptypage}
 \usepackage{subcaption}
@@ -276,8 +283,6 @@
     fonttitle=\sffamily,
     breakable
 ]}{\end{tcolorbox}}
-
-
 
 
 % figure support
