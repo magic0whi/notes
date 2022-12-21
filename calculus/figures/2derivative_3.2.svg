@@ -2,19 +2,22 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="354.7348"
    height="367.11172"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.5 r10040"
-   sodipodi:docname="u1der3_2ndexamplederivativecomplete.svg">
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14, custom)"
+   sodipodi:docname="2derivative_3.2.svg"
+   inkscape:export-filename="2derivative_3.2.pdf"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <defs
      id="defs4">
     <font
@@ -77,21 +80,24 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.31"
-     inkscape:cx="173.88466"
-     inkscape:cy="226.32464"
+     inkscape:cx="97.709924"
+     inkscape:cy="227.09924"
      inkscape:document-units="px"
      inkscape:current-layer="g2987"
      showgrid="false"
      inkscape:snap-page="true"
-     inkscape:window-width="1334"
-     inkscape:window-height="734"
-     inkscape:window-x="39"
-     inkscape:window-y="37"
+     inkscape:window-width="2540"
+     inkscape:window-height="1373"
+     inkscape:window-x="8"
+     inkscape:window-y="55"
      inkscape:window-maximized="0"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
-     fit-margin-bottom="0" />
+     fit-margin-bottom="0"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -189,7 +195,7 @@
            font-size="20px"
            y="17"
            x="0"
-           style="font-size:20px;fill:#000000;font-family:SVGTimes">-</text>
+           style="font-size:20px;line-height:0%;font-family:SVGTimes;fill:#000000">-</text>
       </g>
       <g
          id="g3018"
@@ -206,7 +212,7 @@
            font-size="20px"
            y="17"
            x="14"
-           style="font-size:20px;fill:#000000;font-family:Times New Roman">1</text>
+           style="font-size:20px;line-height:0%;font-family:'Times New Roman';fill:#000000">1</text>
       </g>
       <g
          id="g3025"
@@ -237,7 +243,7 @@
            font-size="20px"
            y="17"
            x="0"
-           style="font-size:20px;fill:#000000;font-family:SVGTimes">-</text>
+           style="font-size:20px;line-height:0%;font-family:SVGTimes;fill:#000000">-</text>
       </g>
       <g
          id="g3039"
@@ -254,7 +260,7 @@
            font-size="20px"
            y="17"
            x="14"
-           style="font-size:20px;fill:#000000;font-family:Times New Roman">2</text>
+           style="font-size:20px;line-height:0%;font-family:'Times New Roman';fill:#000000">2</text>
       </g>
       <g
          id="g3046"
@@ -285,7 +291,7 @@
            font-size="20px"
            y="17"
            x="0"
-           style="font-size:20px;fill:#000000;font-family:SVGTimes">-</text>
+           style="font-size:20px;line-height:0%;font-family:SVGTimes;fill:#000000">-</text>
       </g>
       <g
          id="g3060"
@@ -302,7 +308,7 @@
            font-size="20px"
            y="17"
            x="14"
-           style="font-size:20px;fill:#000000;font-family:Times New Roman">3</text>
+           style="font-size:20px;line-height:0%;font-family:'Times New Roman';fill:#000000">3</text>
       </g>
       <g
          id="g3067"
@@ -333,7 +339,7 @@
            font-size="20px"
            y="17"
            x="0"
-           style="font-size:20px;fill:#000000;font-family:Times New Roman">1</text>
+           style="font-size:20px;line-height:0%;font-family:'Times New Roman';fill:#000000">1</text>
       </g>
       <g
          id="g3081"
@@ -364,7 +370,7 @@
            font-size="20px"
            y="17"
            x="0"
-           style="font-size:20px;fill:#000000;font-family:Times New Roman">2</text>
+           style="font-size:20px;line-height:0%;font-family:'Times New Roman';fill:#000000">2</text>
       </g>
       <g
          id="g3095"
@@ -395,7 +401,7 @@
            font-size="20px"
            y="17"
            x="0"
-           style="font-size:20px;fill:#000000;font-family:Times New Roman">3</text>
+           style="font-size:20px;line-height:0%;font-family:'Times New Roman';fill:#000000">3</text>
       </g>
       <g
          id="g3109"
@@ -442,7 +448,7 @@
            font-size="20px"
            y="17"
            x="0"
-           style="font-size:20px;fill:#000000;font-family:SVGTimes">-</text>
+           style="font-size:20px;line-height:0%;font-family:SVGTimes;fill:#000000">-</text>
       </g>
       <g
          id="g3137"
@@ -459,7 +465,7 @@
            font-size="20px"
            y="17"
            x="14"
-           style="font-size:20px;fill:#000000;font-family:Times New Roman">4</text>
+           style="font-size:20px;line-height:0%;font-family:'Times New Roman';fill:#000000">4</text>
       </g>
       <g
          id="g3144"
@@ -490,7 +496,7 @@
            font-size="20px"
            y="17"
            x="0"
-           style="font-size:20px;fill:#000000;font-family:SVGTimes">-</text>
+           style="font-size:20px;line-height:0%;font-family:SVGTimes;fill:#000000">-</text>
       </g>
       <g
          id="g3158"
@@ -507,7 +513,7 @@
            font-size="20px"
            y="17"
            x="14"
-           style="font-size:20px;fill:#000000;font-family:Times New Roman">3</text>
+           style="font-size:20px;line-height:0%;font-family:'Times New Roman';fill:#000000">3</text>
       </g>
       <g
          id="g3165"
@@ -538,7 +544,7 @@
            font-size="20px"
            y="17"
            x="0"
-           style="font-size:20px;fill:#000000;font-family:SVGTimes">-</text>
+           style="font-size:20px;line-height:0%;font-family:SVGTimes;fill:#000000">-</text>
       </g>
       <g
          id="g3179"
@@ -555,7 +561,7 @@
            font-size="20px"
            y="17"
            x="14"
-           style="font-size:20px;fill:#000000;font-family:Times New Roman">2</text>
+           style="font-size:20px;line-height:0%;font-family:'Times New Roman';fill:#000000">2</text>
       </g>
       <g
          id="g3186"
@@ -586,7 +592,7 @@
            font-size="20px"
            y="17"
            x="0"
-           style="font-size:20px;fill:#000000;font-family:SVGTimes">-</text>
+           style="font-size:20px;line-height:0%;font-family:SVGTimes;fill:#000000">-</text>
       </g>
       <g
          id="g3200"
@@ -603,7 +609,7 @@
            font-size="20px"
            y="17"
            x="14"
-           style="font-size:20px;fill:#000000;font-family:Times New Roman">1</text>
+           style="font-size:20px;line-height:0%;font-family:'Times New Roman';fill:#000000">1</text>
       </g>
       <g
          id="g3207"
@@ -634,7 +640,7 @@
            font-size="20px"
            y="17"
            x="0"
-           style="font-size:20px;fill:#000000;font-family:Times New Roman">1</text>
+           style="font-size:20px;line-height:0%;font-family:'Times New Roman';fill:#000000">1</text>
       </g>
       <g
          id="g3221"
@@ -665,7 +671,7 @@
            font-size="20px"
            y="17"
            x="0"
-           style="font-size:20px;fill:#000000;font-family:Times New Roman">2</text>
+           style="font-size:20px;line-height:0%;font-family:'Times New Roman';fill:#000000">2</text>
       </g>
       <g
          id="g3235"
@@ -696,7 +702,7 @@
            font-size="20px"
            y="17"
            x="0"
-           style="font-size:20px;fill:#000000;font-family:Times New Roman">3</text>
+           style="font-size:20px;line-height:0%;font-family:'Times New Roman';fill:#000000">3</text>
       </g>
       <g
          id="g3249"
@@ -715,28 +721,26 @@
       </g>
       <text
          xml:space="preserve"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Verdana;-inkscape-font-specification:Verdana"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Verdana;-inkscape-font-specification:Verdana;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
          x="213.66319"
          y="29.120056"
-         id="text3463"
-         sodipodi:linespacing="125%"><tspan
+         id="text3463"><tspan
            sodipodi:role="line"
            id="tspan3465"
            x="213.66319"
            y="29.120056"
-           style="font-size:20px">g'(x)</tspan></text>
+           style="font-size:20px;line-height:1.25">g'(x)</tspan></text>
       <text
          xml:space="preserve"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Verdana;-inkscape-font-specification:Verdana"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Verdana;-inkscape-font-specification:Verdana;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
          x="410.6098"
          y="189.4254"
-         id="text3467"
-         sodipodi:linespacing="125%"><tspan
+         id="text3467"><tspan
            sodipodi:role="line"
            id="tspan3469"
            x="410.6098"
            y="189.4254"
-           style="font-size:20px">x</tspan></text>
+           style="font-size:20px;line-height:1.25">x</tspan></text>
     </g>
   </g>
 </svg>

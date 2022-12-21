@@ -170,3 +170,50 @@ If $\lim_{x\to a} f(x)=L$ and $\lim_{x\to a} g(x)=M$, then:
             \caption{The graph of the derivative $y=g^\prime (x)$}
         \end{figure}
 \end{enumerate}
+
+\section{Calculating derivatives}
+\begin{enumerate}
+    \item \textbf{Derivatives of constant multiples}
+
+        If $g(x)=kf(x)$ for some constant $k$, then
+        $$
+        g^\prime(x)=kf^\prime(x)
+        $$
+        at all points where $f$ is differentiable.
+    \item \textbf{Derivatives of sums}
+
+        If $h(x)=f(x)+g(x)$, then
+        $$
+        h^\prime(x)=f^\prime(x)+g^\prime(x)
+        $$
+        at all points where $f$ and $g$ are differentiable.
+    \item \textbf{Derivatives of differences}
+
+        Similarly, if $j(x)=f(x)-g(x)$, then
+        $$
+        j^\prime(x)=f^\prime(x)+g^\prime(x)
+        $$
+        at all points where $f$ and $g$ are differentiable.
+    \item \textbf{Derivatives of constant multiples - proof}
+
+        Suppose that $g(x)=kf(x)$ for all $x$, where $k$ is a constant. We want to prove that $g^\prime(x)=kf^\prime(x)$ at any point $x$ where $f$ is differentiable.
+
+        We know that
+        \begin{align*}
+            g^\prime(x) & =\lim_{\Delta x\to 0} \frac{g(x+\Delta x)-g(x)}{\Delta x} \\
+                        & =\lim_{\Delta x\to 0} \frac{kf(x+\Delta x)-kf(x)}{\Delta x} \\
+                        & =\lim_{\Delta x\to 0} k\frac{f(x+\Delta x)-f(x)}{\Delta x} \\
+                        & =\lim_{\Delta x\to 0} k \lim_{\Delta x\to 0} \frac{f(x+\Delta x)-f(x)}{\Delta x}
+        \end{align*}
+        The first limit is just $k$, and the second limit is the definition of $f^\prime(x)$. So we get $g^\prime=kf^\prime(x)$.
+    \item \textbf{What is linearity?}
+
+        We've seen that differentiation ``respects'' addition and multiplication by a constant. That is, if you take a derivative of a sum of functions, you get the same thing as if you differentiated each part, and then added the derivatives. Similarly, if you take the derivative of $k$ times a function, where $k$ is a constant, then you get $k$ times the derivative of the original function.
+
+        Respecting addition and constant multiplication is this way is called ``linearity'', and it is an important property of the derivative operation!
+    \item \textbf{The Power Rule}
+
+        If $n$ is any fixed number, and $f(x)=x^n$, then $f^\prime(x)=nx^{n-1}$.
+\end{enumerate}
+
+\section{Leibniz notation}
