@@ -217,3 +217,49 @@ If $\lim_{x\to a} f(x)=L$ and $\lim_{x\to a} g(x)=M$, then:
 \end{enumerate}
 
 \section{Leibniz notation}
+\begin{enumerate}
+    \item \textbf{Why Leibniz notation?}
+
+        Why do we like to use Leibniz notation?
+
+        The biggest reason is that it reminds us what the input variable is. The derivative is measuring the instantaneous rate of change of the output variable of a function with respect to the input variable. Sometimes, if there are lots of quantities that have variables representing them, it's easy to lose track of what is what; Leibniz notation helps to remind us.
+    \item \textbf{Properties of Leibniz notation}
+        \begin{itemize}
+            \item \textbf{Units}: If $P$ has units of pressure, and $t$ has units of \textit{time}, then $\frac{\mathrm{d}P}{\mathrm{d}t}$ has units of pressure per time.
+            \item \textbf{Evaluating at point}: If we want to take the derivative at a particular point $x=3$, then we use the notation $\left.\frac{\mathrm{d}f}{\mathrm{d}x}\right|_{x=3}$. The bar is read as ``evaluated at''.
+            \item \textbf{Derivatives act on functions}
+                
+                We can write $\frac{\mathrm{d}(x^2)}{\mathrm{d}x}$ for the derivative of $x^2$.
+
+                If a formula is long, we can write $\frac{\mathrm{d}}{\mathrm{d}y}(y^3+2y^2)$.
+        \end{itemize}
+\end{enumerate}
+
+\section{Second derivatives and higher}
+\begin{enumerate}
+    \item \textbf{Second derivative}
+
+        The second derivative of a function $f(x)$ is the first derivative of $f^\prime(x)$, and is denoted by $f^{\prime\prime}(x)$ or $\frac{\mathrm{d}^2 f}{\mathrm{d}x^2}$.
+    \item \textbf{Higher derivatives}
+
+        The $n$th derivative of a function $f(x)$ is the first derivative of $f^{(n-1)}(x)$, and is denoted by $f^{(n)}(x)$ or $\frac{\mathrm{d}^n f}{\mathrm{d} x^n}$.
+    \item \textbf{Second derivative and concavity summary}
+        
+        On intervals where $f^{\prime\prime}>0$, the function $f$ is concave up.
+        \begin{figure}[H]
+            \centering
+            \incfig{2derivative_6.1}
+        \end{figure}
+
+        On intervals where $f^{\prime\prime}<0$, the function $f$ is concave down.
+        \begin{figure}[H]
+            \centering
+            \incfig{2derivative_6.2}
+        \end{figure}
+
+        Points where the graph of a function changes from concave up to concave down, or vice versa, are called \textbf{inflection points}.
+    \item \textbf{Position, velocity, acceleration}
+
+        If $x(t)$ is a function that describes position as a function of time, then:
+        $x^\prime (t)$ is the velocity, and $x^{\prime\prime} (t)$ is the acceleration.
+\end{enumerate}
