@@ -263,3 +263,57 @@ If $\lim_{x\to a} f(x)=L$ and $\lim_{x\to a} g(x)=M$, then:
         If $x(t)$ is a function that describes position as a function of time, then:
         $x^\prime (t)$ is the velocity, and $x^{\prime\prime} (t)$ is the acceleration.
 \end{enumerate}
+
+\section{Trigonometric functions: sine and cosine}
+\begin{enumerate}
+    \item \textbf{Definition of significant figures}
+        
+        The number of \textit{significant figures} is the count of those digits that carry meaning with regards to precision.
+        
+        \textbf{Examples}
+        \begin{itemize}
+            \item All non-zero digits are significant \rule{20pt}{1pt} - 1235 has 4 significant digits.
+            \item Zeros appearing between nonzero digits are significant - 101 has 3 significant digits.
+            \item Trailing zeros in a number containing a decimal are significant - 32.000 has 5 significant figures.
+        \end{itemize}
+        \textbf{Non-examples}
+        \begin{itemize}
+            \item Trailing zeros in a number with no decimal are \textit{not} significant - 5400 has 2 significant figures.
+            \item Leading zeros in decimal number are not significant - 0.0003 has 1 significant figure.
+            \item Extraneous digits introduced in a computation to greater precision than measured data are \textit{not} significant - if .25 and .50 are measurements accurate to $\pm.01$, then in the product $(.25)(.50)=0.125$ the last 5 is \textit{not} significant.
+        \end{itemize}
+    \item \textbf{Derivative of sine and cosine}
+        
+        The derivative of the trig functions are:
+        \begin{align*}
+            & \frac{\mathrm{d}}{\mathrm{d}x}\sin(x)=\cos(x) \\
+            & \frac{\mathrm{d}}{\mathrm{d}x}\cos(x)=-\sin(x) \\
+            & \frac{\mathrm{d}^2}{\mathrm{d}x^2}\sin(x)=-\sin(x) \\
+            & \frac{\mathrm{d}^2}{\mathrm{d}x^2}\cos(x)=-\cos(x)
+        \end{align*}
+        \begin{proof}
+            To differentiate $\sin(x)$, first we using the trio sum formula
+            \begin{align*}
+                \frac{\sin(x+\mathrm{d}x)-\sin(x)}{\mathrm{d}x} & =\frac{\sin(x)\cos(\mathrm{d}x)+\cos(x)\sin(\mathrm{d}x)-\sin(x)}{\mathrm{d}x} & \\
+                                                                & =\sin(x)\left(\frac{\cos(\mathrm{d}x)-1}{\mathrm{d}x}\right)+\cos(x)\left(\frac{\sin(\mathrm{d}x)}{\mathrm{d}x}\right) \\
+                                                                & =\sin(x)\cos(0)^\prime+\cos(x)\sin(0)^\prime
+            \end{align*}
+            To proof $\cos(0)^\prime=0$ and $\sin(0)^\prime=1$ using geometry, first we draw a unit circle. For convenience, replace $x$ with $\theta$.
+            \begin{figure}[H]
+                \centering
+                \incfig{2derivative_7.1}
+                \caption{Unit circle with angle $\theta$ (Radian)}
+            \end{figure}
+            To zoom in and make angle $\theta$ smaller, we found
+            \begin{figure}[H]
+                \centering
+                \incfig{2derivative_7.2}
+                \caption{Zoomed in $\theta$ (Radian)}
+            \end{figure}
+            while $\theta\to 0$, $1-\cos(\theta)$ getting smaller \textbf{faster} than $\theta$ itself, and $\sin(\theta)$ approaching the green arc $\theta$. Therefore $\frac{\cos(\mathrm{d}\theta)-1}{\mathrm{d}\theta}=0$, $\frac{\sin(\mathrm{d}\theta)}{\mathrm{d}\theta}=1$. Which is $\cos(0)^\prime=0$ and $\sin(0)^\prime=1$
+
+            Summarize, $\sin^\prime(x)=\sin(x)\cos^\prime(0)+\cos(x)\sin^\prime(0)=\sin(x)\cdot 0+\cos(x)\cdot 1=\cos(x)$
+
+            So as cosine, differentiate $\cos(x)$ we get $\cos^\prime(x)=\cos(x)\frac{\cos(\mathrm{d}x)}{\mathrm{d}x}-\sin(x)\frac{\sin(\mathrm{d}x)}{\mathrm{d}}=\cos(x)\cos^\prime(0)-\sin(x)\sin^\prime(0)=-\sin(x)$
+            \end{proof}
+\end{enumerate}
