@@ -240,6 +240,15 @@ If $\lim_{x\to a} f(x)=L$ and $\lim_{x\to a} g(x)=M$, then:
     \item \textbf{Second derivative}
 
         The second derivative of a function $f(x)$ is the first derivative of $f^\prime(x)$, and is denoted by $f^{\prime\prime}(x)$ or $\frac{\mathrm{d}^2 f}{\mathrm{d}x^2}$.
+        \begin{proof}
+            The second derivative in Leibinz notation is written by this transform
+            $$
+            f^{\prime\prime}(x)
+            =\frac{\mathrm{d}}{\mathrm{d}x}\left(\frac{\mathrm{d}}{\mathrm{d}x}(f)\right)
+            =\left(\frac{\mathrm{d}}{\mathrm{d}x}\right)^2(f)
+            =\frac{\mathrm{d}^2 f}{\mathrm{d}x^2}
+            $$
+        \end{proof}
     \item \textbf{Higher derivatives}
 
         The $n$th derivative of a function $f(x)$ is the first derivative of $f^{(n-1)}(x)$, and is denoted by $f^{(n)}(x)$ or $\frac{\mathrm{d}^n f}{\mathrm{d} x^n}$.
@@ -314,6 +323,6 @@ If $\lim_{x\to a} f(x)=L$ and $\lim_{x\to a} g(x)=M$, then:
 
             Summarize, $\sin^\prime(x)=\sin(x)\cos^\prime(0)+\cos(x)\sin^\prime(0)=\sin(x)\cdot 0+\cos(x)\cdot 1=\cos(x)$
 
-            So as cosine, differentiate $\cos(x)$ we get $\cos^\prime(x)=\cos(x)\frac{\cos(\mathrm{d}x)}{\mathrm{d}x}-\sin(x)\frac{\sin(\mathrm{d}x)}{\mathrm{d}}=\cos(x)\cos^\prime(0)-\sin(x)\sin^\prime(0)=-\sin(x)$
+            So as to cosine, differentiate $\cos(x)$ we get $\cos^\prime(x)=\cos(x)\frac{\cos(\mathrm{d}x)}{\mathrm{d}x}-\sin(x)\frac{\sin(\mathrm{d}x)}{\mathrm{d}}=\cos(x)\cos^\prime(0)-\sin(x)\sin^\prime(0)=-\sin(x)$
             \end{proof}
 \end{enumerate}
