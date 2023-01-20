@@ -7,3 +7,39 @@ The linear approximation for a function $f$ near a point $x=a$ is given by the f
     \Delta f\approx\left.\frac{\mathrm{d}f}{\mathrm{d}x}\right|_{x=a}\cdot\Delta x & \quad\text{for $\Delta x$ near $0$,} \\
         f(x)\approx f^\prime(a)(x-a)+f(a) & \quad\text{for $x$ near $a$.}
 \end{align*}
+
+\section{Product rule}
+\textbf{The product rule}
+
+If $h(x)=f(x)g(x)$, then
+$$
+h^\prime (x)=f(x)g^\prime (x)+g(x)f^\prime (x)
+$$
+
+\begin{proof}
+    First we need to know that the Leibniz notation
+    $$
+    \mathrm{d}f(x)=f(x+\mathrm{d}x)-f(x)
+    $$
+    which equals to $\Delta f(x)=\lim_{\Delta x\to 0} [f(x+\Delta x)-f(x)]$.
+
+    When substitute $f(x)=x$ into both equation we get $\mathrm{d}x=(x+\mathrm{d}x)-x\text{ and }\lim_{\Delta x\to 0} (x+\Delta x)-x$.
+    So
+    $$
+    \mathrm{d}x=\lim_{\Delta x\to 0} \Delta x,
+    $$
+    thus why we can replace $\Delta x$ with $\mathrm{d}x$ from the $\Delta f(x)$ and remove the limit symbol, then naturally $\Delta f(x)$ becomes $\mathrm{d}f(x)$, Perfect!
+
+    To proof the product rule, we can write $f(x+\mathrm{d}x)=\mathrm{d}f(x)+f(x)$, the reasons why this equation is important are that if we differentiate the $h(x)=f(x)g(x)$:
+    \begin{align*}
+        \frac{\mathrm{d}h(x)}{\mathrm{d}x} & =\frac{\mathrm{d}}{\mathrm{d}x}[f(x)g(x)] \\
+                                           & =\frac{f(x+\mathrm{d}x)g(x+\mathrm{d}x)-f(x)g(x)}{\mathrm{d}x} \\
+                                           & =\frac{[\mathrm{d}f(x)+f(x)][\mathrm{d}g(x)+g(x)]-f(x)g(x)}{\mathrm{d}x} \\
+                                           & =\frac{\mathrm{d}f(x)\mathrm{d}g(x)+g(x)\mathrm{d}f(x)+f(x)\mathrm{d}g(x)\bcancel{+f(x)g(x)-f(x)g(x)}}{\mathrm{d}x} \\
+                                           & =\frac{\mathrm{d}f(x)\mathrm{d}g(x)}{\mathrm{d}x}+g(x)\frac{\mathrm{d}f(x)}{\mathrm{d}x}+f(x)\frac{\mathrm{d}g(x)}{\mathrm{d}x}
+    \end{align*}
+    The $\frac{\mathrm{d}f(x)\mathrm{d}g(x)}{\mathrm{d}x}$ can transform into $\frac{\mathrm{d}f(x)}{\mathrm{d}x}\cdot\frac{\mathrm{d}g(x)}{\mathrm{d}x}\cdot\mathrm{d}x$ which equals to $0$ because the extra $\mathrm{d}x$ at the end. Finally
+    $$
+    \frac{\mathrm{d}h(x)}{\mathrm{d}x}=g(x)\frac{\mathrm{d}f(x)}{\mathrm{d}x}+f(x)\frac{\mathrm{d}g(x)}{\mathrm{d}x}.
+    $$
+\end{proof}
