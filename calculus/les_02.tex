@@ -61,3 +61,33 @@ $$
             & \frac{\mathrm{d}}{\mathrm{d}x}\csc x=-\frac{\cos x}{\sin^2 x}=-\csc x\cot x
         \end{align*}
 \end{enumerate}
+
+\section{Chain rule}
+\begin{enumerate}
+    \item \textbf{The Chain Rule}
+
+        If $h(x)=f(g(x))$, then
+        $$
+        h^\prime (x)=f^\prime (g(x))g^\prime (x)
+        $$
+        at all points where the derivatives $f^\prime (g(x))$ and $g^\prime (x)$ are defined.
+
+        Alternatively, if $y=f(u)$ and $u=g(x)$, then
+        $$
+        \left.\frac{\mathrm{d}y}{\mathrm{d}x}\right|_{x=a}=\left.\frac{\mathrm{d}y}{\mathrm{d}u}\right|_{u=g(a)}\cdot\left.\frac{\mathrm{d}u}{\mathrm{d}x}\right|_{x=a}
+        $$
+        at any point $x=a$ where the derivatives on the right side are defined.
+
+        \begin{proof}
+            \textbf{Proof Quotient Rule by Chain Rule and Product Rule}
+
+            If $h(x)=\frac{f(x)}{g(x)}$, transform to $h(x)=f(x)\cdot g^{-1}(x)$, the last step is a product, then we start by Product Rule
+            \begin{align*}
+                h^\prime (x) & =f^\prime (x)\cdot g^{-1}(x)+[g^{-1}(x)]^\prime f(x) \\
+                             & =\frac{f^\prime (x)}{g(x)}+\left[[g(x)]^{-1}\right]^\prime f(x) \\
+                             & =\frac{f^\prime (x)}{g(x)}+[-\frac{1}{g^2(x)}\cdot g^\prime (x)]f(x) \\
+                             & =\frac{f^\prime (x)}{g(x)}-\frac{g^\prime (x)f(x)}{g^2(x)} \\
+                             & =\frac{f^\prime (x)g(x)+g^\prime (x)f(x)}{g^2(x)}
+            \end{align*}
+        \end{proof}
+\end{enumerate}
