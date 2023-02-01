@@ -70,7 +70,7 @@ $$
         $$
         h^\prime (x)=f^\prime (g(x))g^\prime (x)
         $$
-        at all points where the derivatives $f^\prime (g(x))$ and $g^\prime (x)$ are defined.
+        at all points where the derivatives $f^\prime (g(x))$ and $g^\prime (x)$ are defined. \textbf{Notice that $[f(g(x))]^\prime\neq f^\prime(g(x))$.}
 
         Alternatively, if $y=f(u)$ and $u=g(x)$, then
         $$
@@ -81,13 +81,76 @@ $$
         \begin{proof}
             \textbf{Proof Quotient Rule by Chain Rule and Product Rule}
 
-            If $h(x)=\frac{f(x)}{g(x)}$, transform to $h(x)=f(x)\cdot g^{-1}(x)$, the last step is a product, then we start by Product Rule
+            If $h(x)=\frac{f(x)}{g(x)}$, the first thing to do is to rewrite $\frac{1}{g(x)}$ in terms of a fractional power $h(x)=f(x)\cdot g^{-1}(x)$, obviously we can apply the chain rule. It might help to write $u=g(x)$ so $h(x)=f(x)\cdot u^{-1}$. Thus the last step is a product, then we start by product rule
             \begin{align*}
-                h^\prime (x) & =f^\prime (x)\cdot g^{-1}(x)+[g^{-1}(x)]^\prime f(x) \\
-                             & =\frac{f^\prime (x)}{g(x)}+\left[[g(x)]^{-1}\right]^\prime f(x) \\
+                h^\prime (x) & =f^\prime (x)\cdot u^{-1}+(u^{-1})^\prime f(x) \\
+                             & =\frac{f^\prime (x)}{g(x)}+(-u^{-2}\cdot u^\prime)f(x) \\
                              & =\frac{f^\prime (x)}{g(x)}+[-\frac{1}{g^2(x)}\cdot g^\prime (x)]f(x) \\
                              & =\frac{f^\prime (x)}{g(x)}-\frac{g^\prime (x)f(x)}{g^2(x)} \\
                              & =\frac{f^\prime (x)g(x)+g^\prime (x)f(x)}{g^2(x)}
             \end{align*}
         \end{proof}
+\end{enumerate}
+
+\section{Implicit differentiation}
+\textbf{Implicit functions}
+An implicit function is an equation involving both $x$ and $y$ (or any two variables really); you \textit{could} solve for $y$ as a function of $x$, but often times that computation is messy (or impossible). If a function is not implicit, we say that it is explicit.
+
+Immediately differentiating $y=x^{m/n}$ is hard. But differentiating the \textit{implicit} function $y^n=x^m$ was a whole lot easier. This happens any time your function is more simply described implicitly.
+\begin{gather*}
+    \frac{\mathrm{d}}{\mathrm{d}x}(y^n=x^m) \\
+    ny^{n-1}\cdot\frac{\mathrm{d}y}{\mathrm{d}x}=mx^{m-1} \\
+    \frac{\mathrm{d}y}{\mathrm{d}x}=\frac{m}{n}\cdot\frac{x^{m-1}}{y^{n-1}}
+\end{gather*}
+\begin{eg}
+    Which of the following equations give $y$ as an implicit function of $x$?
+    \begin{itemize}
+        \item $y^3=x^2$ is implicit. 
+        \item $y=x^{2/3}$ is explicit.
+        \item $yx=1$ is implicit.
+        \item $y+x=1$ is implicit.
+        \item $\sin(y)=cos(x)$ is implicit.
+    \end{itemize}
+\end{eg}
+
+\section{Inverse Function}
+\begin{enumerate}
+    \item \textbf{Definition of inverse function}
+
+        If function $f$ and $g$ satisfy $g(f(x))=x$ and $f(g(y))=y$, then we say $g$ is the inverse of $f$, and denote it by $f^{-1}$. (Similarly, $f=g^{-1}$.)
+
+        If a function $f$ has an inverse function $f^{-1}$, then $f^{-1}(b)=a$ if and only if $b=f(a)$.
+    \item \textbf{Definition of one-to-one}
+
+        A function $f$ is \textbf{one-to-one} if whenever $a\neq b$, $f(a)\neq f(b)$. (Horizontal line test.)
+    \item \textbf{Domain and range, interval notation}
+        
+        The \textbf{domain} of a function $f$ is the set of allowable input values. For instance, the domain of the function $f(x)=1/x$ is the set of all non-zero real numbers. ($x\in(-\infty,0)\cup(0,+\infty)$.)
+
+        The \textbf{range} of $f$ is the set of all possible output values. For instance, the range of the function $g(x)=x^2$ is the set of all real numbers that are non-negative. ($g(x)\in(0,+\infty)$.)
+
+        An \textbf{open interval}, denoted $(a,b)$, is the set of numbers $x$ such that $a<x<b$.
+
+        This notation using round parentheses for open intervals is not universal; many mathematicians use reversed square brackets instead. For instance, they would denote the interval $3<x<7$ as $]3,7[$ rather than $(3,7)$. However, I will stick to round parentheses for open intervals.
+    \item \textbf{The inverse trig functions}
+        \begin{align*}
+            \sin\theta=x \text{ such that } \arcsin x=\theta & \quad(\theta\in[-\frac{\pi}{2},\frac{\pi}{2}]) \\
+            \cos\theta=x \text{ such that } \arccos x=\theta & \quad(\theta\in[0,\pi]) \\
+            \tan\theta=x \text{ such that } \arctan x=\theta & \quad(\theta\in(-\frac{\pi}{2},\frac{\pi}{2}))
+        \end{align*}
+    \item \textbf{Derivatives of inverse functions}
+
+        If $g$ is a (full or partial) inverse of a function $f$, then
+        $$
+        g^\prime(x)=\frac{1}{f^\prime(g(x))}
+        $$
+        at all $x$ where $f^\prime(g(x))$ exists and is non-zero.
+    \item \textbf{Derivatives of arctrig functions}
+
+        Where defined,
+        \begin{align*}
+            \frac{\mathrm{d}}{\mathrm{d}x}\arcsin(x) & =\frac{1}{\cos(\theta)}=\frac{1}{\sqrt{1-\sin^2(\theta)}}=\frac{1}{\sqrt{1-x^2}} \\
+            \frac{\mathrm{d}}{\mathrm{d}x}\arccos(x) & =\frac{1}{-\sin(\theta)}=\frac{1}{-\sqrt{1-\cos^2(\theta)}}=-\frac{1}{\sqrt{1-x^2}} \\
+            \frac{\mathrm{d}}{\mathrm{d}x}\arctan(x) & =\frac{1}{\sec^2(\theta)}=\frac{1}{\cos^{-2}(\theta)}=\cos^2(\theta)=\underbrace{\left(\frac{\cos(\theta)}{\sqrt{\sin^2(\theta)+\cos^2(\theta)}}\right)^2}_{\substack{\text{combine cosine definition} \\ \text{and Pythagoras rule} \\ \text{of the hypotenuse.}}}=\frac{1}{\tan^2(\theta)+1}=\frac{1}{x^2+1}
+        \end{align*}
 \end{enumerate}
