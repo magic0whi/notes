@@ -154,3 +154,41 @@ Immediately differentiating $y=x^{m/n}$ is hard. But differentiating the \textit
             \frac{\mathrm{d}}{\mathrm{d}x}\arctan(x) & =\frac{1}{\sec^2(\theta)}=\frac{1}{\cos^{-2}(\theta)}=\cos^2(\theta)=\underbrace{\left(\frac{\cos(\theta)}{\sqrt{\sin^2(\theta)+\cos^2(\theta)}}\right)^2}_{\substack{\text{combine cosine definition} \\ \text{and Pythagoras rule} \\ \text{of the hypotenuse.}}}=\frac{1}{\tan^2(\theta)+1}=\frac{1}{x^2+1}
         \end{align*}
 \end{enumerate}
+
+\section{Exponential functions}
+\begin{enumerate}
+    \item \textbf{Properties of exponents}
+
+        Let $a$ be a positive real number.
+        \begin{itemize}
+            \item $a^0=1$
+            \item $a^1=a$
+            \item $a^m a^n=a^{m+n}$
+            \item $(a^m)^n=a^{mn}$
+            \item $a^{m/n}=\sqrt[n]{a^m}$
+        \end{itemize}
+    \item \textbf{Properties of exponential functions}
+
+        The function $f(x)=a^x$ has base $a$ for a positive real number.
+        \begin{itemize}
+            \item The function $a^x$ is a continuous function.
+            \item The domain of $a^x$ is all real numbers.
+            \item The range of $a^x$ is all positive real numbers.
+        \end{itemize}
+    \item \textbf{The derivative of an exponential function}
+
+        The derivative of the exponential function is
+        $$
+        \frac{\mathrm{d}}{\mathrm{d}x}a^x=\frac{a^{\mathrm{d}x}-1}{\mathrm{d}x}\cdot a^x=M(a)a^x,
+        $$
+        where the mystery number $M(a)$ is the slope of the tangent line at zero:
+        $$
+        \left.\frac{\mathrm{d}}{\mathrm{d}x}a^x\right|_{x=0}=M(a).
+        $$
+    \item \textbf{Definition of $e$}
+        
+        The base $e$ is the unique real number so that $M(e)=1$. Then
+        $$
+        \frac{\mathrm{d}}{\mathrm{d}x}e^x=e^x.
+        $$
+\end{enumerate}
