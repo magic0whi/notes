@@ -192,3 +192,43 @@ Immediately differentiating $y=x^{m/n}$ is hard. But differentiating the \textit
         \frac{\mathrm{d}}{\mathrm{d}x}e^x=e^x.
         $$
 \end{enumerate}
+
+\section{Logarithms}
+\begin{enumerate}
+    \item \textbf{Properties of $x$}
+
+        $\log(x)$ implicitly denotes $\log_{10}(x)$, which is the inverse function of $10^x$.
+
+        The natural log, denoted $\ln(x)$, is the inverse function of $e^x$.
+        \begin{itemize}
+            \item $e^{\ln x}=x$
+            \item $\ln(ab)=\ln(a)+\ln(b)$
+            \item $\ln(a^b)=b\ln(a)$
+        \end{itemize}
+    \item \textbf{The derivative of the natural logarithm}
+        $$
+        \frac{\mathrm{d}}{\mathrm{d}x}\ln x=\frac{1}{x}
+        $$
+        \begin{proof}
+            Differentiate $e^{\ln(x)}=x$ with $x$
+            \begin{align*}
+                \frac{\mathrm{d}}{\mathrm{d}x}e^{\ln(x)} & =\frac{\mathrm{d}}{\mathrm{d}x}x \\
+                \frac{\mathrm{d}e^{\ln(x)}}{\mathrm{d}\ln(x)}\cdot\frac{\mathrm{d}\ln(x)}{\mathrm{d}x} & =1 \\
+                e^{\ln(x)}\cdot\frac{\mathrm{d}\ln(x)}{\mathrm{d}x} & =1 \\
+                x\cdot\frac{\mathrm{d}\ln(x)}{\mathrm{d}x} & =1 \\
+                \frac{\mathrm{d}\ln(x)}{\mathrm{d}x} & =\frac{1}{x}
+            \end{align*}
+        \end{proof}
+    \item \textbf{Differentiating exponential functions with other bases}
+
+        For any positive constant $a$,
+        $$
+        \frac{\mathrm{d}}{\mathrm{d}x}a^x=a^x\ln a.
+        $$
+        For proof see the method change to base $e$ below.
+    \item \textbf{Differentiation methods}
+        
+        \textbf{Method 1: Change to base $\bm{e}$}
+
+        To calculate $\left[f(x)^{g(x)}\right]^\prime$, first change base $f(x)^{g(x)}=e^{g(x)\ln f(x)}$, then differentiate using the chain rule, and the derivatives of the exponential and natural logarithm functions.
+\end{enumerate}
