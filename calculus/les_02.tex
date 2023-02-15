@@ -231,4 +231,16 @@ Immediately differentiating $y=x^{m/n}$ is hard. But differentiating the \textit
         \textbf{Method 1: Change to base $\bm{e}$}
 
         To calculate $\left[f(x)^{g(x)}\right]^\prime$, first change base $f(x)^{g(x)}=e^{g(x)\ln f(x)}$, then differentiate using the chain rule, and the derivatives of the exponential and natural logarithm functions.
+
+        \textbf{Method 2: Logarithmic differentiation}
+
+        To calculate $u^\prime$, first calculate $(\ln(u))^\prime$, then use the formula $u^\prime=u(\ln(u))^\prime$ and solve for $u^\prime$
+        \begin{proof}
+            \begin{align*}
+                && \frac{\mathrm{d}}{\mathrm{d}x}\ln u & =\frac{\mathrm{d}\ln u}{\mathrm{d}u}\cdot\frac{\mathrm{d}u}{\mathrm{d}x} \\
+                && & =\frac{1}{u}\cdot\frac{\mathrm{d}u}{\mathrm{d}x} \\
+                \leftrightarrow && (\ln u)^\prime & =\frac{u^\prime}{u} \\
+                \leftrightarrow && u^\prime & =u(\ln u)^\prime
+            \end{align*}
+        \end{proof}
 \end{enumerate}
