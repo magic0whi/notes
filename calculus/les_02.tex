@@ -254,3 +254,34 @@ Immediately differentiating $y=x^{m/n}$ is hard. But differentiating the \textit
             \end{align*}
         \end{proof}
 \end{enumerate}
+
+\chapter{Approximations}
+\section{Linear approximation: measurement error}
+\begin{enumerate}
+    \item \textbf{Linear Approximations near $\bm{x=0}$}
+
+        Recall that the linearization of a function $f(x)$ near $x=0$ is given by the formula $f(x)\approx f(0)+f^\prime (0)x$.
+        \begin{itemize}
+            \item $(1+x)^n\approx 1+nx$
+            \item $\sin x\approx x$
+            \item $\cos x\approx 1$
+            \item $e^x\approx x+1$
+            \item $\ln(1+x)\approx x$
+        \end{itemize}
+    \item \textbf{Approximations (likely nonlinear) of compositions}
+
+        Suppose $g(x)$ is a function such that $g(0)=0$. To find an approximation of a function $f(g(x))$ near $x=0$, we can take a linear approximation for $f(u)$ and then substitute $g(x)$ in for $u$. The resulting approximation is likely nonlinear, but it is still an approximation.
+
+        Warning: this only works if $g(0)=0$.
+        $$
+            f(u)\approx f(0)+f^\prime (u)u\Rightarrow f(g(x))\approx f(0)+f^\prime(0)g(x)
+        $$
+    \item \textbf{Linear approximations of products}
+
+        To find the linear approximation of a function $h(x)=f(x)g(x)$ near $x=0$, it suffices to find a linear approximation for $f(x)$, find a linear approximation for $g(x)$, and then the linear approximation for $h(x)$ is the product of these two approximations where we cancel all of the terms that are quadratic (or higher for more products).
+		\begin{align*}
+            h(x) & \approx (f(0)+f^\prime (0)x)(g(0)+g^\prime (0)x) \\
+                 & =f(0)g(0)+(f^\prime (0)g(0)+f(0)g^\prime (0))x+f^\prime (0)g^\prime (0)x^2 \\
+                 & \approx f(0)g(0)+(f^\prime (0)g(0)+f(0)g^\prime (0))x
+        \end{align*}
+\end{enumerate}
