@@ -1,0 +1,101 @@
+\chapter{Sketch graph of factored polynomial function}
+\begin{itemize}
+    \item Multiplicity (Order): Number of times a give factor appears in the factored polynomial. If a polynomial contains a factor $(x-h)$, then $x=h$ is called zero of multiplicity $p$.
+    \item Degree of a polynomial: Highest degree of a term in a polynomial, which is determined by the number of variable factor in that term. It is also the sum of multiplicities.
+        \begin{eg}
+            \[
+                f(x)=-\frac{2}{5}x^7 y^2 z+\sqrt{3}x^2 yz-x+2\pi
+            \]
+        \end{eg}
+    \item Concavity
+        \begin{itemize}
+                \item If a line segment joining any two points on a curve is entirely below the line, then the curve is said to be \textbf{concave down} between the two points.
+                    \begin{figure}[H]
+                        \centering
+                        \incfig{1}
+                        \caption{Concave down}
+                    \end{figure}
+                \item If a line segment is entirely above the curve, the curve is \textbf{concave up} between the two points.
+                    \begin{figure}[H]
+                        \centering
+                        \incfig{2}
+                        \caption{Concave up}
+                    \end{figure}
+        \end{itemize}
+    \item Point of inflection: a point where a graph of function changes concavity.
+    \item $n$th degree polynomial functions will have a maximum of $n-1$ turning points since it has maximum $n$ $x$-intercepts.
+    \item If degree $n$ is odds polynomial functions have at least one $x$-intercept; while the even degree polynomial may have no $x$-intercepts
+\end{itemize}
+
+\section{Sketch graph of factored polynomial function}
+\begin{enumerate}
+    \item Find $x$-intercepts $f(x)=0$ and $y$-intercept $f(0)$.
+    \item Check symmetry, whether $f(-x)=f(x)$ or $f(-x)=-f(x)$.
+    \item Use multiplicities of zeros  to determine the behavior of polynomial at $x$-intercepts.
+
+        For each factor $(x-h)^p$
+        \begin{figure}[H]
+            \centering
+            \incfig{3}
+            \caption{Graph of three typical power functions}
+        \end{figure}
+        Higher power $p$ appears flatter on the graph..
+    \item Determine end behavior by examining the leading term.
+        \[
+            f(x)=a_n x^n+a_{n-1}x^{n-1}+\cdots+a_1 x+a_0
+        \]
+        \begin{figure}[H]
+            \centering
+            \incfig{4}
+            \caption{End behavior is depended on leading term}
+        \end{figure}
+    \item Sketch the graph. Uses the end behavior and the behavior at intercepts.
+\end{enumerate}
+
+\section{Even and Odd functions}
+\begin{itemize}
+    \item A polynomial function is an \textbf{even function} if and only if each of the terms of the function is of an even degree. \\
+        Graph of odd degree polynomial functions will never have even symmetry.
+    \item A polynomial function is an \textbf{odd function} if and only if each of the terms of the function is of an odd degree.
+        Graph of even degree polynomial functions will never have odd symmetry.
+\end{itemize}
+
+\section{Division of polynomials}
+\begin{itemize}
+    \item Long division
+        \[
+            \begin{array}{r}
+                \phantom{2x^2+}2x-1 \\
+                x+3\overline{\smash{\big)}2x^2+5x+8} \\
+                \underline{2x^2+6x}\phantom{{}+\,}\downarrow \\
+                -1x-8 \\
+                \underline{-1x-3} \\
+                -5
+            \end{array}
+        \]
+    \item Synthetic division
+        \[
+            \begin{array}{rrrr}
+                \multicolumn{1}{r|}{-3} & 2 & 5 & -8 \\
+                \multicolumn{1}{r|}{} & \downarrow & -6 & 3 \\ \cline{2-4}
+                & 2 & -1 & -5
+            \end{array}
+        \]
+    \item To carry out the division, ensure the terms of the polynomial are in descending order of degree. Missing powers of $x$ in the dividend or divisor are included using a coefficient of 0 to keep work accurate and aligned correctly.
+    \item The division is completed when the degree of the remaining terms after subtraction is less than the degree of the divisor.
+        \[
+            \begin{array}{c@{}c@{}c@{}c@{}c@{}c@{}c}
+            P(x) & {}={} & D(x) & Q(x) & + & R(x) & {}\Leftrightarrow \frac{P(x)}{D(x)}=Q(x)+\frac{R(x)}{D(x)} \\
+            n & & n-r & r & & <r &
+            \end{array}
+        \]
+    \item The Remainder Theorem
+
+        When a polynomial $P(x)$ is divided by $(mx-n)$, the remainder is $P(\frac{n}{m})$ where $m$ and $n$ are integers and $m\neq 0$.
+    \item The Factor Theorem
+        
+        $(mx-n)$ is a factor of $P(x)\iff P(\frac{n}{m})=0$.
+    \item The Rational Root Theorem
+
+        For $a_nx^n+a_{n-1}x^{n-1}+\cdots+a_0=0$, $\exists x=\frac{p}{q}$, $p$ is a factor of $a_0$, $q$ is a factor of $a_n$.
+\end{itemize}
