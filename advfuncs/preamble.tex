@@ -228,8 +228,8 @@
 \usepackage{xifthen}
 
 \def\testdateparts#1{\dateparts#1\relax}
-\def\dateparts#1 #2 #3 #4 #5\relax{
-    \marginpar{\small\textsf{\mbox{#1 #2 #3 #5}}}
+\def\dateparts#1 #2 #3 #4\relax{
+    \hfill\small\textsf{\mbox{#1 #2 #3 #4}}
 }
 
 \def\@lesson{}%
@@ -239,8 +239,7 @@
     }{%
         \def\@lesson{Lecture #1: #3}%
     }%
-    \subsection*{\@lesson}
-    \testdateparts{#2}
+    \subsection*{\@lesson \testdateparts{#2}}
 }
 
 % \renewcommand\date[1]{\marginpar{#1}}
@@ -295,6 +294,7 @@
     \def\svgwidth{\columnwidth}
     \import{./figures/}{#1.pdf_tex}
 }
+%\usepackage{showframe}
 
 % %http://tex.stackexchange.com/questions/76273/multiple-pdfs-with-page-group-included-in-a-single-page-warning
 \pdfsuppresswarningpagegroup=1

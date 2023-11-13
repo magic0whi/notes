@@ -1,3 +1,5 @@
+\lesson{1}{Nov 10 2023 16:00}{}
+
 \chapter{Sketch graph of factored polynomial function}
 \begin{itemize}
     \item Multiplicity (Order): Number of times a give factor appears in the factored polynomial. If a polynomial contains a factor $(x-h)$, then $x=h$ is called zero of multiplicity $p$.
@@ -99,3 +101,54 @@
 
         For $a_nx^n+a_{n-1}x^{n-1}+\cdots+a_0=0$, $\exists x=\frac{p}{q}$, $p$ is a factor of $a_0$, $q$ is a factor of $a_n$.
 \end{itemize}
+
+\section{Rational Functions 1}
+\begin{itemize}
+    \item A rational function is a function of the form $f(x)=\frac{g(x)}{h(x)}$, where $g(x)$ and $h(x)$ are polynomials and $h(x)\neq 0$.
+    \item The function has a vertical asymptote (V.A.) $x=a$ if $h(a)=0$ and $g(a)\neq 0$.
+    \item If $h(a)=0$ and $g(a)=0$ then $x=a$ is a factor of the numerator and denominator of the function, and a hole occur at $x=a$. 
+    \item If the degree of $g(x)$ is less than the degree of $h(x)$, then $y=0$ is the horizontal asymptote of the function.
+        \[
+            x\to\pm\infty,\,y\to0
+        \]
+    \item If the degree of $g(x)$ is equals the degree of $h(x)$, then $y=\frac{a}{b}$ is the horizontal asymptote of the function, where $a$ and $b$ are the coefficients of the highest degree term in the numerator and denominator, respectively
+    \item If the degree of $g(x)$ is greater than the degree of $h(x)$, there is no horizontal asymptote.
+    \item If the degree of $g(x)$ is exactly one greater than the degree $h(x)$ then the function has an oblique asymptote (O.A.).
+    \[
+        y=\frac{q(x)}{h(x)}\iff y=ax+b+\frac{r(x)}{h(x)}
+    \]
+    where $ax+b$, $a\neq0$ is the quotient and $r(x)$ is the remainder.
+\end{itemize}
+
+\section{Rational Functions 2}
+\begin{enumerate}
+    \item Collect all terms to the left side of the inequality and $0$ to the right side.
+        \begin{eg}
+            Solve $\frac{3}{x+1}<-\frac{2}{x-2}$:
+            \[
+                \frac{3}{x+1}+\frac{2}{x-2}>0
+            \]
+        \end{eg}
+    \item Simplity the expression on the left side by finding a common denominator and adding the terms.
+        \[
+            \frac{3(x-2)}{(x+1)(x-2)}+\frac{2(x+1)}{(x+1)(x-2)}>0
+        \]
+    \item Once simplified, factor the numator, if possible, always leaving the denominator in factored form.
+        \[
+            \frac{5x-4}{(x+1)(x-2)}>0
+        \]
+    \item Create an internal table and identify the sign of each factor in the rational expression with each internal.
+        \[
+            \begin{array}{c|c|c|c|c}
+                \multicolumn{1}{c}{} & \multicolumn{4}{l}{\hspace{2.45em} x=-1 \hspace{3em} x=\frac{4}{5} \hspace{2.85em} x=2} \\[1ex]
+                \multicolumn{1}{c}{} & x<-1 & -1<x<\frac{4}{5} & \frac{4}{5}<x<2 & x>2 \\[0.5ex] \hline
+                5x-4 & - & - & + & + \\ \hline
+                x+1  & - & + & + & + \\ \hline
+                x-2  & - & - & - & + \\ \hline\rule{0pt}{2.5ex}
+                \frac{5x-4}{(x+1)(x+2)} & - & + & - & +
+            \end{array}
+        \]
+        \begin{note}
+            An extraneous solution is a solution of an equation derived from original equation that is not a solution of the original equation.
+        \end{note}
+\end{enumerate}
