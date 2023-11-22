@@ -1,0 +1,84 @@
+\lesson{2}{Nov 14 2023 18:46}{}
+
+
+\chapter{Miscellaneous}
+\begin{itemize}
+    \item $\text{Radian}=\text{Degree\textdegree}\cdot\frac{\pi}{180^\circ}\Longleftrightarrow\text{Degree\textdegree}=\text{Radian}\cdot\frac{180^\circ}{\pi}$.
+    \item \[
+            \begin{array}{ccccc}
+              \underbrace{\csc x}_{\mathclap{\text{cosecant}}}=(\sin x)^{-1} && \underbrace{\sec x}_{\mathclap{\text{secant}}}=(\cos x)^{-1} && \underbrace{\cot x}_{\mathclap{\text{cotangent}}}=(\tan x)^{-1}
+            \end{array}
+          \]
+    \item Special angle:
+            \[
+              \begin{array}{llll}
+                0^\circ=0 & \sin 0=0 & \cos 0=1 & \tan 0=0 \\
+                30^\circ=\dfrac{\pi}{6} & \sin\dfrac{\pi}{6}=\dfrac{1}{2} & \cos\dfrac{\pi}{6}=\dfrac{\sqrt{3}}{3} & \tan\dfrac{\pi}{6}=\dfrac{1}{\sqrt{3}} \\
+                45^\circ=\dfrac{\pi}{4} & \sin\dfrac{\pi}{4}=\dfrac{1}{\sqrt{2}} & \cos\dfrac{\pi}{4}=\dfrac{1}{\sqrt{2}} & \tan\dfrac{\pi}{4}=1 \\[1.8ex]
+                60^\circ=\dfrac{\pi}{3} & \sin\dfrac{\pi}{3}=\dfrac{\sqrt{3}}{2} & \cos\dfrac{\pi}{3}=\dfrac{1}{2} & \tan\dfrac{\pi}{3}=\sqrt{3} \\[1.8ex]
+                90^\circ=\dfrac{\pi}{2} & \sin\dfrac{\pi}{2}=1 & \cos\dfrac{\pi}{2}=0 & \tan\dfrac{\pi}{2}=\nexists \\
+                180^\circ=\pi & \sin\pi=0 & \cos\pi=-1 & \tan\pi=0.
+              \end{array}
+            \]
+      \item $\begin{array}[t]{@{}l}
+        a^3+b^3=(a+b)(a^2-ab+b^2), \\
+        (x+a)^3=(x+a)(x^2+2ax+a^2), \\
+        (x-a)^3=(x-a)(x^2+2ax+a^2).
+      \end{array}$
+      \item Dot Product.\par
+        $\begin{array}{@{}r@{}l}
+          \multicolumn{2}{@{}l}{\hat{i}\cdot\hat{j}=\hat{j}\cdot\hat{k}=\hat{k}\cdot\hat{i}=(1)(1)(\cos90^\circ)=0}, \\
+          A\cdot B={} & (A_x\hat{i}+A_y\hat{j}+A_z\hat{k})\cdot(B_x\hat{i}+B_y\hat{j}+B_z\hat{k}) \\
+                  ={} & A_xB_x\hat{i}\cdot\hat{i}+\cancel{A_xB_y\hat{i}\cdot\hat{j}}+\cancel{A_xB_z\hat{i}\cdot\hat{k}}+ \\
+                      & \cancel{A_yB_x\hat{j}\cdot\hat{i}}+A_yB_y\hat{j}\cdot\hat{j}+\cancel{A_yB_z\hat{j}\cdot\hat{k}}+ \\
+                      & \cancel{A_zB_x\hat{k}\cdot\hat{i}}+\cancel{A_zB_y\hat{k}\cdot\hat{j}}+A_zB_z\hat{k}\cdot\hat{k} \\
+                  ={} & A_xB_x+A_yB_y+A_zB_z.
+        \end{array}$
+      \item Logarithm.\par
+        $\log_{a^b}x=\frac{1}{b}\log_a x$.
+      \item Trigonometric function.\par
+        $\begin{gathered}
+          \cos\frac{\theta}{2}=\sqrt{\frac{1+\cos\theta}{2}}, \\
+          \sin\frac{\theta}{2}=\sqrt{\frac{1-\cos\theta}{2}}.
+        \end{gathered}$
+      \item Cross Product.\par
+        Geometrically, the cross product of two vectors is the area of the parallelogram between them.\par
+        Right-handed rule: cyclic product of three coordinate axes is positive and any anticyclic product is negative.
+        \[
+          \begin{array}{r@{}l}
+            \multicolumn{2}{l}{\hat{i}\times\hat{i}=\hat{j}\times\hat{j}=\hat{k}\times\hat{k}=(1)(1)(\sin0^\circ)=0} \\
+            A\times B={} & (A_x\hat{i}+A_y\hat{j}+A_z\hat{k})\times(B_x\hat{i}+B_y\hat{j}+B_z\hat{k}) \\
+                     ={} & \cancel{A_xB_x\hat{i}\times\hat{i}}+A_xB_y\hat{i}\times\hat{j}+A_xB_z\hat{i}\times\hat{k}+ \\
+                         & A_yB_x\hat{j}\times\hat{i}+\cancel{A_yB_y\hat{j}\times\hat{j}}+A_yB_z\hat{j}\times\hat{k}+ \\
+                         & A_zB_x\hat{k}\times\hat{i}+A_zB_y\hat{k}\times\hat{j}+\cancel{A_zB_z\hat{k}\times\hat{k}} \\
+                     ={} & A_xB_y\hat{k}+A_xB_z(-\hat{j})+ \\
+                         & A_yB_x(-\hat{k})+A_yB_z\hat{i}+ \\
+                         & A_zB_x\hat{j}+A_zB_y(-\hat{i}) \\
+                     ={} & (A_yB_z-A_zB_y)\hat{i}+(A_zB_x-A_xB_z)\hat{j}+(A_xB_y-A_yB_x)\hat{k}
+          \end{array}
+        \]
+        \begin{figure}[H]
+            \centering
+            \incfig{6}
+        \end{figure}
+        \begin{note}\leavevmode\\
+          $A\times B=-B\times A$.\\
+          A trick to calculate cross products.
+          \[
+          \begin{array}{c*{4}{wc{5em}}c}
+          \tikzmark{1}{A_x} & \tikzmark{2}{A_y} & \tikzmark{3}{A_z} & \tikzmark{4}{A_x} & \tikzmark{5}{A_y} & \tikzmark{6}{A_z} \\
+          \tikzmark{7}{B_x} & \tikzmark{8}{B_y} & \tikzmark{9}{B_z} & \tikzmark{10}{B_x} & \tikzmark{11}{B_y} & \tikzmark{12}{B_z} \\
+          \hline
+          & \multicolumn{4}{c}{\scriptstyle A_yB_z-A_zB_y\quad A_zB_x-A_xB_z\quad A_xB_y-A_yB_x} &
+          \end{array}
+          \]
+          \drawvline{1}{7}
+          \drawvline{6}{12}
+          \drawline{2}{9}
+          \drawline{3}{8}
+          \drawline{3}{10}
+          \drawline{4}{9}
+          \drawline{4}{11}
+          \drawline{5}{10}
+        \end{note}
+\end{itemize}

@@ -94,6 +94,24 @@
     force/.style={thick, {Circle[length=2pt]}-stealth, shorten <=-1pt}
 }
 
+\newcommand{\tikzmark}[2]{\tikz[overlay,remember picture,baseline] \node [anchor=base] (#1) {$#2$};}
+\newcommand{\drawline}[3][]{%
+    \begin{tikzpicture}[overlay,remember picture]
+        \draw[#1] (#2) -- (#3);
+    \end{tikzpicture}
+}
+\newcommand{\drawvline}[3][]{%
+    \begin{tikzpicture}[overlay,remember picture]
+        \draw[#1] (#2.north) -- (#3.south);
+    \end{tikzpicture}
+}
+\newcommand{\drawhline}[3][]{%
+    \begin{tikzpicture}[overlay,remember picture]
+        \draw[#1] (#2.west) -- (#3.east);
+    \end{tikzpicture}
+}
+
+
 % theorems
 \makeatother
 \usepackage{thmtools}
