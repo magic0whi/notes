@@ -1,60 +1,47 @@
 %\input{./preamble.tex}
 \chapter{Limits}
-\section{Introduction to limits}
+\section{Introduction to Limits}
 \begin{figure}[H]
     \centering
     \incfig{1limit_1.1}
     \caption{Left-/Right-hand limit}
 \end{figure}
 \begin{enumerate}
-    \item Definition of limits
-
-        Right-hand limit: $\lim_{x\to a^+} f(x)=R$, or $f(x)\to R\text{ as }x\to a^+$.
-
-        Left-hand limit: $\lim_{x\to a^-} f(x)=L$, or $f(x)\to L\text{ as }x\to a^-$.
-
-        Overall limit: If $\lim_{x\to a^+} f(x)=\lim_{x\to a^-} f(x)=L$, then $\lim_{x\to a} f(x)=L$
-
-        Remember that $x$ is approaching $a$ but not equal $a$.
+    \item \textbf{Definition of limits}\\
+        \indent Right-hand limit: \(\lim_{x\to a^+}f(x)=R\), or \(f(x)\to R\text{ as }x\to a^+\).\\
+        \indent Left-hand limit: \(\lim_{x\to a^-}f(x)=L\), or \(f(x)\to L\text{ as }x\to a^-\).\\
+        \indent Overall limit: If \(\lim_{x\to a^+}f(x)=\lim_{x\to a^-} f(x)=L\), then \(\lim_{x\to a}f(x)=L\).\par
+        Remember that \(x\) is approaching \(a\) but not equal \(a\).
         \begin{definition}[Formal definition of limit]
-            $\forall\epsilon>0$, $\exists\delta>0$ such that if $0<|x-a|<\delta$, then $|f(x)-L|<\epsilon$.
-
-            That is, no matter how small $\epsilon$ gets, we can satisfy the condition $|f(x)-L|<\epsilon$ as long as $x$ get close enough to $a$; the proximity required is measured by $\delta$.
+            \[
+                \forall\epsilon>0,\,\exists\delta>0\text{ that if }0<\lvert x-a\rvert<\delta,\,\text{then }\lvert f(x)-L\rvert<\epsilon.
+            \]
+            That is, no matter how small \(\epsilon\) gets, we can satisfy the condition \(\lvert f(x)-L\rvert<\epsilon\) as long as \(x\) get close enough to \(a\); the proximity required is measured by \(\delta\).
         \end{definition}
-    \item Possible limit behaviors
+    \item \textbf{Possible limit behaviors}
         \begin{itemize}
-            \item $\lim_{x\to a^+} f(x)=\lim_{x\to a^-}=\lim_{x\to a} f(x)$.
-            \item $\lim_{x\to a^+} f(x)\neq\lim_{x\to a^-} f(x)$.
-            \item Left-/Right-hand limit could fail to exist due to $\lim_{x\to a^+} f(x)=\pm\infty$ or/and $\lim_{x\to a^-} f(x)=\pm\infty$, because $\infty$ is not a real number.
-            \item Left-/Right-hand limit could fail to exist because it oscillates between many values and never settle down.
+            \item \(\lim_{x\to a^+}f(x)=\lim_{x\to a^-}f(x)=\lim_{x\to a}f(x)\).
+            \item \(\lim_{x\to a^+}f(x)\neq\lim_{x\to a^-}f(x)\).
+            \item Left\slash Right-hand limit could fail to exist due to \(\lim_{x\to a^+}f(x)=\pm\infty\) or \(\lim_{x\to a^-}f(x)=\pm\infty\), because \(\infty\) is not a real number.
+            \item Left\slash Right-hand limit could fail to exist because it oscillates between many values and never settle down.
         \end{itemize}
-    \item The limit laws
-
-        Addition: $\lim_{x\to a} [f(x)+g(x)]=L+M$.
-
-        Subtraction: $\lim_{x\to a} [f(x)-g(x)]=L-M.$
-
-        Multiplication: $\lim_{x\to a} [f(x)\cdot g(x)]=L\cdot M$.
-
-        Division (Part 1): If $M\neq0$, then $\lim_{x\to a} \frac{f(x)}{g(x)}=\frac{L}{M}$.
+    \item \textbf{The limit laws}\\
+        \indent Addition: \(\lim_{x\to a}[f(x)+g(x)]=L+M\).\\
+        \indent Subtraction: \(\lim_{x\to a}[f(x)-g(x)]=L-M.\)\\
+        \indent Multiplication: \(\lim_{x\to a}[f(x)\cdot g(x)]=L\cdot M\).\\
+        \indent Division (Part 1): If \(M\neq 0\), then \(\lim_{x\to a}\frac{f(x)}{g(x)}=\frac{L}{M}\).
 \end{enumerate}
 
 \section{Continuity}
 \begin{enumerate}
-    \item Definition of Continuity at A Point
-
-        A function $f$ is \textbf{continuous at} $x=a$ if $\lim_{x\to a} f(x)=f(a)$.
-
-        In particular, if either $f(a)$ or $\lim_{x\to a} f(x)$ fails to exist, then $f$ is discontinuous at $a$.
-
-        We say that a function $f$ is \textbf{right-continuous} at $x=a$ if $\lim_{x\to a^+} f(x)=f(a)$.
-
-        We say that a function $f$ is \textbf{left-continuous} at $x=a$ if $\lim_{x\to a^-} f(x)=f(a)$.
-    \item Types of Discontinuities
-
-        If $\lim_{x\to a^-} f(x)$ and $\lim_{x\to a^+} f(x)$ are exist but they are not equal, then we can say $f$ has a \textbf{jump discontinuity} at $x=a$.
-
-        If $\lim_{x\to a} f(x)$ exists but does not equal $f(a)$, then we say that $f$ has a \textbf{removable discontinuity} at $x=a$.
+    \item \textbf{Definition of continuity at a point}\\
+        \indent A function \(f\) is \textbf{continuous at} \(x=a\) if \(\lim_{x\to a}f(x)=f(a)\).\\
+        \indent In particular, if either \(f(a)\) or \(\lim_{x\to a} f(x)\) fails to exist, then \(f\) is discontinuous at \(a\).\par
+        \indent We say that a function \(f\) is \textbf{right-continuous} at \(x=a\) if \(\lim_{x\to a^+}f(x)=f(a)\).\\
+        \indent We say that a function \(f\) is \textbf{left-continuous} at \(x=a\) if \(\lim_{x\to a^-}f(x)=f(a)\).
+    \item \textbf{Types of discontinuities}\\
+        \indent If \(\lim_{x\to a^-}f(x)\) and \(\lim_{x\to a^+}f(x)\) are exist but they are not equal, then we can say \(f\) has a \textbf{jump discontinuity} at \(x=a\).\\
+        \indent If \(\lim_{x\to a}f(x)\) exists but does not equal \(f(a)\), then we say that \(f\) has a \textbf{removable discontinuity} at \(x=a\).
         \begin{figure}[H]
             \centering
             \incfig{1limit_2.1}
@@ -65,98 +52,91 @@
 			\incfig{1limit_2.2}
 			\caption{Removable discontinuity}
 		\end{figure}
-   \item Definition of Continuous Functions
-
-       A function $f(x)$ is \textbf{continuous} if for every point $c$ in he domain of $f(x)$, the function $f$ is continuous at the point $x=c$.
-    \item Basic Continuous Functions
-
-        The following functions are continuous at \textit{all real numbers}.
+    \item \textbf{Definition of continuous functions}\\
+       \indent A function \(f(x)\) is \textbf{continuous} if for every point \(c\) in he domain of \(f(x)\), the function \(f\) is continuous at the point \(x=c\).
+   \item \textbf{Basic continuous functions}\\
+        \indent The following functions are continuous at \textit{all real numbers}.
         \begin{itemize}
             \item all polynomials
-            \item $\sqrt[3]{x}$ 
-            \item $|x|$
-            \item $\cos x$ and $\sin x$
-            \item exponential functions $a^x$ with $a>0$.
+            \item \(\sqrt[3]{x}\) 
+            \item \(\lvert x\rvert\)
+            \item \(\cos x\) and \(\sin x\)
+            \item exponential functions \(a^x\) with \(a>0\).
         \end{itemize}
 
-        The following functions are continuous \textit{at the specified values of $x$}.
+        The following functions are continuous \textit{at the specified values of \(x\)}.
         \begin{itemize}
-            \item $\sqrt{x}$, for $x>0$.
-            \item $\tan x$, at all $x$ where it is defined.
-            \item logarithmic functions $\log_a x$ with base $a>0$, for $x>0$.
+            \item \(\sqrt{x}\), for \(x>0\).
+            \item \(\tan x\), at all \(x\) where it is defined.
+            \item logarithmic functions \(\log_a x\) with base \(a>0\), for \(x>0\).
         \end{itemize}
-    \item Limit Laws and Continuity
-
-        If the functions $f$ and $g$ are continuous everywhere, then:
+    \item \textbf{Limit laws and Continuity}\\
+        \indent If the functions \(f\) and \(g\) are continuous everywhere, then:
         \begin{itemize}
-            \item $f\pm g$ is continuous everywhere.
-            \item $f\cdot g$ is continuous everywhere.
-            \item $\frac{f}{g}$ is continuous where it is defined.
-            \item $f\circ g$ is continuous everywhere. ($\circ$ is the composition symbol which means $f\circ g(x)=f(g(x))$.)
+            \item \(f\pm g\) is continuous everywhere.
+            \item \(f\cdot g\) is continuous everywhere.
+            \item \(\frac{f}{g}\) is continuous where it is defined.
+            \item \(f\circ g\) is continuous everywhere. (``\(\circ\)'' is the composition symbol which means \(f\circ g(x)=f[g(x)]\))
         \end{itemize}
-    \item Intermediate Value Theorem
-
-        If $f$ is a function which is continuous on the interval $[a, b]$ and $M$ lies between the values of $f(a)$ and $f(b)$, then there is at least one point $c$ between $a$ and $b$ such that $f(c)=M$.
-
-        (A function is \textbf{continuous on a closed interval} $[a, b]$ if it is continuous on interval $(a, b)$, right-continuous at $a$ and left-continuous at $b$.)
+    \item \textbf{Intermediate Value Theorem}\\
+        \indent If \(f\) is a function which is continuous on the interval \([a,b]\) and \(M\) lies between the values of \(f(a)\) and \(f(b)\), then there is at least one point \(c\) between \(a\) and \(b\) such that \(f(c)=M\).
+        \begin{note}
+            A function is \textbf{continuous on a closed interval} \([a,b]\) if it is continuous on interval \((a,b)\), right-continuous at \(a\) and left-continuous at \(b\).
+        \end{note}
 \end{enumerate}
 
-\section{Limits of quotients}
-If $\lim_{x\to a} f(x)=L$ and $\lim_{x\to a} g(x)=M$, then:
+\section{Limits of Quotients}
+If \(\lim_{x\to a}f(x)=L\) and \(\lim_{x\to a}g(x)=M\), then:
 \begin{enumerate}
-    \item If $M\neq 0$, then $\lim_{x\to a} \frac{f(x)}{g(x)}=\frac{L}{M}$
-    \item If $M=0$ but $L\neq 0$, then $\lim_{x\to a} \frac{f(x)}{g(x)}$ does not exist.
-    \item If both $M=0$ and $L=0$, then $\lim_{x\to a} \frac{f(x)}{g(x)}$ might exist, or it might not exist. More work is necessary to determine whether the last type of limit exists and what it is if it does exist.
+    \item If \(M\neq 0\), then \(\lim_{x\to a}\frac{f(x)}{g(x)}=\frac{L}{M}\)
+    \item If \(M=0\) but \(L\neq 0\), then \(\lim_{x\to a}\frac{f(x)}{g(x)}\) does not exist.
+    \item If both \(M=0\) and \(L=0\), then \(\lim_{x\to a}\frac{f(x)}{g(x)}\) might exist, or it might not exist. More work is necessary to determine whether the last type of limit exists and what it is if it does exist.
 \end{enumerate}
 
 \chapter{The derivative}
-\section{What is the derivative?}
+\section{What is the Derivative?}
 \begin{enumerate}
-    \item The definition of the average rate of change.
-
-        The \textbf{average rate of change} of a function $f(x)$ over an interval $a\leq x\leq b$ is defined to be
-        $$
+    \item The definition of the average rate of change.\\
+        \indent The \textbf{average rate of change} of a function \(f(x)\) over an interval \(a\leq x\leq b\) is defined to be
+        \[
         \frac{f(b)-f(a)}{b-a}.
-        $$
-    \item Definition of the derivative.
-
-        The \textbf{derivative} of a function $f(x)$ at a point $x=a$ is defined to be
-        $$
+        \]
+    \item Definition of the derivative.\\
+        \indent The \textbf{derivative} of a function \(f(x)\) at a point \(x=a\) is defined to be
+        \[
         f^\prime(a)=\lim_{b\to a}\frac{f(b)-f(a)}{b-a}.
-        $$
+        \]
 \end{enumerate}
 
 \section{Geometric Interpretation of The Derivative}
 \begin{enumerate}
-    \item \textbf{Secant lines}
-
-        The \textit{secant line} of a function $f(x)$ over the interval $a\leq x\leq b$ is the line that passes through the points $(a,f(a))$ and $(b,f(b))$.
+    \item \textbf{Secant lines}\\
+        \indent The \textit{secant line} of a function \(f(x)\) over the interval \(a\leq x\leq b\) is the line that passes through the points \((a,f(a))\) and \((b,f(b))\).
         \begin{itemize}
-            \item The slope of the secant line is $\frac{f(b)-f(a)}{b-a}$, which is the average rate of change of the function $f(x)$ over the interval $a\leq x\leq b$.
-            \item The equation of the secant line is $y=\frac{f(b)-f(a)}{b-a}(x-a)+f(a)$.
+            \item The slope of the secant line is \(\frac{f(b)-f(a)}{b-a}\), which is the average rate of change of the function \(f(x)\) over the interval \(a\leq x\leq b\).
+            \item The equation of the secant line is \(y=\frac{f(b)-f(a)}{b-a}(x-a)+f(a)\).
         \end{itemize}
-    \item \textbf{Tangent lines}
-
-        The \textit{tangent line} to a function $f(x)$ at the point $x=a$ is the line that passes through the point $(a,f(a))$, and whose slope is the instantaneous rate of change of $f(x)$ at the point $x=a$. This slope is the slope of the line you get if you imagine zooming in on the function until it looks like a line.
+    \item \textbf{Tangent lines}\\
+        \indent The \textit{tangent line} to a function \(f(x)\) at the point \(x=a\) is the line that passes through the point \((a,f(a))\), and whose slope is the instantaneous rate of change of \(f(x)\) at the point \(x=a\). This slope is the slope of the line you get if you imagine zooming in on the function until it looks like a line.
         \begin{itemize}
-            \item The slope of the tangent line is $f^\prime(a)$.
-            \item The equation for the tangent line is $y=f^\prime(a)(x-a)+f(a)$.
+            \item The slope of the tangent line is \(f^\prime(a)\).
+            \item The equation for the tangent line is \(y=f^\prime(a)(x-a)+f(a)\).
         \end{itemize}
-        \paragraph{Properties of tangent lines.\\} If the derivative of $f(x)$ exists at $x=a$, then the tangent line exists. The tangent line may exist if the derivative is undefined at $x=a$ though. (Example $f(x)=\sqrt[3]{x}$ has a vertical tangent line at $x=0$.)
-        \paragraph{What a tangent line is and is not\\} When introduced to tangent lines of circles, many students learn that a tangent is ``a line that touches the curve in only one point. '' This is true if your curve is a circle, but for many other curves and functions, this is \textbf{not a good} definition.
-\begin{figure}[H]
-    \centering
-    \incfig{2derivative_2.1}
-    \caption{The tangent line passes through multiple times of the function}
-\end{figure}
+        \noindent\textbf{Properties of tangent lines}\\
+        If the derivative of \(f(x)\) exists at \(x=a\), then the tangent line exists. The tangent line may exist if the derivative is undefined at \(x=a\) though. (Example \(f(x)=\sqrt[3]{x}\) has a vertical tangent line at \(x=0\).)\par
+        \noindent\textbf{What a tangent line is and is not}\\
+        When introduced to tangent lines of circles, many students learn that a tangent is ``a line that touches the curve in only one point. '' This is true if your curve is a circle, but for many other curves and functions, this is \textbf{not a good} definition.
+        \begin{figure}[H]
+            \centering
+            \incfig{2derivative_2.1}
+            \caption{The tangent line passes through multiple times of the function}
+        \end{figure}
 \end{enumerate}
 
-\section{The Derivative as a function}
+\section{The Derivative as A Function}
 \begin{enumerate}
-    \item \textbf{Recall secant and tangent lines}
-
-        In calculus, we often think of the function and its graph as being the same object. So to study functions, we often study their graphs.
-
+    \item \textbf{Recall secant and tangent lines}\\
+        \indent In calculus, we often think of the function and its graph as being the same object. So to study functions, we often study their graphs.\par
         Recall: the derivative at a point is the slope of the tangent line to the graph through that point. But when our graph is nice and smooth, without any discontinuities, corners, or other weird behavior, we can find the slope of the tangent line at any point. Thus we can think of the derivative of a function as a function.
     \item \textbf{Example: The graph of a function and its derivative}
         \begin{figure}[H]
@@ -171,85 +151,73 @@ If $\lim_{x\to a} f(x)=L$ and $\lim_{x\to a} g(x)=M$, then:
         \end{figure}
 \end{enumerate}
 
-\section{Calculating derivatives}
+\section{Calculating Derivatives}
 \begin{enumerate}
-    \item \textbf{Derivatives of constant multiples}
-
-        If $g(x)=kf(x)$ for some constant $k$, then
-        $$
+    \item \textbf{Derivatives of constant multiples}\\
+        \indent If \(g(x)=kf(x)\) for some constant \(k\), then
+        \[
         g^\prime(x)=kf^\prime(x)
-        $$
-        at all points where $f$ is differentiable.
-    \item \textbf{Derivatives of sums}
-
-        If $h(x)=f(x)+g(x)$, then
-        $$
-        h^\prime(x)=f^\prime(x)+g^\prime(x)
-        $$
-        at all points where $f$ and $g$ are differentiable.
-    \item \textbf{Derivatives of differences}
-
-        Similarly, if $j(x)=f(x)-g(x)$, then
-        $$
-        j^\prime(x)=f^\prime(x)+g^\prime(x)
-        $$
-        at all points where $f$ and $g$ are differentiable.
-    \item \textbf{Derivatives of constant multiples - proof}
-
-        Suppose that $g(x)=kf(x)$ for all $x$, where $k$ is a constant. We want to prove that $g^\prime(x)=kf^\prime(x)$ at any point $x$ where $f$ is differentiable.
-
+        \]
+        at all points where \(f\) is differentiable.
+        \begin{proof}
+            Suppose that \(g(x)=kf(x)\) for all \(x\), where \(k\) is a constant. We want to prove that \(g^\prime(x)=kf^\prime(x)\) at any point \(x\) where \(f\) is differentiable.\par
         We know that
         \begin{align*}
-            g^\prime(x) & =\lim_{\Delta x\to 0} \frac{g(x+\Delta x)-g(x)}{\Delta x} \\
-                        & =\lim_{\Delta x\to 0} \frac{kf(x+\Delta x)-kf(x)}{\Delta x} \\
-                        & =\lim_{\Delta x\to 0} k\frac{f(x+\Delta x)-f(x)}{\Delta x} \\
-                        & =\lim_{\Delta x\to 0} k \lim_{\Delta x\to 0} \frac{f(x+\Delta x)-f(x)}{\Delta x}
+            g^\prime(x) & =\lim_{\Delta x\to 0}\frac{g(x+\Delta x)-g(x)}{\Delta x} \\
+                        & =\lim_{\Delta x\to 0}\frac{kf(x+\Delta x)-kf(x)}{\Delta x} \\
+                        & =\lim_{\Delta x\to 0}k\frac{f(x+\Delta x)-f(x)}{\Delta x} \\
+                        & =\lim_{\Delta x\to 0}k\lim_{\Delta x\to 0}\frac{f(x+\Delta x)-f(x)}{\Delta x}
         \end{align*}
-        The first limit is just $k$, and the second limit is the definition of $f^\prime(x)$. So we get $g^\prime=kf^\prime(x)$.
-    \item \textbf{What is linearity?}
-
-        We've seen that differentiation ``respects'' addition and multiplication by a constant. That is, if you take a derivative of a sum of functions, you get the same thing as if you differentiated each part, and then added the derivatives. Similarly, if you take the derivative of $k$ times a function, where $k$ is a constant, then you get $k$ times the derivative of the original function.
-
-        Respecting addition and constant multiplication is this way is called ``linearity'', and it is an important property of the derivative operation!
-    \item \textbf{The Power Rule}
-
-        If $n$ is any fixed number, and $f(x)=x^n$, then $f^\prime(x)=nx^{n-1}$.
+        The first limit is just \(k\), and the second limit is the definition of \(f^\prime(x)\). So we get \(g^\prime=kf^\prime(x)\).
+            
+        \end{proof}
+    \item \textbf{Derivatives of sums}\\
+        \indent If \(h(x)=f(x)+g(x)\), then
+        \[
+        h^\prime(x)=f^\prime(x)+g^\prime(x)
+        \]
+        at all points where \(f\) and \(g\) are differentiable.
+    \item \textbf{Derivatives of differences}\\
+        \indent Similarly, if \(j(x)=f(x)-g(x)\), then
+        \[
+        j^\prime(x)=f^\prime(x)+g^\prime(x)
+        \]
+        at all points where \(f\) and \(g\) are differentiable.
+    \item \textbf{What is linearity?}\\
+        \indent We've seen that differentiation ``respects'' addition and multiplication by a constant. That is, if you take a derivative of a sum of functions, you get the same thing as if you differentiated each part, and then added the derivatives. Similarly, if you take the derivative of \(k\) times a function, where \(k\) is a constant, then you get \(k\) times the derivative of the original function.\par
+        Respecting addition and constant multiplication in this way is called ``linearity'', and it is an important property of the derivative operation!
+    \item \textbf{The Power Rule}\\
+        \indent If \(n\) is any fixed number, and \(f(x)=x^n\), then \(f^\prime(x)=nx^{n-1}\).
 \end{enumerate}
 
 \section{Leibniz notation}
 \begin{enumerate}
-    \item \textbf{Why Leibniz notation?}
-
-        Why do we like to use Leibniz notation?
-
-        The biggest reason is that it reminds us what the input variable is. The derivative is measuring the instantaneous rate of change of the output variable of a function with respect to the input variable. Sometimes, if there are lots of quantities that have variables representing them, it's easy to lose track of what is what; Leibniz notation helps to remind us.
+    \item \textbf{Why do we use Leibniz notation?}\\
+        \indent The biggest reason is that it reminds us what the input variable is. The derivative is measuring the instantaneous rate of change of the output variable of a function with respect to the input variable. Sometimes, if there are lots of quantities that have variables representing them, it's easy to lose track of what is what; Leibniz notation helps to remind us.
     \item \textbf{Properties of Leibniz notation}
         \begin{itemize}
-            \item \textbf{Units}: If $P$ has units of pressure, and $t$ has units of \textit{time}, then $\frac{\mathrm{d}P}{\mathrm{d}t}$ has units of pressure per time.
-            \item \textbf{Evaluating at point}: If we want to take the derivative at a particular point $x=3$, then we use the notation $\left.\frac{\mathrm{d}f}{\mathrm{d}x}\right|_{x=3}$. The bar is read as ``evaluated at''.
-            \item \textbf{Derivatives act on functions}
-                
-                We can write $\frac{\mathrm{d}(x^2)}{\mathrm{d}x}$ for the derivative of $x^2$.
-
-                If a formula is long, we can write $\frac{\mathrm{d}}{\mathrm{d}y}(y^3+2y^2)$.
+            \item \textbf{Units}: If \(P\) has units of pressure, and \(t\) has units of \textit{time}, then \(\frac{\mathrm{d}P}{\mathrm{d}t}\) has units of pressure per time.
+            \item \textbf{Evaluating at point}: If we want to take the derivative at a particular point \(x=3\), then we use the notation \(\left.\frac{\mathrm{d}f}{\mathrm{d}x}\right|_{x=3}\). The bar is read as ``evaluated at''.
+            \item \textbf{Derivatives act on functions}\\
+                \indent We can write \(\frac{\mathrm{d}(x^2)}{\mathrm{d}x}\) for the derivative of \(x^2\).\par
+                If a formula is long, we can write \(\frac{\mathrm{d}}{\mathrm{d}y}(y^3+2y^2)\).
         \end{itemize}
 \end{enumerate}
 
-\section{Second derivatives and higher}
+\section{Second Derivatives and Higher}
 \begin{enumerate}
-    \item \textbf{Second derivative}
-
-        The second derivative of a function $f(x)$ is the first derivative of $f^\prime(x)$, and is denoted by $f^{\prime\prime}(x)$ or $\frac{\mathrm{d}^2 f}{\mathrm{d}x^2}$.
+    \item \textbf{Second derivative}\\
+        \indent The second derivative of a function $f(x)$ is the first derivative of $f^\prime(x)$, and is denoted by $f^{\prime\prime}(x)$ or $\frac{\mathrm{d}^2 f}{\mathrm{d}x^2}$.
         \begin{proof}
             The second derivative in Leibinz notation is written by this transform
-            $$
+            \[
             f^{\prime\prime}(x)
             =\frac{\mathrm{d}}{\mathrm{d}x}\left(\frac{\mathrm{d}}{\mathrm{d}x}(f)\right)
             =\left(\frac{\mathrm{d}}{\mathrm{d}x}\right)^2(f)
             =\frac{\mathrm{d}^2 f}{\mathrm{d}x^2}
-            $$
+            \]
         \end{proof}
-    \item \textbf{Higher derivatives}
+    \item \textbf{Higher derivatives}\todo{Progress is Here}
 
         The $n$th derivative of a function $f(x)$ is the first derivative of $f^{(n-1)}(x)$, and is denoted by $f^{(n)}(x)$ or $\frac{\mathrm{d}^n f}{\mathrm{d} x^n}$.
     \item \textbf{Second derivative and concavity summary}
