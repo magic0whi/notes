@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="150.35001mm"
-   height="85mm"
-   viewBox="0 0 150.34999 85.000001"
+   width="80mm"
+   height="39.999992mm"
+   viewBox="0 0 79.999991 39.999993"
    version="1.1"
    id="svg5"
    sodipodi:docname="2derivative_7.1.svg"
@@ -51,10 +51,10 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-11.600601,-22.497205)">
+     transform="translate(-30.963099,40.738206)">
     <g
        id="g1939"
-       transform="translate(-6.7275336,0.90296158)">
+       transform="matrix(0.4809439,0,0,0.4809439,25.99334,-51.153863)">
       <path
          style="fill:none;fill-rule:evenodd;stroke:#4eff00;stroke-width:0.265;stroke-opacity:1"
          d="m 118.32453,49.92639 c 2.38719,4.174677 3.75154,9.009509 3.75154,14.163002"
@@ -100,11 +100,11 @@
          x="458.80664"
          y="655.013"
          id="text5820-3"
-         transform="matrix(0.26458333,0,0,0.26458333,-16.325488,-113.95903)"><tspan
+         transform="matrix(0.26458333,0,0,0.26458333,-12.071051,-113.95903)"><tspan
            sodipodi:role="line"
            id="tspan5818-5"
            x="458.80664"
-           y="655.013">$\sin(\theta)$</tspan></text>
+           y="655.013">\(\scriptstyle\sin\theta\)</tspan></text>
       <text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;line-height:1.25;font-family:'Nimbus Roman';-inkscape-font-specification:'Nimbus Roman, ';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;fill:#ff0000;fill-opacity:1;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
@@ -115,32 +115,32 @@
            sodipodi:role="line"
            id="tspan5822-6"
            x="381.21796"
-           y="687.97467">$\cos(\theta)$</tspan></text>
+           y="687.97467">\(\scriptstyle\cos\theta\)</tspan></text>
       <text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;line-height:1.25;font-family:'Nimbus Roman';-inkscape-font-specification:'Nimbus Roman, ';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;fill:#ff00ab;fill-opacity:1;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
          x="531.27557"
          y="690.43793"
          id="text5828-7"
-         transform="matrix(0.26458333,0,0,0.26458333,-22.863346,-115.51023)"
+         transform="matrix(0.26458333,0,0,0.26458333,-26.164147,-114.9984)"
          inkscape:export-filename="2derivative_7.1.svg"
          inkscape:export-xdpi="96"
          inkscape:export-ydpi="96"><tspan
            sodipodi:role="line"
            id="tspan5826-5"
            x="531.27557"
-           y="690.43793">$1-\cos(\theta)$</tspan></text>
+           y="690.43793">\(\scriptstyle1-\cos\theta\)</tspan></text>
       <text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;line-height:1.25;font-family:'Nimbus Roman';-inkscape-font-specification:'Nimbus Roman, ';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;opacity:1;fill:#4eff00;fill-opacity:1;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          x="179.30429"
          y="151.95016"
          id="text1267"
-         transform="matrix(0.26458333,0,0,0.26458333,51.121058,23.607781)"><tspan
+         transform="matrix(0.26458333,0,0,0.26458333,51.787148,23.208127)"><tspan
            sodipodi:role="line"
            id="tspan1265"
            x="179.30429"
-           y="151.95016">$\theta$</tspan></text>
+           y="151.95016">\(\scriptstyle\theta\)</tspan></text>
       <text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;line-height:1.25;font-family:'Nimbus Roman';-inkscape-font-specification:'Nimbus Roman, ';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;opacity:1;fill:#4eff00;fill-opacity:1;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
@@ -151,19 +151,25 @@
            sodipodi:role="line"
            x="269.48148"
            y="121.26989"
-           id="tspan1323">$\theta$</tspan></text>
+           id="tspan1323">\(\scriptstyle\theta\)</tspan></text>
       <path
          style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#0031ff;stroke-width:0.349999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
          d="M 118.24803,49.802926 V 64.089392"
-         id="path1479" />
-      <rect
-         style="font-variation-settings:normal;display:none;opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#040404;stroke-width:0.359994;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
-         id="rect1709"
-         width="149.99001"
-         height="84.640007"
-         x="18.508133"
-         y="21.77424" />
+         id="path1479"
+         inkscape:export-filename="2derivative_7.1.pdf"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
     </g>
+    <rect
+       style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.113068;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+       id="rect1"
+       width="79.886932"
+       height="39.886929"
+       x="31.019634"
+       y="-40.681675"
+       inkscape:export-filename="2derivative_7.1.pdf"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
   </g>
   <metadata
      id="metadata1649">

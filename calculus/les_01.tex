@@ -163,13 +163,12 @@ If \(\lim_{x\to a}f(x)=L\) and \(\lim_{x\to a}g(x)=M\), then:
             Suppose that \(g(x)=kf(x)\) for all \(x\), where \(k\) is a constant. We want to prove that \(g^\prime(x)=kf^\prime(x)\) at any point \(x\) where \(f\) is differentiable.\par
         We know that
         \begin{align*}
-            g^\prime(x) & =\lim_{\Delta x\to 0}\frac{g(x+\Delta x)-g(x)}{\Delta x} \\
-                        & =\lim_{\Delta x\to 0}\frac{kf(x+\Delta x)-kf(x)}{\Delta x} \\
-                        & =\lim_{\Delta x\to 0}k\frac{f(x+\Delta x)-f(x)}{\Delta x} \\
+            g^\prime(x) & =\lim_{\Delta x\to 0}\frac{g(x+\Delta x)-g(x)}{\Delta x}\\
+                        & =\lim_{\Delta x\to 0}\frac{kf(x+\Delta x)-kf(x)}{\Delta x}\\
+                        & =\lim_{\Delta x\to 0}k\frac{f(x+\Delta x)-f(x)}{\Delta x}\\
                         & =\lim_{\Delta x\to 0}k\lim_{\Delta x\to 0}\frac{f(x+\Delta x)-f(x)}{\Delta x}
         \end{align*}
         The first limit is just \(k\), and the second limit is the definition of \(f^\prime(x)\). So we get \(g^\prime=kf^\prime(x)\).
-            
         \end{proof}
     \item \textbf{Derivatives of sums}\\
         \indent If \(h(x)=f(x)+g(x)\), then
@@ -209,7 +208,7 @@ If \(\lim_{x\to a}f(x)=L\) and \(\lim_{x\to a}g(x)=M\), then:
     \item \textbf{Second derivative}\\
         \indent The second derivative of a function $f(x)$ is the first derivative of $f^\prime(x)$, and is denoted by $f^{\prime\prime}(x)$ or $\frac{\mathrm{d}^2 f}{\mathrm{d}x^2}$.
         \begin{proof}
-            The second derivative in Leibinz notation is written by this transform
+            The second derivative in Leibniz notation is written by this transform
             \[
             f^{\prime\prime}(x)
             =\frac{\mathrm{d}}{\mathrm{d}x}\left(\frac{\mathrm{d}}{\mathrm{d}x}(f)\right)
@@ -217,80 +216,70 @@ If \(\lim_{x\to a}f(x)=L\) and \(\lim_{x\to a}g(x)=M\), then:
             =\frac{\mathrm{d}^2 f}{\mathrm{d}x^2}
             \]
         \end{proof}
-    \item \textbf{Higher derivatives}\todo{Progress is Here}
-
-        The $n$th derivative of a function $f(x)$ is the first derivative of $f^{(n-1)}(x)$, and is denoted by $f^{(n)}(x)$ or $\frac{\mathrm{d}^n f}{\mathrm{d} x^n}$.
-    \item \textbf{Second derivative and concavity summary}
-        
-        On intervals where $f^{\prime\prime}>0$, the function $f$ is concave up.
+    \item \textbf{Higher derivatives}\\
+        \indent The \(n\)th derivative of a function \(f(x)\) is the first derivative of \(f^{(n-1)}(x)\), and is denoted by \(f^{(n)}(x)\) or \(\frac{\mathrm{d}^n f}{\mathrm{d} x^n}\).
+    \item \textbf{Second derivative and concavity summary}\\
+        \indent On intervals where \(f^{\prime\prime}>0\), the function \(f\) is concave up.
         \begin{figure}[H]
             \centering
             \incfig{2derivative_6.1}
         \end{figure}
-
-        On intervals where $f^{\prime\prime}<0$, the function $f$ is concave down.
+        On intervals where \(f^{\prime\prime}<0\), the function \(f\) is concave down.
         \begin{figure}[H]
             \centering
             \incfig{2derivative_6.2}
         \end{figure}
-
         Points where the graph of a function changes from concave up to concave down, or vice versa, are called \textbf{inflection points}.
-    \item \textbf{Position, velocity, acceleration}
-
-        If $x(t)$ is a function that describes position as a function of time, then:
-        $x^\prime (t)$ is the velocity, and $x^{\prime\prime} (t)$ is the acceleration.
+    \item \textbf{Position, velocity, acceleration}\\
+        \indent If \(x(t)\) is a function that describes position as a function of time, then \(x^\prime (t)\) is the velocity, and \(x^{\prime\prime} (t)\) is the acceleration.
 \end{enumerate}
 
 \section{Trigonometric functions: sine and cosine}
 \begin{enumerate}
-    \item \textbf{Definition of significant figures}
-        
-        The number of \textit{significant figures} is the count of those digits that carry meaning with regards to precision.
-        
-        \textbf{Examples}
-        \begin{itemize}
-            \item All non-zero digits are significant \rule{20pt}{1pt} - 1235 has 4 significant digits.
-            \item Zeros appearing between nonzero digits are significant - 101 has 3 significant digits.
-            \item Trailing zeros in a number containing a decimal are significant - 32.000 has 5 significant figures.
-        \end{itemize}
-        \textbf{Non-examples}
-        \begin{itemize}
-            \item Trailing zeros in a number with no decimal are \textit{not} significant - 5400 has 2 significant figures.
-            \item Leading zeros in decimal number are not significant - 0.0003 has 1 significant figure.
-            \item Extraneous digits introduced in a computation to greater precision than measured data are \textit{not} significant - if .25 and .50 are measurements accurate to $\pm.01$, then in the product $(.25)(.50)=0.125$ the last 5 is \textit{not} significant.
-        \end{itemize}
-    \item \textbf{Derivative of sine and cosine}
-        
-        The derivative of the trig functions are:
+    \item \textbf{Definition of significant figures}\\
+        \indent The number of \textit{significant figures} is the count of those digits that carry meaning with regards to precision.\par
+        \begin{eg}\leavevmode
+            \begin{itemize}
+                \item All non-zero digits are significant: 1235 has 4 significant digits.
+                \item Zeros appearing between nonzero digits are significant: 101 has 3 significant digits.
+                \item Trailing zeros in a number containing a decimal are significant: 32.000 has 5 significant figures.
+            \end{itemize}
+            \textsf{\textbf{\color{NavyBlue!70!Black}Non-examples.}}
+            \begin{itemize}
+                \item Trailing zeros in a number with no decimal are \textit{not} significant: 5400 has 2 significant figures.
+                \item Leading zeros in decimal number are not significant: 0.0003 has 1 significant figure.
+                \item Extraneous digits introduced in a computation to greater precision than measured data are \textit{not} significant: if .25 and .50 are measurements accurate to \(\pm.01\), then in the product \((.25)(.50)=0.125\) the last 5 is \textit{not} significant.
+            \end{itemize}
+        \end{eg}
+    \item \textbf{Derivative of sine and cosine}\\
+        \indent The derivative of the trig functions are:
         \begin{align*}
-            & \frac{\mathrm{d}}{\mathrm{d}x}\sin(x)=\cos(x) \\
-            & \frac{\mathrm{d}}{\mathrm{d}x}\cos(x)=-\sin(x) \\
-            & \frac{\mathrm{d}^2}{\mathrm{d}x^2}\sin(x)=-\sin(x) \\
-            & \frac{\mathrm{d}^2}{\mathrm{d}x^2}\cos(x)=-\cos(x)
+            \frac{\mathrm{d}}{\mathrm{d}x}\sin x= & \mathbin{\phantom{-}}\cos x\\
+            \frac{\mathrm{d}}{\mathrm{d}x}\cos x= & -\sin x\\
+            \frac{\mathrm{d}^2}{\mathrm{d}x^2}\sin x= & -\sin x\\
+            \frac{\mathrm{d}^2}{\mathrm{d}x^2}\cos x= & -\cos x
         \end{align*}
         \begin{proof}
-            To differentiate $\sin(x)$, first we using the trio sum formula
+            To differentiate \(\sin x\), first we use the trig sum formula
             \begin{align*}
-                \frac{\sin(x+\mathrm{d}x)-\sin(x)}{\mathrm{d}x} & =\frac{\sin(x)\cos(\mathrm{d}x)+\cos(x)\sin(\mathrm{d}x)-\sin(x)}{\mathrm{d}x} & \\
-                                                                & =\sin(x)\left(\frac{\cos(\mathrm{d}x)-1}{\mathrm{d}x}\right)+\cos(x)\left(\frac{\sin(\mathrm{d}x)}{\mathrm{d}x}\right) \\
-                                                                & =\sin(x)\cos(0)^\prime+\cos(x)\sin(0)^\prime
+                \frac{\sin(x+\mathrm{d}x)-\sin x}{\mathrm{d}x} & =\frac{\sin x\cos\mathrm{d}x+\cos x\sin\mathrm{d}x-\sin x}{\mathrm{d}x} & \\
+                                                                & =\sin x\left(\frac{\cos\mathrm{d}x-1}{\mathrm{d}x}\right)+\cos x\left(\frac{\sin\mathrm{d}x}{\mathrm{d}x}\right)\\
+                                                                & =\sin x\cos0^\prime+\cos x\sin0^\prime
             \end{align*}
-            To proof $\cos(0)^\prime=0$ and $\sin(0)^\prime=1$ using geometry, first we draw a unit circle. For convenience, replace $x$ with $\theta$.
+            To proof \(\cos0^\prime=0\) and \(\sin0^\prime=1\) using geometry, first we draw a unit circle. For convenience, replace \(x\) with \(\theta\).
             \begin{figure}[H]
                 \centering
                 \incfig{2derivative_7.1}
-                \caption{Unit circle with angle $\theta$ (Radian)}
+                \caption{Unit circle with angle \(\theta\) (Radian)}
             \end{figure}
-            To zoom in and make angle $\theta$ smaller, we found
+            Then zoom in and make angle \(\theta\) smaller, we found
             \begin{figure}[H]
                 \centering
                 \incfig{2derivative_7.2}
-                \caption{Zoomed in $\theta$ (Radian)}
+                \caption{Zoomed in \(\theta\) (Radian)}
             \end{figure}
-            while $\theta\to 0$, $1-\cos(\theta)$ getting smaller \textbf{faster} than $\theta$ itself, and $\sin(\theta)$ approaching the green arc $\theta$. Therefore $\frac{\cos(\mathrm{d}\theta)-1}{\mathrm{d}\theta}=0$, $\frac{\sin(\mathrm{d}\theta)}{\mathrm{d}\theta}=1$. Which is $\cos(0)^\prime=0$ and $\sin(0)^\prime=1$
-
-            Summarize, $\sin^\prime(x)=\sin(x)\cos^\prime(0)+\cos(x)\sin^\prime(0)=\sin(x)\cdot 0+\cos(x)\cdot 1=\cos(x)$
-
-            So as to cosine, differentiate $\cos(x)$ we get $\cos^\prime(x)=\cos(x)\frac{\cos(\mathrm{d}x)}{\mathrm{d}x}-\sin(x)\frac{\sin(\mathrm{d}x)}{\mathrm{d}}=\cos(x)\cos^\prime(0)-\sin(x)\sin^\prime(0)=-\sin(x)$
-            \end{proof}
+            while \(\theta\to0\), \(1-\cos\theta\) getting smaller \textbf{faster} than \(\theta\) itself, and \(\sin\theta\) approaching the arc \(\theta\). Therefore \(\frac{\cos\mathrm{d}\theta-1}{\mathrm{d}\theta}=0\), \(\frac{\sin\mathrm{d}\theta}{\mathrm{d}\theta}=1\). Which is \(\cos0^\prime=0\) and \(\sin0^\prime=1\).\\
+            \indent To summarize, \(\sin^\prime x=\sin x\cos^\prime 0+\cos x\sin^\prime 0=\sin x\cdot0+\cos x\cdot1=\cos x\).\par
+            So as to cosine, differentiate \(\cos x\) we get \(\cos^\prime x=\cos x\left(\frac{\cos\mathrm{d}x-1}{\mathrm{d}x}\right)-\sin x\left(\frac{\sin\mathrm{d}x}{\mathrm{d}x}\right)=\cos x\cos^\prime 0-\sin x\sin^\prime 0=-\sin x\)
+        \end{proof}
 \end{enumerate}
