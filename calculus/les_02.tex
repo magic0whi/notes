@@ -9,29 +9,29 @@
 
 \section{Product rule}
 \textbf{The product rule}\\
-\indent If $h(x)=f(x)g(x)$, then
+\indent If \(h(x)=f(x)g(x)\), then
 \[
-    h^\prime (x)=f(x)g^\prime (x)+g(x)f^\prime (x)
+    h^\prime (x)=f(x)g^\prime (x)+g(x)f^\prime (x).
 \]
 
 \begin{proof}
     First we need to know the Leibniz notation
     \[
-        \mathrm{d}f(x)=f(x+\mathrm{d}x)-f(x)
+        \mathrm{d}f(x)=f(x+\mathrm{d}x)-f(x),
     \]
     which equals to \(\Delta f(x)=\lim_{\Delta x\to 0}[f(x+\Delta x)-f(x)]\).\par
     When substitute \(f(x)=x\) into both equation we get \(\mathrm{d}x=(x+\mathrm{d}x)-x\) and \(\lim_{\Delta x\to 0}(x+\Delta x)-x\). Therefore
     \[
         \mathrm{d}x=\lim_{\Delta x\to 0}\Delta x.
     \]
-    Thus we can replace \(\Delta x\) with \(\mathrm{d}x\) from the $\Delta f(x)$ and remove the limit symbol, then naturally $\Delta f(x)$ becomes $\mathrm{d}f(x)$, Perfect!\par
+    Thus we can replace \(\Delta x\) with \(\mathrm{d}x\) from the \(\Delta f(x)\) and remove the limit symbol, then naturally \(\Delta f(x)\) becomes \(\mathrm{d}f(x)\).\par
     To proof the product rule, we can write \(f(x+\mathrm{d}x)=\mathrm{d}f(x)+f(x)\), the reasons why this equation is important are that if we differentiate the \(h(x)=f(x)g(x)\):
     \begin{align*}
         \frac{\mathrm{d}h(x)}{\mathrm{d}x} & =\frac{\mathrm{d}}{\mathrm{d}x}[f(x)g(x)]\\
                                            & =\frac{f(x+\mathrm{d}x)g(x+\mathrm{d}x)-f(x)g(x)}{\mathrm{d}x}\\
                                            & =\frac{[\mathrm{d}f(x)+f(x)][\mathrm{d}g(x)+g(x)]-f(x)g(x)}{\mathrm{d}x}\\
-                                           & =\frac{\mathrm{d}f(x)\mathrm{d}g(x)+g(x)\mathrm{d}f(x)+f(x)\mathrm{d}g(x)\cancel{+f(x)g(x)-f(x)g(x)}}{\mathrm{d}x} \\
-                                           & =\frac{\mathrm{d}f(x)\mathrm{d}g(x)}{\mathrm{d}x}+g(x)\frac{\mathrm{d}f(x)}{\mathrm{d}x}+f(x)\frac{\mathrm{d}g(x)}{\mathrm{d}x}
+                                           & =\frac{\mathrm{d}f(x)\mathrm{d}g(x)+g(x)\mathrm{d}f(x)+f(x)\mathrm{d}g(x)\cancel{+f(x)g(x)-f(x)g(x)}}{\mathrm{d}x}\\
+                                           & =\frac{\mathrm{d}f(x)\mathrm{d}g(x)}{\mathrm{d}x}+g(x)\frac{\mathrm{d}f(x)}{\mathrm{d}x}+f(x)\frac{\mathrm{d}g(x)}{\mathrm{d}x}.
     \end{align*}
     The \(\frac{\mathrm{d}f(x)\mathrm{d}g(x)}{\mathrm{d}x}\) can be transformed into \(\frac{\mathrm{d}f(x)}{\mathrm{d}x}\cdot\frac{\mathrm{d}g(x)}{\mathrm{d}x}\cdot\mathrm{d}x\) which equals to \(0\) because the extra \(\mathrm{d}x\) at the end. Finally
     \[
@@ -54,7 +54,7 @@
             & \frac{\mathrm{d}}{\mathrm{d}x}\tan x=\cos^{-2}x=\sec^2 x\\
             & \frac{\mathrm{d}}{\mathrm{d}x}\cot x=-\sin^{-2}x=-\csc^2 x\\
             & \frac{\mathrm{d}}{\mathrm{d}x}\sec x=\frac{\sin x}{\cos^2 x}=\sec x\tan x\\
-            & \frac{\mathrm{d}}{\mathrm{d}x}\csc x=-\frac{\cos x}{\sin^2 x}=-\csc x\cot x
+            & \frac{\mathrm{d}}{\mathrm{d}x}\csc x=-\frac{\cos x}{\sin^2 x}=-\csc x\cot x.
         \end{align*}
 \end{enumerate}
 
@@ -82,7 +82,7 @@
                              & =\frac{f^\prime (x)}{g(x)}+(-u^{-2}\cdot u^\prime)f(x)\\
                              & =\frac{f^\prime (x)}{u}+[-\frac{1}{g^2(x)}\cdot g^\prime (x)]f(x)\\
                              & =\frac{f^\prime (x)}{g(x)}-\frac{g^\prime (x)f(x)}{g^2(x)}\\
-                             & =\frac{f^\prime (x)g(x)+g^\prime (x)f(x)}{g^2(x)}
+                             & =\frac{f^\prime (x)g(x)+g^\prime (x)f(x)}{g^2(x)}.
             \end{align*}
         \end{proof}
 \end{enumerate}
@@ -91,11 +91,11 @@
 \begin{note}\textbf{Implicit functions:} An implicit function is an equation involving both \(x\) and \(y\) (or any two variables really); you \textit{could} solve for \(y\) as a function of \(x\), but often times that computation is messy or impossible. If a function is not implicit, we say that it is explicit.
 \end{note}
 
-Immediately differentiating $y=x^{m/n}$ is hard. But differentiating the \textit{implicit} function $y^n=x^m$ was a whole lot easier. This happens any time your function is more simply described implicitly.
+Immediately differentiating \(y=x^{m/n}\) is hard. But differentiating the \textit{implicit} function \(y^n=x^m\) was a whole lot easier. This happens any time your function is more simply described implicitly.
 \begin{align*}
-    \phantom{\Leftrightarrow\,} & \frac{\mathrm{d}}{\mathrm{d}x}(y^n=x^m) \\
-                             \Leftrightarrow\, & ny^{n-1}\cdot\frac{\mathrm{d}y}{\mathrm{d}x}=mx^{m-1} \\
-                             \Leftrightarrow\, & \frac{\mathrm{d}y}{\mathrm{d}x}=\frac{m}{n}\cdot\frac{x^{m-1}}{y^{n-1}}
+    \phantom{\Leftrightarrow\,} & \frac{\mathrm{d}}{\mathrm{d}x}(y^n=x^m)\\
+                             \Leftrightarrow\, & ny^{n-1}\cdot\frac{\mathrm{d}y}{\mathrm{d}x}=mx^{m-1}\\
+                             \Leftrightarrow\, & \frac{\mathrm{d}y}{\mathrm{d}x}=\frac{m}{n}\cdot\frac{x^{m-1}}{y^{n-1}}.
 \end{align*}
 
 \begin{eg}
@@ -109,161 +109,169 @@ Immediately differentiating $y=x^{m/n}$ is hard. But differentiating the \textit
     \end{itemize}
 \end{eg}
 
-\section{Inverse Function}\todo{Progess is here}
+\section{Inverse Function}
 \begin{enumerate}
-    \item \textbf{Definition of inverse function}
-
-        If function $f$ and $g$ satisfy $g(f(x))=x$ and $f(g(y))=y$, then we say $g$ is the inverse of $f$, and denote it by $f^{-1}$. (Similarly, $f=g^{-1}$.)
-
-        If a function $f$ has an inverse function $f^{-1}$, then $f^{-1}(b)=a$ if and only if $b=f(a)$.
-    \item \textbf{Definition of one-to-one}
-
-        A function $f$ is \textbf{one-to-one} if whenever $a\neq b$, $f(a)\neq f(b)$. (Horizontal line test.)
-    \item \textbf{Domain and range, interval notation}
-        
-        The \textbf{domain} of a function $f$ is the set of allowable input values. For instance, the domain of the function $f(x)=1/x$ is the set of all non-zero real numbers. ($x\in(-\infty,0)\cup(0,+\infty)$.)
-
-        The \textbf{range} of $f$ is the set of all possible output values. For instance, the range of the function $g(x)=x^2$ is the set of all real numbers that are non-negative. ($g(x)\in(0,+\infty)$.)
-
-        An \textbf{open interval}, denoted $(a,b)$, is the set of numbers $x$ such that $a<x<b$.
-
-        This notation using round parentheses for open intervals is not universal; many mathematicians use reversed square brackets instead. For instance, they would denote the interval $3<x<7$ as $]3,7[$ rather than $(3,7)$. However, I will stick to round parentheses for open intervals.
+    \item \textbf{Definition of inverse function}\\
+        \indent If function \(f\) and \(g\) satisfy \(g[f(x)]=x\) and \(f[g(y)]=y\), then we say \(g\) is the inverse of \(f\), and denote it by \(f^{-1}\). (Similarly, \(f=g^{-1}\).)\\
+        \indent If a function \(f\) has an inverse function \(f^{-1}\), then \(f^{-1}(b)=a\) if and only if \(b=f(a)\).
+    \item \textbf{Definition of one-to-one}\\
+        \indent A function \(f\) is \textbf{one-to-one} if whenever \(a\neq b\), \(f(a)\neq f(b)\). (Horizontal line test.)
+    \item \textbf{Domain and range, interval notation}\\
+        \indent The \textbf{domain} of a function \(f\) is the set of allowable input values.\\
+        \indent For instance, the domain of the function \(f(x)=1/x\) is the set of all non-zero real numbers. (\(x\in(-\infty,0)\cup(0,+\infty)\).)\par
+        The \textbf{range} of \(f\) is the set of all possible output values. For instance, the range of the function \(g(x)=x^2\) is the set of all real numbers that are non-negative. (\(g(x)\in[0,+\infty)\).)\par
+        An \textbf{open interval}, denoted \((a,b)\), is the set of numbers \(x\) such that \(a<x<b\). This notation using round parentheses for open intervals is not universal. Many mathematicians use reversed square brackets instead. For instance, they would denote the interval \(3<x<7\) as \(]3,7[\) rather than \((3,7)\). However, I will stick to round parentheses for open intervals.
     \item \textbf{The inverse trig functions}
         \begin{align*}
-            \sin\theta=x \text{ such that } \arcsin x=\theta & \quad(\theta\in[-\frac{\pi}{2},\frac{\pi}{2}]) \\
-            \cos\theta=x \text{ such that } \arccos x=\theta & \quad(\theta\in[0,\pi]) \\
-            \tan\theta=x \text{ such that } \arctan x=\theta & \quad(\theta\in(-\frac{\pi}{2},\frac{\pi}{2}))
+            & \sin\theta=x\text{ such that }\arcsin x=\theta, \theta\in[-\frac{\pi}{2},\frac{\pi}{2}]\\
+            & \cos\theta=x\text{ such that }\arccos x=\theta, \theta\in[0,\pi]\\
+            & \tan\theta=x\text{ such that }\arctan x=\theta, \theta\in(-\frac{\pi}{2},\frac{\pi}{2}).
         \end{align*}
-    \item \textbf{Derivatives of inverse functions}
-
-        If $g$ is a (full or partial) inverse of a function $f$, then
-        $$
-        g^\prime (x)=\frac{1}{f^\prime (g(x))}
-        $$
-        at all $x$ where $f^\prime [g(x)]$ exists and is non-zero.
-    \item \textbf{Derivatives of arctrig functions}
-
-        Where defined,
+    \item \textbf{Derivatives of inverse functions}\\
+        \indent If \(g\) is a (full or partial) inverse of a function \(f\), then
+        \[
+        g^\prime (x)=\frac{1}{f^\prime [g(x)]}.
+        \]
+        at all \(x\) where \(f^\prime [g(x)]\) exists and is non-zero.
+    \item \textbf{Derivatives of arctrig functions}\\
+        \indent Where defined,
         \begin{align*}
-            \frac{\mathrm{d}}{\mathrm{d}x}\arcsin(x) & =\frac{1}{\cos(\theta)}=\frac{1}{\sqrt{1-\sin^2(\theta)}}=\frac{1}{\sqrt{1-x^2}} \\
-            \frac{\mathrm{d}}{\mathrm{d}x}\arccos(x) & =\frac{1}{-\sin(\theta)}=\frac{1}{-\sqrt{1-\cos^2(\theta)}}=-\frac{1}{\sqrt{1-x^2}} \\
-            \frac{\mathrm{d}}{\mathrm{d}x}\arctan(x) & =\frac{1}{\sec^2(\theta)}=\frac{1}{\cos^{-2}(\theta)}=\cos^2(\theta)=\underbrace{\left(\frac{\cos(\theta)}{\sqrt{\sin^2(\theta)+\cos^2(\theta)}}\right)^2}_{\substack{\text{combine cosine definition} \\ \text{and Pythagoras rule} \\ \text{of the hypotenuse.}}}=\frac{1}{\tan^2(\theta)+1}=\frac{1}{x^2+1}
+            & \frac{\mathrm{d}}{\mathrm{d}x}\arcsin x=\frac{1}{\sqrt{1-x^2}}\\
+            & \frac{\mathrm{d}}{\mathrm{d}x}\arccos x=-\frac{1}{\sqrt{1-x^2}}\\
+            & \frac{\mathrm{d}}{\mathrm{d}x}\arctan x=\frac{1}{x^2+1}.
         \end{align*}
+        \begin{proof}\leavevmode
+            \begin{itemize}
+                \item Assume \(\arcsin x=\theta, \theta\in[-\frac{\pi}{2},\frac{\pi}{2}]\),
+                    \[
+                        \frac{\mathrm{d}}{\mathrm{d}x}\arcsin x=\frac{1}{\cos\theta}=\frac{1}{\sqrt{1-\sin^2 \theta}}=\frac{1}{\sqrt{1-x^2}}.
+                    \]
+                \item Assume \(\arccos x=\theta, \theta\in[0,\pi]\),
+                    \[
+                        \frac{\mathrm{d}}{\mathrm{d}x}\arccos x=\frac{1}{-\sin\theta}=\frac{1}{-\sqrt{1-\cos^2 \theta}}=-\frac{1}{\sqrt{1-x^2}}.
+                    \]
+                \item Assume \(\arctan x=\theta, \theta\in(-\frac{\pi}{2},\frac{\pi}{2})\),
+                    \begin{align*}
+                        \frac{\mathrm{d}}{\mathrm{d}x}\arctan x=\frac{1}{\sec^2 \theta}=\frac{1}{\cos^{-2} \theta}
+                        & =\cos^2 \theta\\
+                        & =\underbrace{\left(\frac{\cos\theta}{\sqrt{\sin^2 \theta+\cos^2 \theta}}\right)^2}_{\mathclap{\text{Use cosine definition and Pythagoras rule.}}}\\
+                        & =\frac{1}{\tan^2 \theta+1}\\
+                        & =\frac{1}{x^2+1}.
+                    \end{align*}
+            \end{itemize}
+        \end{proof}
 \end{enumerate}
 
 \section{Exponential functions}
 \begin{enumerate}
-    \item \textbf{Properties of exponents}
-
-        Let $a$ be a positive real number.
+    \item \textbf{Properties of exponents}\\
+        Let \(a\) be a positive real number.
         \begin{itemize}
-            \item $a^0=1$
-            \item $a^1=a$
-            \item $a^m a^n=a^{m+n}$
-            \item $(a^m)^n=a^{mn}$
-            \item $a^{m/n}=\sqrt[n]{a^m}$
+            \item \(a^0=1\)
+            \item \(a^1=a\)
+            \item \(a^m a^n=a^{m+n}\)
+            \item \((a^m)^n=a^{mn}\)
+            \item \(a^{m/n}=\sqrt[n]{a^m}\)
         \end{itemize}
-    \item \textbf{Properties of exponential functions}
-
-        The function $f(x)=a^x$ has base $a$ for a positive real number.
+    \item \textbf{Properties of exponential functions}\\
+        \indent The function \(f(x)=a^x\) has base \(a\) for a positive real number.
         \begin{itemize}
-            \item The function $a^x$ is a continuous function.
-            \item The domain of $a^x$ is all real numbers.
-            \item The range of $a^x$ is all positive real numbers.
+            \item The function \(a^x\) is a continuous function.
+            \item The domain of \(a^x\) is all real numbers.
+            \item The range of \(a^x\) is all positive real numbers.
         \end{itemize}
-    \item \textbf{The derivative of an exponential function}
-
-        The derivative of the exponential function is
-        $$
-        \frac{\mathrm{d}}{\mathrm{d}x}a^x=\frac{a^{x+\mathrm{d}x}-a^x}{\mathrm{d}x}=\frac{a^{\mathrm{d}x}-1}{\mathrm{d}x}\cdot a^x=M(a)a^x,
-        $$
-        where the mystery number $M(a)$ is the slope of the tangent line at zero:
-        $$
-        M(a)=\left.\frac{\mathrm{d}}{\mathrm{d}x}a^x\right|_{x=0}=\frac{a^{\mathrm{d}x}-1}{\mathrm{d}x}.
-        $$
-    \item \textbf{Definition of $e$}
-        
-        The base $e$ is the unique real number which has $M(e)=1$. Then
-        $$
-        \frac{\mathrm{d}}{\mathrm{d}x}e^x=e^x.
-        $$
-        While $M(e)$ always equals to $1$:
+    \item \textbf{The derivative of an exponential function}\\
+        \indent The derivative of the exponential function is
+        \[
+            \frac{\mathrm{d}}{\mathrm{d}x}a^x=\frac{a^{x+\mathrm{d}x}-a^x}{\mathrm{d}x}=\frac{a^{\mathrm{d}x}-1}{\mathrm{d}x}\cdot a^x=M(a)a^x,
+        \]
+        where the mystery number \(M(a)\) is the slope of the tangent line at zero:
+        \[
+            M(a)=\left.\frac{\mathrm{d}}{\mathrm{d}x}a^x\right|_{x=0}=\frac{a^{\mathrm{d}x}-1}{\mathrm{d}x}.
+        \]
+    \item \textbf{Definition of \(e\)}\\
+        \indent The base \(e\) is the unique real number which has \(M(e)=1\). Then
+        \[
+            \frac{\mathrm{d}}{\mathrm{d}x}e^x=e^x.
+        \]
+        Since \(M(e)\) always equals to \(1\):
         \begin{align*}
-            \frac{e^{\mathrm{d}x} -1}{\mathrm{d}x} & =1 \\
-            e^{\mathrm{d}x} & =1+\mathrm{d}x \\
-            e & =(1+\mathrm{d}x)^{\frac{1}{\mathrm{d}x}}
+            \frac{e^{\mathrm{d}x} -1}{\mathrm{d}x} & =1\\
+            e^{\mathrm{d}x} & =1+\mathrm{d}x\\
+            e & =(1+\mathrm{d}x)^{\frac{1}{\mathrm{d}x}},
         \end{align*}
-        let $\frac{1}{\mathrm{d}x}=n$, so $n\to +\infty$. We get the formally definition of $e$
-        $$
-        e=\lim_{n\to +\infty}(1+\frac{1}{n})^n
-        $$
-    \item \textbf{Differentiating exponential functions with other bases}
-
-        For any positive constant $a$,
-        $$
-        \frac{\mathrm{d}}{\mathrm{d}x}a^x=a^x\ln a.
-        $$
+        Let \(\frac{1}{\mathrm{d}x}=n, n\to +\infty\). We get the formal definition of \(e\):
+        \[
+            e=\lim_{n\to+\infty}(1+\frac{1}{n})^n.
+        \]
+    \item \textbf{Differentiating exponential functions with other bases}\\
+        \indent For any positive constant \(a\),
+        \[
+            \frac{\mathrm{d}}{\mathrm{d}x}a^x=a^x\ln a.
+        \]
         \begin{proof}
             \begin{align*}
-                M(a) & =\frac{a^{\mathrm{d}x}-1}{\mathrm{d}x} \\
-                     & =\frac{e^{\mathrm{d}x\ln a}-1}{\mathrm{d}x}
+                M(a) & =\frac{a^{\mathrm{d}x}-1}{\mathrm{d}x}\\
+                     & =\frac{e^{\mathrm{d}x\ln a}-1}{\mathrm{d}x}.
             \end{align*}
-            Since $\mathrm{d}x\ln a\to+\infty$, we can rewrite the definition of $e$ to
-            $$
-            e=(1+\mathrm{d}x\ln a)^\frac{1}{\mathrm{d}x\ln a}
-            $$
+            Since \(\mathrm{d}x\ln a\to0\), we can rewrite the definition of \(e\) to
+            \[
+                e=(1+\mathrm{d}x\ln a)^\frac{1}{\mathrm{d}x\ln a}
+            \]
             then
             \begin{align*}
-                M(a) & =\frac{e^{\mathrm{d}x\ln a}-1}{\mathrm{d}x} \\
-                     & =\frac{\mathrm{d}x\ln a}{\mathrm{d}x} \\
-                     & =\ln a
+                M(a) & =\frac{e^{\mathrm{d}x\ln a}-1}{\mathrm{d}x}\\
+                     & =\frac{\mathrm{d}x\ln a}{\mathrm{d}x}\\
+                     & =\ln a.
             \end{align*}
-            There also exists method 2, which change to base $e$ then differentiate using the chain rule.
+        \end{proof}
+        \begin{proof}
+            There exists another method which proof \((a^x)^\prime=a^x\ln a\) directly. It also changes to base \(e\) but then differentiate using the chain rule.
+            \begin{align*}
+                \frac{\mathrm{d}a^x}{\mathrm{d}x} & =\frac{\mathrm{d}e^{x\ln a}}{\mathrm{d}x}\\
+                                                 & =\frac{\mathrm{d}e^{x\ln a}}{\mathrm{d}(x\ln a)}\cdot\frac{\mathrm{d}(x\ln a)}{\mathrm{d}x}\\
+                                                 & =e^{x\ln a}\ln a\\
+                                                 & =a^x\ln a
+            \end{align*}
         \end{proof}
 \end{enumerate}
 
 \section{Logarithms}
 \begin{enumerate}
-    \item \textbf{Properties of $x$}
-
-        $\log(x)$ implicitly denotes $\log_{10}(x)$, which is the inverse function of $10^x$.
-
-        The natural log, denoted $\ln x$, is the inverse function of $e^x$.
+    \item \textbf{Some properties of Logarithms}\\
+        \indent\(\log x\) implicitly denotes \(\log_{10}x\), which is the inverse function of \(10^x\).\par
+        The natural log, denoted by \(\ln x\), is the inverse function of \(e^x\).
         \begin{itemize}
-            \item $e^{\ln x}=x$
-            \item $\ln(ab)=\ln a+\ln b$
-            \item $\ln a^b=b\ln a$
+            \item \(e^{\ln x}=x\)
+            \item \(\ln(ab)=\ln a+\ln b\)
+            \item \(\ln a^b=b\ln a\)
         \end{itemize}
     \item \textbf{The derivative of the natural logarithm}
-        $$
-        \frac{\mathrm{d}}{\mathrm{d}x}\ln x=\frac{1}{x}
-        $$
+        \[
+            \frac{\mathrm{d}}{\mathrm{d}x}\ln x=\frac{1}{x}
+        \]
         \begin{proof}
-            Differentiate $e^{\ln x}=x$ with $x$
+            Differentiate \(e^{\ln x}=x\) with \(x\)
             \begin{align*}
-                \frac{\mathrm{d}}{\mathrm{d}x}e^{\ln x} & =\frac{\mathrm{d}}{\mathrm{d}x}x \\
-                \frac{\mathrm{d}e^{\ln x}}{\mathrm{d}\ln x}\cdot\frac{\mathrm{d}\ln x}{\mathrm{d}x} & =1 \\
-                e^{\ln x}\cdot\frac{\mathrm{d}\ln x}{\mathrm{d}x} & =1 \\
-                x\cdot\frac{\mathrm{d}\ln x}{\mathrm{d}x} & =1 \\
-                \frac{\mathrm{d}\ln x}{\mathrm{d}x} & =\frac{1}{x}
+                \frac{\mathrm{d}}{\mathrm{d}x}e^{\ln x} & =\frac{\mathrm{d}}{\mathrm{d}x}x\\
+                \frac{\mathrm{d}e^{\ln x}}{\mathrm{d}\ln x}\cdot\frac{\mathrm{d}\ln x}{\mathrm{d}x} & =1\\
+                e^{\ln x}\cdot\frac{\mathrm{d}\ln x}{\mathrm{d}x} & =1\\
+                x\cdot\frac{\mathrm{d}\ln x}{\mathrm{d}x} & =1\\
+                \frac{\mathrm{d}\ln x}{\mathrm{d}x} & =\frac{1}{x}.
             \end{align*}
         \end{proof}
-    \item \textbf{Differentiation methods}
-        
-        \textbf{Method 1: Change to base $\bm{e}$}
-
-        To calculate $\left[f(x)^{g(x)}\right]^\prime$, first change base $f(x)^{g(x)}=e^{g(x)\ln f(x)}$, then differentiate using the chain rule, and the derivatives of the exponential and natural logarithm functions.
-
-        \textbf{Method 2: Logarithmic differentiation}
-
-        To calculate $u^\prime$, first calculate $(\ln u)^\prime$, then use the formula $u^\prime=u(\ln u)^\prime$ and solve for $u^\prime$
+    \item \textbf{Differentiation methods}\\
+        \indent\textbf{Method 1: Change to base \(\bm{e}\)}\\
+        \indent To calculate \(\left[f(x)^{g(x)}\right]^\prime\), first change base \(f(x)^{g(x)}=e^{g(x)\ln f(x)}\), then differentiate using the chain rule, and the derivatives of the exponential and natural logarithm functions.\par
+        \textbf{Method 2: Logarithmic differentiation}\\
+        \indent To calculate \(u^\prime\), first calculate \((\ln u)^\prime\), then use the formula \(u^\prime=u(\ln u)^\prime\) and solve for \(u^\prime\)
         \begin{proof}
-            \begin{align*}
-                && \frac{\mathrm{d}}{\mathrm{d}x}\ln u & =\frac{\mathrm{d}\ln u}{\mathrm{d}u}\cdot\frac{\mathrm{d}u}{\mathrm{d}x} \\
-                && & =\frac{1}{u}\cdot\frac{\mathrm{d}u}{\mathrm{d}x} \\
-                \leftrightarrow && (\ln u)^\prime & =\frac{u^\prime}{u} \\
-                \leftrightarrow && u^\prime & =u(\ln u)^\prime
-            \end{align*}
+            \begin{alignat*}{2}
+                & & \frac{\mathrm{d}}{\mathrm{d}x}\ln u & =\frac{\mathrm{d}\ln u}{\mathrm{d}u}\cdot\frac{\mathrm{d}u}{\mathrm{d}x}\\
+                & & & =\frac{1}{u}\cdot\frac{\mathrm{d}u}{\mathrm{d}x}\\
+                \Leftrightarrow\, & & (\ln u)^\prime & =\frac{u^\prime}{u}\\
+                \Leftrightarrow\, & & u^\prime & =u(\ln u)^\prime .
+            \end{alignat*}
         \end{proof}
 \end{enumerate}
 

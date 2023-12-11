@@ -104,7 +104,7 @@ If \(\lim_{x\to a}f(x)=L\) and \(\lim_{x\to a}g(x)=M\), then:
     \item Definition of the derivative.\\
         \indent The \textbf{derivative} of a function \(f(x)\) at a point \(x=a\) is defined to be
         \[
-            f^\prime (a)=\lim_{b\to a}\frac{f(b)-f(a)}{b-a}.
+            f^\prime(a)=\lim_{b\to a}\frac{f(b)-f(a)}{b-a}.
         \]
 \end{enumerate}
 
@@ -119,8 +119,8 @@ If \(\lim_{x\to a}f(x)=L\) and \(\lim_{x\to a}g(x)=M\), then:
     \item \textbf{Tangent lines}\\
         \indent The \textit{tangent line} to a function \(f(x)\) at the point \(x=a\) is the line that passes through the point \((a,f(a))\), and whose slope is the instantaneous rate of change of \(f(x)\) at the point \(x=a\). This slope is the slope of the line you get if you imagine zooming in on the function until it looks like a line.
         \begin{itemize}
-            \item The slope of the tangent line is \(f^\prime (a)\).
-            \item The equation for the tangent line is \(y=f^\prime (a)(x-a)+f(a)\).
+            \item The slope of the tangent line is \(f^\prime(a)\).
+            \item The equation for the tangent line is \(y=f^\prime(a)(x-a)+f(a)\).
         \end{itemize}
         \noindent\textbf{Properties of tangent lines}\\
         If the derivative of \(f(x)\) exists at \(x=a\), then the tangent line exists. The tangent line may exist if the derivative is undefined at \(x=a\) though. (Example \(f(x)=\sqrt[3]{x}\) has a vertical tangent line at \(x=0\).)\par
@@ -147,7 +147,7 @@ If \(\lim_{x\to a}f(x)=L\) and \(\lim_{x\to a}g(x)=M\), then:
         \begin{figure}[H]
             \centering
             \incfig{2derivative_3.2}
-            \caption{The graph of the derivative \(y=g^\prime (x)\)}
+            \caption{The graph of the derivative \(y=g^\prime(x)\)}
         \end{figure}
 \end{enumerate}
 
@@ -156,37 +156,37 @@ If \(\lim_{x\to a}f(x)=L\) and \(\lim_{x\to a}g(x)=M\), then:
     \item \textbf{Derivatives of constant multiples}\\
         \indent If \(g(x)=kf(x)\) for some constant \(k\), then
         \[
-            g^\prime (x)=kf^\prime (x)
+            g^\prime(x)=kf^\prime(x)
         \]
         at all points where \(f\) is differentiable.
         \begin{proof}
-            Suppose that \(g(x)=kf(x)\) for all \(x\), where \(k\) is a constant. We want to prove that \(g^\prime (x)=kf^\prime (x)\) at any point \(x\) where \(f\) is differentiable.\par
+            Suppose that \(g(x)=kf(x)\) for all \(x\), where \(k\) is a constant. We want to prove that \(g^\prime(x)=kf^\prime(x)\) at any point \(x\) where \(f\) is differentiable.\par
         We know that
         \begin{align*}
-            g^\prime (x) & =\lim_{\Delta x\to 0}\frac{g(x+\Delta x)-g(x)}{\Delta x}\\
+            g^\prime(x) & =\lim_{\Delta x\to 0}\frac{g(x+\Delta x)-g(x)}{\Delta x}\\
                         & =\lim_{\Delta x\to 0}\frac{kf(x+\Delta x)-kf(x)}{\Delta x}\\
                         & =\lim_{\Delta x\to 0}k\frac{f(x+\Delta x)-f(x)}{\Delta x}\\
                         & =\lim_{\Delta x\to 0}k\lim_{\Delta x\to 0}\frac{f(x+\Delta x)-f(x)}{\Delta x}
         \end{align*}
-        The first limit is just \(k\), and the second limit is the definition of \(f^\prime (x)\). So we get \(g^\prime=kf^\prime (x)\).
+        The first limit is just \(k\), and the second limit is the definition of \(f^\prime(x)\). So we get \(g^\prime=kf^\prime(x)\).
         \end{proof}
     \item \textbf{Derivatives of sums}\\
         \indent If \(h(x)=f(x)+g(x)\), then
         \[
-            h^\prime (x)=f^\prime (x)+g^\prime (x)
+            h^\prime(x)=f^\prime(x)+g^\prime(x)
         \]
         at all points where \(f\) and \(g\) are differentiable.
     \item \textbf{Derivatives of differences}\\
         \indent Similarly, if \(j(x)=f(x)-g(x)\), then
         \[
-            j^\prime (x)=f^\prime (x)+g^\prime (x)
+            j^\prime(x)=f^\prime(x)+g^\prime(x)
         \]
         at all points where \(f\) and \(g\) are differentiable.
     \item \textbf{What is linearity?}\\
         \indent We've seen that differentiation ``respects'' addition and multiplication by a constant. That is, if you take a derivative of a sum of functions, you get the same thing as if you differentiated each part, and then added the derivatives. Similarly, if you take the derivative of \(k\) times a function, where \(k\) is a constant, then you get \(k\) times the derivative of the original function.\par
         Respecting addition and constant multiplication in this way is called ``linearity'', and it is an important property of the derivative operation!
     \item \textbf{The Power Rule}\\
-        \indent If \(n\) is any fixed number, and \(f(x)=x^n\), then \(f^\prime (x)=nx^{n-1}\).
+        \indent If \(n\) is any fixed number, and \(f(x)=x^n\), then \(f^\prime(x)=nx^{n-1}\).
 \end{enumerate}
 
 \section{Leibniz notation}
@@ -206,7 +206,7 @@ If \(\lim_{x\to a}f(x)=L\) and \(\lim_{x\to a}g(x)=M\), then:
 \section{Second Derivatives and Higher}
 \begin{enumerate}
     \item \textbf{Second derivative}\\
-        \indent The second derivative of a function \(f(x)\) is the first derivative of \(f^\prime (x)\), and is denoted by \(f^{\prime\prime}(x)\) or \(\frac{\mathrm{d}^2 f}{\mathrm{d}x^2}\).
+        \indent The second derivative of a function \(f(x)\) is the first derivative of \(f^\prime(x)\), and is denoted by \(f^{\prime\prime}(x)\) or \(\frac{\mathrm{d}^2 f}{\mathrm{d}x^2}\).
         \begin{proof}
             The second derivative in Leibniz notation is written by this transform
             \[
@@ -231,7 +231,7 @@ If \(\lim_{x\to a}f(x)=L\) and \(\lim_{x\to a}g(x)=M\), then:
         \end{figure}
         Points where the graph of a function changes from concave up to concave down, or vice versa, are called \textbf{inflection points}.
     \item \textbf{Position, velocity, acceleration}\\
-        \indent If \(x(t)\) is a function that describes position as a function of time, then \(x^\prime (t)\) is the velocity, and \(x^{\prime\prime} (t)\) is the acceleration.
+        \indent If \(x(t)\) is a function that describes position as a function of time, then \(x^\prime(t)\) is the velocity, and \(x^{\prime\prime} (t)\) is the acceleration.
 \end{enumerate}
 
 \section{Trigonometric functions: sine and cosine}
