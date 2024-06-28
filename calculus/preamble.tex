@@ -1,8 +1,6 @@
 % basics
-\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
-% \usepackage[dutch]{babel}
 \usepackage{url}
 % \usepackage{hyperref}
 % \hypersetup{
@@ -26,7 +24,7 @@
 \usepackage{emptypage}
 \usepackage{subcaption}
 \usepackage{multicol}
-\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[dvipsnames]{xcolor}
 
 % \usepackage{cmbright}
 
@@ -286,19 +284,12 @@
 
 % figure support
 \usepackage{import}
-\usepackage{xifthen}
-\pdfminorversion=7
 \usepackage{pdfpages}
-\usepackage{transparent}
 \newcommand{\incfig}[1]{%
     \def\svgwidth{\columnwidth}
     \import{./figures/}{#1.pdf_tex}
 }
 %\usepackage[showframe]{geometry}
-
-% %http://tex.stackexchange.com/questions/76273/multiple-pdfs-with-page-group-included-in-a-single-page-warning
-\pdfsuppresswarningpagegroup=1
-
 
 \author{Proteus Ndoskrnl}
 

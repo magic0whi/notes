@@ -7,5 +7,6 @@
 *.pdf
 *.pdf_tex
 *.synctex.gz
+*.xdv
 
 tags
