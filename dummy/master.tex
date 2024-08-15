@@ -1,0 +1,41 @@
+\documentclass{report}
+\input{./preamble.tex}
+
+\title{MITx 18.01}
+\begin{document}
+% \layout
+\section{Default \LaTeX{} layout}
+Here's the default layout:
+
+\layout
+\section{Make some changes}
+Make changes to the margin paragraph settings and use the command \verb|layout*| to redraw the page layout diagram:
+\vspace{10pt}
+\setlength{\marginparwidth}{0pt}
+\setlength{\marginparsep}{0pt}
+
+\layout*
+    % \maketitle
+    % \tableofcontents
+    % start lessons
+    % \input{les_01.tex}
+    % \input{les_02.tex}
+    % \input{les_03.tex}
+    % \input{les_04.tex}
+   % \input{les_05.tex}
+   % \input{les_06.tex}
+   % \input{les_07.tex}
+   % \input{les_08.tex}
+   % \input{les_09.tex}
+   % \input{les_10.tex}
+   % end lessons
+\newcommand\printvalue[1]{\texttt{\string #1} : \the #1}
+\begin{enumerate}[labelwidth=10pt,labelsep=2pt,itemindent=\labelwidth+\labelsep]
+  \DrawEnumitemLabel\item \printvalue\labelindent
+  \item \printvalue\labelwidth
+  \item \printvalue\labelsep
+  \item \printvalue\itemindent
+  \item \printvalue\leftmargin
+\end{enumerate}
+\end{document}
+

@@ -49,24 +49,34 @@
 \newcommand\contra{\scalebox{1.1}{$\lightning$}}
 % \let\phi\varphi
 
+
+
+
+
 % correct
 \definecolor{correct}{HTML}{009900}
 \newcommand\correct[2]{\ensuremath{\:}{\color{red}{#1}}\ensuremath{\to }{\color{correct}{#2}}\ensuremath{\:}}
 \newcommand\green[1]{{\color{correct}{#1}}}
+
+
 
 % horizontal rule
 \newcommand\hr{
     \noindent\rule[0.5ex]{\linewidth}{0.5pt}
 }
 
+
 % hide parts
 \newcommand\hide[1]{}
+
+
 
 % si unitx
 \usepackage{siunitx}
 \sisetup{locale = FR}
 % \renewcommand\vec[1]{\mathbf{#1}}
 \newcommand\mat[1]{\mathbf{#1}}
+
 
 % tikz
 \usepackage{tikz}
@@ -146,6 +156,8 @@
         linecolor=NavyBlue, backgroundcolor=NavyBlue!1,
     },
 ]{thmexplanationbox}
+
+
 
 % \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, mdframed={ nobreak } ]{thmgreenbox}
 % \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, mdframed={ nobreak } ]{thmredbox}
@@ -243,6 +255,9 @@
 
 \makeatother
 
+
+
+
 % notes
 \usepackage{todonotes}
 \usepackage{tcolorbox}
@@ -274,10 +289,10 @@
     \def\svgwidth{\columnwidth}
     \import{./figures/}{#1.pdf_tex}
 }
-\usepackage{geometry}
+\usepackage[showframe]{geometry}
 \geometry{
     a4paper,total={170mm,257mm},twoside
 }
-
+\usepackage{layout}
 \author{Proteus Ndoskrnl}
 
