@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install font packages
-        run: apt install fonts-ipaexfont fonts-noto-cjk
+        run: sudo apt install fonts-ipaexfont fonts-noto-cjk
       - name: Set up Git repository
         uses: actions/checkout@v4.1.7
       - name: Compile LaTeX document
