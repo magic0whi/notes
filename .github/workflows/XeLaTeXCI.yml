@@ -14,7 +14,9 @@ jobs:
           scheme: full
           run: |
             apk add findutils font-noto-cjk samurai
-            ninja pdf
+            ninja pdf | true
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3.18
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
         with:
