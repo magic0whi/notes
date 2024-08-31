@@ -1,7 +1,7 @@
 # TODO: Use misc/ninja_syntax.py to auto-generates target (Replace find)
 OUTPUT=output
 rule build_xelatex
-  command = find -maxdepth 1 -type d ! -name '.' -a ! -name '.git' -a ! -name '.github' -a ! -name '$OUTPUT' -printf '%f\0' | xargs -0 -P$$(nproc) -I{} latexmk -cd -pdfxe -halt-on-error {}/master.tex -jobname={} -output-directory=../"$OUTPUT"
+  command = find -maxdepth 1 -type d ! -name '.' -a ! -name '.git' -a ! -name '.github' -a ! -name '$OUTPUT' -printf '%f\0' | xargs -0 -P$$(nproc) -I{} sh -c 'pushd {}; latexmk -pdfxe -halt-on-error master.tex -jobname={} -output-directory=../"$OUTPUT; popd"'
   description = Building XeLaTeX object $out
 
 rule clean_xelatex
