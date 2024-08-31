@@ -1,30 +1,17 @@
 \chapter{Differentiation}
 \section{Linear Approximation}
-\textbf{Linear approximation}\\
-\indent The linear approximation for a function \(f\) near point \(x=a\) is given by the following equivalent formulas:
+\subsection{Linear approximation}
+The linear approximation for a function $f$ near point $x=a$ is given by the following equivalent formulas:
 \begin{align*}
-    \Delta f\approx\left.\frac{\mathrm{d}f}{\mathrm{d}x}\right|_{x=a}\cdot\Delta x & \quad\text{for \(\Delta x\) near \(0\),}\\
-        f(x)\approx f^\prime (a)(x-a)+f(a) & \quad\text{for \(x\) near \(a\).}
+  \Delta f\approx\evalat{\frac{\dd f}{\dd x}}{x=a}\cdot\Delta x & \ \text{for}\ \Delta x\ \text{near}\ 0,\\
+  f(x)\approx f^\prime(a)(x-a)+f(a) & \ \text{for}\ x\ \text{near}\ a.
 \end{align*}
 
 \section{Product Rule}
-\textbf{The product rule}\\
-\indent If \(h(x)=f(x)g(x)\), then
-\[
-    h^\prime (x)=f(x)g^\prime (x)+g(x)f^\prime (x).
-\]
+\subsection{The product rule}
+\[\text{If}\ h=f\cdot g,\ \text{then}\ h^\prime=f\cdot g^\prime+f^\prime\cdot g.\]
 
 \begin{proof}
-    First we need to know the Leibniz notation
-    \[
-        \mathrm{d}f(x)=f(x+\mathrm{d}x)-f(x),
-    \]
-    which equals to \(\Delta f(x)=\lim_{\Delta x\to 0}[f(x+\Delta x)-f(x)]\).\par
-    When substitute \(f(x)=x\) into both equation we get \(\mathrm{d}x=(x+\mathrm{d}x)-x\) and \(\lim_{\Delta x\to 0}(x+\Delta x)-x\). Therefore
-    \[
-        \mathrm{d}x=\lim_{\Delta x\to 0}\Delta x.
-    \]
-    Thus we can replace \(\Delta x\) with \(\mathrm{d}x\) from the \(\Delta f(x)\) and remove the limit symbol, then naturally \(\Delta f(x)\) becomes \(\mathrm{d}f(x)\).\par
     To proof the product rule, we can write \(f(x+\mathrm{d}x)=\mathrm{d}f(x)+f(x)\), the reasons why this equation is important are that if we differentiate the \(h(x)=f(x)g(x)\):
     \begin{align*}
         \frac{\mathrm{d}h(x)}{\mathrm{d}x} & =\frac{\mathrm{d}}{\mathrm{d}x}[f(x)g(x)]\\

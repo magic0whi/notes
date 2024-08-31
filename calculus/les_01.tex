@@ -38,6 +38,7 @@ That is, no matter how small $\epsilon$ gets, we can satisfy the condition $\lve
   \item Division (Part 1): If $M\neq 0$, then $\lim_{x\to a}\frac{f(x)}{g(x)}=\frac L M$.
 \end{itemize}
 
+
 \section{Continuity}
 \subsection{Definition of Continuity at a Point}
 \begin{itemize}
@@ -191,8 +192,24 @@ If $n$ is any fixed number, and $f(x)=x^n$, then $f^\prime(x)=nx^{n-1}$.
 
 \section{Leibniz Notation}
 \subsection{Why do we use Leibniz notation?}
-The biggest reason is that it reminds us what the independent variable is. The derivative is measuring the instantaneous rate of change of the implicit variable of a function correspond to the independent variable. Sometimes, if there are lots of quantities that have variables representing them, it's easy to lose track of what is what. Leibniz notation helps to remind us.
+The biggest reason is that it reminds us what the independent variable is. The derivative is measuring the instantaneous rate of change of the implicit variable of a function respects to the independent variable. Sometimes, if there are lots of quantities that have variables representing them, it's easy to lose track of what is what. Leibniz notation helps to remind us.
 
+\subsection{Definition of Leibniz Notation}
+For function $f(x)$ and its derivative funtion $f^\prime(x)$, has
+\[f^\prime(x)=\frac{\dd f(x)}{\dd x}\]
+Where
+\begin{gather*}
+\mathrm{d}f(x)=f(x+\mathrm{d}x)-f(x)\quad\equiv\quad\lim_{\Delta x\to0}\Delta f(x)=\lim_{\Delta x\to0}[f(x+\Delta x)-f(x)],\\
+\dd x=\lim_{\Delta x\to0}\Delta x.
+\end{gather*}
+\begin{proof}[$\dd x=\lim_{\Delta x\to0}\Delta x$]
+  Substitute $f(x)=x$ into both equations gets
+  \begin{align*}
+                                  \dd x&=(x+\dd x)-x\\
+    \equiv\lim_{\Delta x\to0}\Delta x&=\lim_{\Delta x\to0}(x+\Delta x)-x\\
+                \therefore\mathrm{d}x&=\lim_{\Delta x\to0}\Delta x.
+  \end{align*}
+\end{proof}
 \subsection{Properties of Leibniz Notation}
 \begin{itemize}
 \item Units: If $P$ has units of pressure, and $t$ has units of \textit{time}, then $\frac{\dd P}{\dd t}\) has units of pressure per time.

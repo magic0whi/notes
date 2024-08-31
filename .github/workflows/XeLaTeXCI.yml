@@ -4,17 +4,18 @@ jobs:
   build_latex:
     runs-on: ubuntu-latest
     steps:
-      - name: Install font packages
-        run: |
-          sudo apt install fonts-ipaexfont fonts-noto-cjk
-          fc-cache -fv
       - name: Set up Git repository
         uses: actions/checkout@v4.1.7
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@3.2.0
         with:
+          extra_fonts: |
+            ./.github/NotoSerifCJK-Bold.ttc
+            ./.github/NotoSerifCJK-Regular.ttc
           latexmk_use_xelatex: true
-          root_file: calculus/master.tex
+          root_file: |
+            calculus/master.tex
+            japanese-duolingo/master.tex
           work_in_root_file_dir: true
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
