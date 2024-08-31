@@ -1,76 +1,67 @@
 \chapter{Differentiation}
 \section{Linear Approximation}
-\subsection{The Definition of Linear Approximation}
 The linear approximation for a function $f$ near point $x=a$ is given by the following equivalent formulas:
 \begin{gather*}
   \Delta f\approx\evalat{\frac{\dd f}{\dd x}}{x=a}\cdot\Delta x\ \text{for}\ \Delta x\ \text{near}\ 0,\\
   f(x)\approx f^\prime(a)(x-a)+f(a)\ \text{for}\ x\ \text{near}\ a.
 \end{gather*}
 
-\subsection{The Product Rule}
+\section{The Product Rule}
 \[\text{If}\ h=f\cdot g,\ \text{then}\ h^\prime=f\cdot g^\prime+f^\prime\cdot g.\]
 \begin{proof}
-  To proof the product rule, we can write $f(x+\dd x)=\mathrm{d}f(x)+f(x)\), the reasons why this equation is important are that if we differentiate the \(h(x)=f(x)g(x)\):
-    \begin{align*}
-        \frac{\mathrm{d}h(x)}{\mathrm{d}x} & =\frac{\mathrm{d}}{\mathrm{d}x}[f(x)g(x)]\\
-                                           & =\frac{f(x+\mathrm{d}x)g(x+\mathrm{d}x)-f(x)g(x)}{\mathrm{d}x}\\
-                                           & =\frac{[\mathrm{d}f(x)+f(x)][\mathrm{d}g(x)+g(x)]-f(x)g(x)}{\mathrm{d}x}\\
-                                           & =\frac{\mathrm{d}f(x)\mathrm{d}g(x)+g(x)\mathrm{d}f(x)+f(x)\mathrm{d}g(x)\cancel{+f(x)g(x)-f(x)g(x)}}{\mathrm{d}x}\\
-                                           & =\frac{\mathrm{d}f(x)\mathrm{d}g(x)}{\mathrm{d}x}+g(x)\frac{\mathrm{d}f(x)}{\mathrm{d}x}+f(x)\frac{\mathrm{d}g(x)}{\mathrm{d}x}.
-    \end{align*}
-    The \(\frac{\mathrm{d}f(x)\mathrm{d}g(x)}{\mathrm{d}x}\) can be transformed into \(\frac{\mathrm{d}f(x)}{\mathrm{d}x}\cdot\frac{\mathrm{d}g(x)}{\mathrm{d}x}\cdot\mathrm{d}x\) which equals to \(0\) because the extra \(\mathrm{d}x\) at the end. Finally
-    \[
-        \frac{\mathrm{d}h(x)}{\mathrm{d}x}=g(x)\frac{\mathrm{d}f(x)}{\mathrm{d}x}+f(x)\frac{\mathrm{d}g(x)}{\mathrm{d}x}.
-    \]
+  To proof the product rule, we can write $f(x+\dd x)=\dd f(x)+f(x)$, the reason why this equation is important is that if we differentiate the $h=fg$:
+  \begin{align*}
+    \frac{\dd h}{\dd x} & =\frac\dd{\dd x}(fg)\\
+                        & =\frac{f(x+\dd x)g(x+\dd x)-f(x)g(x)}{\mathrm{d}x}\\
+                        & =\frac{(\dd f+f)(\dd g+g)-fg}{\dd x}\\
+                        & =\frac{\dd f\dd g+g\dd f+f\dd g+\cancel{fg-fg}}{\dd x}\\
+                        & =\frac{\dd f\dd g}{\dd x}+g\frac{\dd f}{\dd x}+f\frac{\dd g}{\dd x}.
+  \end{align*}
+  The $\frac{\dd f\dd g}{\dd x}\) can be transformed into $\frac{\dd f}{\dd x}\cdot\frac{\dd g}{\dd x}\cdot\dd x$ which would be 0 because the extra $\dd x$ at the end. Finally
+  \[
+    \frac{\dd h}{\dd x}=g\frac{\dd f}{\dd x}+f\frac{\dd g}{\dd x}.
+  \]
 \end{proof}
 
-\section{Quotient Rule}
-\begin{enumerate}
-    \item \textbf{The quotient rule.}\\
-        \indent If \(h(x)=\frac{f(x)}{g(x)}\) for all \(x\), then
-        \[
-            h^\prime (x)=\frac{f^\prime (x)g(x)-f(x)g^\prime (x)}{g(x)^2}
-        \]
-        at all points where \(f\) and \(g\) are differentiable and \(g(x)\neq 0\).
-    \item \textbf{Derivatives of all trigonometric functions}
-        \begin{align*}
-            & \frac{\mathrm{d}}{\mathrm{d}x}\sin x=\cos x\\
-            & \frac{\mathrm{d}}{\mathrm{d}x}\cos x=-\sin x\\
-            & \frac{\mathrm{d}}{\mathrm{d}x}\tan x=\cos^{-2}x=\sec^2 x\\
-            & \frac{\mathrm{d}}{\mathrm{d}x}\cot x=-\sin^{-2}x=-\csc^2 x\\
-            & \frac{\mathrm{d}}{\mathrm{d}x}\sec x=\frac{\sin x}{\cos^2 x}=\sec x\tan x\\
-            & \frac{\mathrm{d}}{\mathrm{d}x}\csc x=-\frac{\cos x}{\sin^2 x}=-\csc x\cot x.
-        \end{align*}
-\end{enumerate}
+\section{The Quotient Rule}
+\subsection{The Quotient Rule}
+For functions $f$ and $g$,
+\[
+\text{if}\ h=\frac f g\ ,\ \text{then}\ h^\prime=\frac{f^\prime g-fg^\prime}{g^2}
+\]
+at all points where $f$ and $g$ are differentiable and $g\neq0$.
 
-\section{Chain Rule}
-\begin{enumerate}
-    \item \textbf{The Chain Rule}\\
-        \indent If \(h(x)=f[g(x)]\), then
-        \[
-            h^\prime (x)=f^\prime [g(x)]g^\prime (x)
-        \]
-        at all points where the derivatives \(f^\prime [g(x)]\) and \(g^\prime (x)\) are defined.
-        \begin{note}
-            \textbf{Notice that \([f(g(x))]^\prime=h^\prime (x)\neq f^\prime[g(x)]\).}
-        \end{note}
-        Alternatively, let \(y=f(u)\) and \(u=g(x)\), then
-        \[
-            \left.\frac{\mathrm{d}y}{\mathrm{d}x}\right|_{x=a}=\left.\frac{\mathrm{d}y}{\mathrm{d}u}\right|_{u=g(a)}\cdot\left.\frac{\mathrm{d}u}{\mathrm{d}x}\right|_{x=a}
-        \]
-        at any point \(x=a\) where the derivatives on the right side are defined.
-        \begin{proof}
-            \textbf{Quotient Rule (by using Chain Rule and Product Rule)}\\
-            \indent If \(h(x)=\frac{f(x)}{g(x)}\), the first thing to do is to rewrite \(\frac{1}{g(x)}\) in terms of a fractional power \(h(x)=f(x)\cdot g^{-1}(x)\). To help keep clear we write \(u=g(x)\) so \(h(x)=f(x)\cdot u^{-1}\). Thus the last step is a product, then we start by product rule
-            \begin{align*}
-                h^\prime (x) & =f^\prime (x)\cdot u^{-1}+(u^{-1})^\prime f(x)\\
-                             & =\frac{f^\prime (x)}{g(x)}+(-u^{-2}\cdot u^\prime)f(x)\\
-                             & =\frac{f^\prime (x)}{u}+[-\frac{1}{g^2(x)}\cdot g^\prime (x)]f(x)\\
-                             & =\frac{f^\prime (x)}{g(x)}-\frac{g^\prime (x)f(x)}{g^2(x)}\\
-                             & =\frac{f^\prime (x)g(x)+g^\prime (x)f(x)}{g^2(x)}.
-            \end{align*}
-        \end{proof}
-\end{enumerate}
+\subsection{Derivatives of All Trigonometric Functions}
+\begin{align*}
+  & \frac\dd{\dd x}\sin x=\cos x\\
+  & \frac\dd{\dd x}\cos x=-\sin x\\
+  & \frac\dd{\dd x}\tan x=\cos^{-2}x=\sec^2 x\\
+  & \frac\dd{\dd x}\cot x=-\sin^{-2}x=-\csc^2 x\\
+  & \frac\dd{\dd x}\sec x=\frac{\sin x}{\cos^2 x}=\sec x\tan x\\
+  & \frac\dd{\dd x}\csc x=-\frac{\cos x}{\sin^2 x}=-\csc x\cot x.
+\end{align*}
+
+\section{The Chain Rule}
+For functions $f$ and $g$,
+\[\text{if}\ h=f\circ g,\ \text{then}\ h^\prime=f^\prime(g)g^\prime\]
+at all points where $f^\prime(g)$ and $g^\prime$ are defined.
+\begin{note}Notice that $f^\prime(g)\neq[f(g)]^\prime $.\end{note}
+Alternatively, let $y=f(u)$ and $u=g(x)$, then
+\[
+  \evalat{\frac{\dd y}{\dd x}}{x=a}=\evalat{\frac{\dd y}{\dd u}}{u=g(a)}\cdot\evalat{\frac{\dd u}{\dd x}}{x=a}
+\]
+at any point $x=a$ where the derivatives on the right side are defined.
+\todo{Here}
+\begin{proof}[Quotient Rule (by using Chain Rule and Product Rule)]
+If \(h(x)=\frac{f(x)}{g(x)}\), the first thing to do is to rewrite \(\frac{1}{g(x)}\) in terms of a fractional power \(h(x)=f(x)\cdot g^{-1}(x)\). To help keep clear we write \(u=g(x)\) so \(h(x)=f(x)\cdot u^{-1}\). Thus the last step is a product, then we start by product rule
+    \begin{align*}
+        h^\prime (x) & =f^\prime (x)\cdot u^{-1}+(u^{-1})^\prime f(x)\\
+                     & =\frac{f^\prime (x)}{g(x)}+(-u^{-2}\cdot u^\prime)f(x)\\
+                     & =\frac{f^\prime (x)}{u}+[-\frac{1}{g^2(x)}\cdot g^\prime (x)]f(x)\\
+                     & =\frac{f^\prime (x)}{g(x)}-\frac{g^\prime (x)f(x)}{g^2(x)}\\
+                     & =\frac{f^\prime (x)g(x)+g^\prime (x)f(x)}{g^2(x)}.
+    \end{align*}
+\end{proof}
 
 \section{Implicit Differentiation}
 \begin{note}\textbf{Implicit functions:} An implicit function is an equation involving both \(x\) and \(y\) (or any two variables really); you \textit{could} solve for \(y\) as a function of \(x\), but often times that computation is messy or impossible. If a function is not implicit, we say that it is explicit.
