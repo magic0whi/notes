@@ -1,7 +1,7 @@
-# TODO: Use misc/ninja_syntax.py to auto-generates target (Replace find)
+# TODO: Use misc/ninja_syntax.py to auto-generates target (Replace find/xargs mechanism)
 OUT_DIR=output
 rule build_xelatex
-  command = find -maxdepth 1 -type d -printf '%f\0' | xargs -0 -P$$(nproc) -I{} sh -c 'if [ -e "{}/master.tex" ]; then cd {}; pwd; latexmk -pdfxe -halt-on-error master.tex -jobname={} -output-directory=../"$OUT_DIR"; fi'
+  command = find -maxdepth 1 -type d -printf '%f\0' | xargs -0 -P$$(nproc) -I{} sh -c 'if [ -e "{}/master.tex" ]; then cd {}; latexmk -pdfxe -halt-on-error master.tex -jobname={} -output-directory=../"$OUT_DIR"; fi'
   description = Building XeLaTeX object $out
 
 rule clean_xelatex

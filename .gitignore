@@ -11,3 +11,5 @@
 .ninja_deps
 
 tags
+# Whitelist
+!**/figures/*.pdf
