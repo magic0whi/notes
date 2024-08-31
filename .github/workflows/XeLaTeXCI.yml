@@ -1,5 +1,7 @@
 name: Build XeLaTeX document
 on: [push]
+env:
+  OUT_DIR: output
 jobs:
   build_latex:
     runs-on: ubuntu-latest
@@ -7,18 +9,14 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v4.1.7
       - name: Compile LaTeX document
-        uses: xu-cheng/latex-action@3.2.0
+        uses: xu-cheng/texlive-action@v2
         with:
-          extra_fonts: |
-            ./.github/NotoSerifCJK-Bold.ttc
-            ./.github/NotoSerifCJK-Regular.ttc
-          latexmk_use_xelatex: true
-          root_file: |
-            calculus/master.tex
-            japanese-duolingo/master.tex
-          work_in_root_file_dir: true
+          scheme: full
+          run: |
+            apk add ninja font-noto-cjk
+            ninja pdf
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
         with:
-          name: PDF
-          path: main.pdf
+          name: notes
+          path: $OUT_DIR/*.pdf

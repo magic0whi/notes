@@ -50,10 +50,10 @@
 \DeclareMathOperator{\Ker}{ker}
 \DeclareMathOperator{\im}{Im}
 \let\svlim\lim\def\lim{\svlim\limits}
-\let\implies\Rightarrow
-\let\impliedby\Leftarrow
-\let\iff\Leftrightarrow
-\let\epsilon\varepsilon
+\let\implies\Rightarrow%
+\let\impliedby\Leftarrow%
+\let\iff\Leftrightarrow%
+\let\epsilon\varepsilon%
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}
 \DeclarePairedDelimiter\norm{\lVert}{\rVert}
 \usepackage{stmaryrd} % for \lightning
@@ -87,7 +87,7 @@
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.13}
 \tikzset{force/.style={thick,{Circle[length=2pt]}-stealth,shorten<=-1pt}}
-\newcommand{\tikzmark}[2]{\tikz[overlay,remember picture,baseline] \node [anchor=base] (#1) {$#2$};}
+\newcommand{\tikzmark}[2]{\tikz[overlay,remember picture,baseline] \node[anchor=base] (#1) {$#2$};}
 \newcommand{\drawline}[3][]{%
     \begin{tikzpicture}[overlay,remember picture]
         \draw[#1] (#2) -- (#3);
@@ -154,7 +154,7 @@
         rightline=false, topline=false, bottomline=false,
         linecolor=RawSienna, backgroundcolor=RawSienna!1,
     },
-    qed=\qedsymbol
+    qed=\qedsymbol%
 ]{thmproofbox}
 \declaretheoremstyle[
     headfont=\bfseries\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
@@ -195,6 +195,7 @@
 % \def\thm@space@setup{%
 %   \thm@preskip=\parskip \thm@postskip=0pt
 % }
+\makeatother
 
 \newcommand{\oefening}[1]{%
     \def\@oefening{#1}%
@@ -214,8 +215,8 @@
 \usepackage{xifthen}
 
 \def\testdateparts#1{\dateparts#1\relax}
-\def\dateparts#1 #2 #3 #4 #5\relax{
-    \marginpar{\small\textsf{\mbox{#1 #2 #3 #5}}}
+\def\dateparts#1 #2 #3 #4\relax{
+    \marginpar{\scriptsize\textsf{\mbox{#1 #2 #3 #4}}}
 }
 
 \def\@lesson{}%

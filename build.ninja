@@ -1,0 +1,17 @@
+# TODO: Use misc/ninja_syntax.py to auto-generates target (Replace find)
+OUTPUT=output
+rule build_xelatex
+  command = find -maxdepth 1 -type d ! -name '.' -a ! -name '.git' -a ! -name '.github' -a ! -name '$OUTPUT' -printf '%f\0' | xargs -0 -P$$(nproc) -I{} latexmk -cd -pdfxe -halt-on-error {}/master.tex -jobname={} -output-directory=../"$OUTPUT"
+  description = Building XeLaTeX object $out
+
+rule clean_xelatex
+  command = find -maxdepth 1 -type d ! -name '.' -a ! -name '.git' -a ! -name '.github' -a ! -name '$OUTPUT' -printf '%f\0' | xargs -0 -P$$(nproc) -I{} sh -c 'pushd {}; latexmk -C; popd'
+  description = Clean temporary files created by Texlab
+
+rule clean_output
+  command = rm -r $OUTPUT
+  description = Remove the directory $OUTPUT
+
+build pdf: build_xelatex
+build _clean_output: clean_output
+build clean: clean_xelatex _clean_output
