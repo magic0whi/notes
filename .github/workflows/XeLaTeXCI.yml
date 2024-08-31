@@ -13,10 +13,10 @@ jobs:
         with:
           scheme: full
           run: |
-            apk add findutils font-noto-cjk ninja-build
+            apk add findutils font-noto-cjk samurai
             ninja pdf
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
         with:
           name: notes
-          path: $OUT_DIR/*.pdf
+          path: ${{ env.OUT_DIR}} /*.pdf
