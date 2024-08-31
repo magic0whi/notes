@@ -5,8 +5,9 @@
 *.fdb_latexmk
 *.log
 *.pdf
-*.pdf_tex
 *.synctex.gz
 *.xdv
+
+.ninja_deps
 
 tags
