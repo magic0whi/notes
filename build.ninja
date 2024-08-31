@@ -1,11 +1,11 @@
 # TODO: Use misc/ninja_syntax.py to auto-generates target (Replace find)
 OUTPUT=output
 rule build_xelatex
-  command = find -maxdepth 1 -type d ! -name '.' -a ! -name '.git' -a ! -name '.github' -a ! -name '$OUTPUT' -printf '%f\0' | xargs -0 -P$$(nproc) -I{} sh -c 'cd {}; latexmk -pdfxe -halt-on-error master.tex -jobname={} -output-directory=../"$OUTPUT"'
+  command = find -maxdepth 1 -type d -printf '%f\0' | xargs -0 -P$$(nproc) -I{} sh -c 'if [ -e "{}/master.tex" ]; then cd {}; pwd; latexmk -pdfxe -halt-on-error master.tex -jobname={} -output-directory=../"$OUTPUT"; fi'
   description = Building XeLaTeX object $out
 
 rule clean_xelatex
-  command = find -maxdepth 1 -type d ! -name '.' -a ! -name '.git' -a ! -name '.github' -a ! -name '$OUTPUT' -printf '%f\0' | xargs -0 -P$$(nproc) -I{} sh -c 'cd {}; latexmk -C'
+  command = find -maxdepth 1 -type d -printf '%f\0' | xargs -0 -P$$(nproc) -I{} sh -c 'if [ -e "{}/master.tex" ]; then cd {}; latexmk -C; fi'
   description = Clean temporary files created by Texlab
 
 rule clean_output
