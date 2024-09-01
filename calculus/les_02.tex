@@ -18,18 +18,23 @@ The linear approximation for a function $f$ near point $x=a$ is given by the fol
                         & =\frac{\dd f\dd g}{\dd x}+g\frac{\dd f}{\dd x}+f\frac{\dd g}{\dd x}.
   \end{align*}
   The $\frac{\dd f\dd g}{\dd x}\) can be transformed into $\frac{\dd f}{\dd x}\cdot\frac{\dd g}{\dd x}\cdot\dd x$ which would be 0 because the extra $\dd x$ at the end. Finally
-  \[
-    \frac{\dd h}{\dd x}=g\frac{\dd f}{\dd x}+f\frac{\dd g}{\dd x}.
-  \]
+  \[\frac{\dd h}{\dd x}=g\frac{\dd f}{\dd x}+f\frac{\dd g}{\dd x}.\]
 \end{proof}
 
 \section{The Quotient Rule}
 \subsection{The Quotient Rule}
 For functions $f$ and $g$,
-\[
-\text{if}\ h=\frac f g\ ,\ \text{then}\ h^\prime=\frac{f^\prime g-fg^\prime}{g^2}
-\]
-at all points where $f$ and $g$ are differentiable and $g\neq0$.
+\[\text{if}\ h=\frac f g\ ,\ \text{then}\ h^\prime=\frac{f^\prime g-fg^\prime}{g^2}\] at all points where $f$ and $g$ are differentiable and $g\neq0$.
+\begin{proof}[The Quotient Rule]
+If $h=\frac f g$, the first thing to do is to rewrite $\frac 1 g$ in the terms of a fractional power $h=fg^{-1}$. Thus the last step is a product, then we start by product rule:
+    \begin{align*}
+        h^\prime & =f^\prime g^{-1}+(g^{-1})^\prime f\\
+                 & =\frac{f^\prime}g+(-g^{-2}g^\prime)f\\
+                 & =\frac{f^\prime}g+\left(-\frac1{g^2}g^\prime\right)f\\
+                 & =\frac{f^\prime}g-\frac{g^\prime f}{g^2}\\
+                 & =\frac{f^\prime g+g^\prime f}{g^2}.
+    \end{align*}
+\end{proof}
 
 \subsection{Derivatives of All Trigonometric Functions}
 \begin{align*}
@@ -48,169 +53,143 @@ at all points where $f^\prime(g)$ and $g^\prime$ are defined.
 \begin{note}Notice that $f^\prime(g)\neq[f(g)]^\prime $.\end{note}
 Alternatively, let $y=f(u)$ and $u=g(x)$, then
 \[
-  \evalat{\frac{\dd y}{\dd x}}{x=a}=\evalat{\frac{\dd y}{\dd u}}{u=g(a)}\cdot\evalat{\frac{\dd u}{\dd x}}{x=a}
+\evalat{\frac{\dd y}{\dd x}}{x=a}=\evalat{\frac{\dd y}{\dd u}}{u=g(a)}\cdot\evalat{\frac{\dd u}{\dd x}}{x=a}
 \]
 at any point $x=a$ where the derivatives on the right side are defined.
-\todo{Here}
-\begin{proof}[Quotient Rule (by using Chain Rule and Product Rule)]
-If \(h(x)=\frac{f(x)}{g(x)}\), the first thing to do is to rewrite \(\frac{1}{g(x)}\) in terms of a fractional power \(h(x)=f(x)\cdot g^{-1}(x)\). To help keep clear we write \(u=g(x)\) so \(h(x)=f(x)\cdot u^{-1}\). Thus the last step is a product, then we start by product rule
-    \begin{align*}
-        h^\prime (x) & =f^\prime (x)\cdot u^{-1}+(u^{-1})^\prime f(x)\\
-                     & =\frac{f^\prime (x)}{g(x)}+(-u^{-2}\cdot u^\prime)f(x)\\
-                     & =\frac{f^\prime (x)}{u}+[-\frac{1}{g^2(x)}\cdot g^\prime (x)]f(x)\\
-                     & =\frac{f^\prime (x)}{g(x)}-\frac{g^\prime (x)f(x)}{g^2(x)}\\
-                     & =\frac{f^\prime (x)g(x)+g^\prime (x)f(x)}{g^2(x)}.
-    \end{align*}
-\end{proof}
 
 \section{Implicit Differentiation}
-\begin{note}\textbf{Implicit functions:} An implicit function is an equation involving both \(x\) and \(y\) (or any two variables really); you \textit{could} solve for \(y\) as a function of \(x\), but often times that computation is messy or impossible. If a function is not implicit, we say that it is explicit.
+\begin{note}[Implicit functions] An implicit function is an equation involving both $x$ and $y$ (or any two variables really). you could solve for $y$ as a function of $x$, but often times that computation is messy or impossible. If a function isn't implicit, we say that it is explicit.
 \end{note}
 
-Immediately differentiating \(y=x^{m/n}\) is hard. But differentiating the \textit{implicit} function \(y^n=x^m\) was a whole lot easier. This happens any time your function is more simply described implicitly.
+Immediately differentiating $y=x^{m/n}$ is hard. But differentiating the implicit function $y^n=x^m$ is a whole lot easier. This happens any time your function is more simply described implicitly.
 \begin{align*}
-    \phantom{\Leftrightarrow\,} & \frac{\mathrm{d}}{\mathrm{d}x}(y^n=x^m)\\
-                             \Leftrightarrow\, & ny^{n-1}\cdot\frac{\mathrm{d}y}{\mathrm{d}x}=mx^{m-1}\\
-                             \Leftrightarrow\, & \frac{\mathrm{d}y}{\mathrm{d}x}=\frac{m}{n}\cdot\frac{x^{m-1}}{y^{n-1}}.
+  \phantom{\equiv}\ & \frac{\dd }{\dd x}(y^n=x^m)\\
+            \equiv\ & ny^{n-1}\frac{\dd y}{\dd x}=mx^{m-1}\\
+            \equiv\ & \frac{\dd y}{\dd x}=\frac m n\cdot\frac{x^{m-1}}{y^{n-1}}.
 \end{align*}
-
-\begin{eg}
-    Which of the following equations give \(y\) as an implicit function of \(x\)?
-    \begin{itemize}
-        \item \(y^3=x^2\) is implicit. 
-        \item \(y=x^{2/3}\) is explicit.
-        \item \(yx=1\) is implicit.
-        \item \(y+x=1\) is implicit.
-        \item \(\sin(y)=\cos(x)\) is implicit.
-    \end{itemize}
+\begin{eg}[Which of the following equations given $y$ as an implicit function of $x$?]
+  \leavevmode
+  \begin{itemize}
+    \item$y^3=x^2$ is implicit.
+    \item$y=x^{2/3}$ is \textit{explicit}.
+    \item$yx=1$ is implicit.
+    \item$y+x=1$ is implicit.
+    \item$\sin y=\cos x$ is implicit.
+  \end{itemize}
 \end{eg}
 
 \section{Inverse Function}
-\begin{enumerate}
-    \item \textbf{Definition of inverse function}\\
-        \indent If function \(f\) and \(g\) satisfy \(g[f(x)]=x\) and \(f[g(y)]=y\), then we say \(g\) is the inverse of \(f\), and denote it by \(f^{-1}\). (Similarly, \(f=g^{-1}\).)\\
-        \indent If a function \(f\) has an inverse function \(f^{-1}\), then \(f^{-1}(b)=a\) if and only if \(b=f(a)\).
-    \item \textbf{Definition of one-to-one}\\
-        \indent A function \(f\) is \textbf{one-to-one} if whenever \(a\neq b\), \(f(a)\neq f(b)\). (Horizontal line test.)
-    \item \textbf{Domain and range, interval notation}\\
-        \indent The \textbf{domain} of a function \(f\) is the set of allowable input values.\\
-        \indent For instance, the domain of the function \(f(x)=1/x\) is the set of all non-zero real numbers. (\(x\in(-\infty,0)\cup(0,+\infty)\).)\par
-        The \textbf{range} of \(f\) is the set of all possible output values. For instance, the range of the function \(g(x)=x^2\) is the set of all real numbers that are non-negative. (\(g(x)\in[0,+\infty)\).)\par
-        An \textbf{open interval}, denoted \((a,b)\), is the set of numbers \(x\) such that \(a<x<b\). This notation using round parentheses for open intervals is not universal. Many mathematicians use reversed square brackets instead. For instance, they would denote the interval \(3<x<7\) as \(]3,7[\) rather than \((3,7)\). However, I will stick to round parentheses for open intervals.
-    \item \textbf{The inverse trig functions}
-        \begin{align*}
-            & \sin\theta=x\text{ such that }\arcsin x=\theta, \theta\in[-\frac{\pi}{2},\frac{\pi}{2}]\\
-            & \cos\theta=x\text{ such that }\arccos x=\theta, \theta\in[0,\pi]\\
-            & \tan\theta=x\text{ such that }\arctan x=\theta, \theta\in(-\frac{\pi}{2},\frac{\pi}{2}).
-        \end{align*}
-    \item \textbf{Derivatives of inverse functions}\\
-        \indent If \(g\) is a (full or partial) inverse of a function \(f\), then
-        \[
-        g^\prime (x)=\frac{1}{f^\prime [g(x)]}.
-        \]
-        at all \(x\) where \(f^\prime [g(x)]\) exists and is non-zero.
-    \item \textbf{Derivatives of arctrig functions}\\
-        \indent Where defined,
-        \begin{align*}
-            & \frac{\mathrm{d}}{\mathrm{d}x}\arcsin x=\frac{1}{\sqrt{1-x^2}}\\
-            & \frac{\mathrm{d}}{\mathrm{d}x}\arccos x=-\frac{1}{\sqrt{1-x^2}}\\
-            & \frac{\mathrm{d}}{\mathrm{d}x}\arctan x=\frac{1}{x^2+1}.
-        \end{align*}
-        \begin{proof}\leavevmode
-            \begin{itemize}
-                \item Assume \(\arcsin x=\theta, \theta\in[-\frac{\pi}{2},\frac{\pi}{2}]\),
-                    \[
-                        \frac{\mathrm{d}}{\mathrm{d}x}\arcsin x=\frac{1}{\cos\theta}=\frac{1}{\sqrt{1-\sin^2 \theta}}=\frac{1}{\sqrt{1-x^2}}.
-                    \]
-                \item Assume \(\arccos x=\theta, \theta\in[0,\pi]\),
-                    \[
-                        \frac{\mathrm{d}}{\mathrm{d}x}\arccos x=\frac{1}{-\sin\theta}=\frac{1}{-\sqrt{1-\cos^2 \theta}}=-\frac{1}{\sqrt{1-x^2}}.
-                    \]
-                \item Assume \(\arctan x=\theta, \theta\in(-\frac{\pi}{2},\frac{\pi}{2})\),
-                    \begin{align*}
-                        \frac{\mathrm{d}}{\mathrm{d}x}\arctan x=\frac{1}{\sec^2 \theta}=\frac{1}{\cos^{-2} \theta}
-                        & =\cos^2 \theta\\
-                        & =\underbrace{\left(\frac{\cos\theta}{\sqrt{\sin^2 \theta+\cos^2 \theta}}\right)^2}_{\mathclap{\text{Use cosine definition and Pythagoras rule.}}}\\
-                        & =\frac{1}{\tan^2 \theta+1}\\
-                        & =\frac{1}{x^2+1}.
-                    \end{align*}
-            \end{itemize}
-        \end{proof}
-\end{enumerate}
+\subsection{Definition of Inverse Function}
+If function $f$ and $g$ satisfy $g\circ f(x)=x$ and $f\circ g(y)=y$, then we say $g$ is the inverse of $f$, and denote it by $f^{-1}$ (equivalently $f=g^{-1}$). 
+
+If a function $f$ has an inverse function $f^{-1}$, then $f^{-1}(b)=a$ if and only if $b=f(a)$.
+
+\subsection{Definition of one-to-one (Horizontal line test)}
+A function $f$ is \textbf{one-to-one} if whenever $a\neq b$, $f(a)\neq f(b)$ (Horizontal line test).
+
+\subsection{The Inverse Trigonometry Functions}
+\begin{itemize}
+  \item$\sin\theta=x$ such that $\arcsin x=\theta\ \left(\theta\in\left[-\frac\pi 2,\frac\pi 2\right]\right)$;
+  \item$\cos\theta=x$ such that $\arccos x=\theta\ \left(\theta\in\left[0,\pi\right]\right)$;
+  \item$\tan\theta=x$ such that $\arctan x=\theta\ \left(\theta\in\left(-\frac\pi 2,\frac\pi 2\right)\right)$.
+\end{itemize}
+\todo{Supplement plots}
+\subsection{Derivatives of Inverse Functions}
+If $g$ is a (full or partial) inverse of a function $f$, then
+\[g^\prime=\frac1{f^\prime\circ g}\]
+at all $x$ where $f^\prime\circ g$ exists and is non-zero.
+
+\subsection{Derivatives of Arctrig Functions}
+Where defined,
+\begin{itemize}
+  \item$\frac\dd{\dd x}\arcsin x=\frac1{\sqrt{1-x^2}}$;
+  \item$\frac\dd{\dd x}\arccos x=-\frac1{\sqrt{1-x^2}}$;
+  \item$\frac\dd{\dd x}\arctan x=\frac1{x^2+1}$.
+\end{itemize}
+\begin{proof}\leavevmode
+  \begin{itemize}
+  \item Assume $\arcsin x=\theta\ \left(\theta\in\left[-\frac\pi 2,\frac\pi 2\right]\right)$,
+    \[
+    \frac\dd{\dd x}\arcsin x=\frac1{\cos\theta}=\frac1{\sqrt{1-\sin^2 \theta}}=\frac1{\sqrt{1-x^2}};
+    \]
+  \item Assume $\arccos x=\theta\ \left(\theta\in\left[0,\pi\right]\right)$,
+    \[
+    \frac\dd{\dd x}\arccos x=\frac1{-\sin\theta}=\frac1{-\sqrt{1-\cos^2 \theta}}=-\frac1{\sqrt{1-x^2}};
+    \]
+  \item Assume $\arctan x=\theta\ \left(\theta\in\left(-\frac\pi 2,\frac\pi 2\right)\right)$,
+    \begin{align*}
+      \frac\dd{\dd x}\arctan x=\frac1{\sec^2 \theta}=\frac1{\cos^{-2}\theta}
+      & =\cos^2 \theta\\
+      & =\underbrace{\left(\frac{\cos\theta}{\sqrt{\sin^2 \theta+\cos^2 \theta}}\right)^2}_{\mathclap{\text{Cosine definition and Pythagoras rule}}}\\
+      & =\frac1{\tan^2 \theta+1}=\frac1{x^2+1}.
+    \end{align*}
+  \end{itemize}
+\end{proof}
 
 \section{Exponential Functions}
-\begin{enumerate}
-    \item \textbf{Properties of exponents}\\
-        Let \(a\) be a positive real number.
-        \begin{itemize}
-            \item \(a^0=1\)
-            \item \(a^1=a\)
-            \item \(a^m a^n=a^{m+n}\)
-            \item \((a^m)^n=a^{mn}\)
-            \item \(a^{m/n}=\sqrt[n]{a^m}\)
-        \end{itemize}
-    \item \textbf{Properties of exponential functions}\\
-        \indent The function \(f(x)=a^x\) has base \(a\) for a positive real number.
-        \begin{itemize}
-            \item The function \(a^x\) is a continuous function.
-            \item The domain of \(a^x\) is all real numbers.
-            \item The range of \(a^x\) is all positive real numbers.
-        \end{itemize}
-    \item \textbf{The derivative of an exponential function}\\
-        \indent The derivative of the exponential function is
-        \[
-            \frac{\mathrm{d}}{\mathrm{d}x}a^x=\frac{a^{x+\mathrm{d}x}-a^x}{\mathrm{d}x}=\frac{a^{\mathrm{d}x}-1}{\mathrm{d}x}\cdot a^x=M(a)a^x,
-        \]
-        where the mystery number \(M(a)\) is the slope of the tangent line at zero:
-        \[
-            M(a)=\left.\frac{\mathrm{d}}{\mathrm{d}x}a^x\right|_{x=0}=\frac{a^{\mathrm{d}x}-1}{\mathrm{d}x}.
-        \]
-    \item \textbf{Definition of \(e\)}\\
-        \indent The base \(e\) is the unique real number which has \(M(e)=1\). Then
-        \[
-            \frac{\mathrm{d}}{\mathrm{d}x}e^x=e^x.
-        \]
-        Since \(M(e)\) always equals to \(1\):
-        \begin{align*}
-            \frac{e^{\mathrm{d}x} -1}{\mathrm{d}x} & =1\\
-            e^{\mathrm{d}x} & =1+\mathrm{d}x\\
-            e & =(1+\mathrm{d}x)^{\frac{1}{\mathrm{d}x}},
-        \end{align*}
-        Let \(\frac{1}{\mathrm{d}x}=n, n\to +\infty\). We get the formal definition of \(e\):
-        \[
-            e=\lim_{n\to+\infty}(1+\frac{1}{n})^n.
-        \]
-    \item \textbf{Differentiating exponential functions with other bases}\\
-        \indent For any positive constant \(a\),
-        \[
-            \frac{\mathrm{d}}{\mathrm{d}x}a^x=a^x\ln a.
-        \]
-        \begin{proof}
-            \begin{align*}
-                M(a) & =\frac{a^{\mathrm{d}x}-1}{\mathrm{d}x}\\
-                     & =\frac{e^{\mathrm{d}x\ln a}-1}{\mathrm{d}x}.
-            \end{align*}
-            Since \(\mathrm{d}x\ln a\to0\), we can rewrite the definition of \(e\) to
-            \[
-                e=(1+\mathrm{d}x\ln a)^\frac{1}{\mathrm{d}x\ln a}
-            \]
-            then
-            \begin{align*}
-                M(a) & =\frac{\mathrm{d}x\ln a}{\mathrm{d}x}\\
-                     & =\ln a.
-            \end{align*}
-        \end{proof}
-        \begin{proof}
-            There exists another method to proof \((a^x)^\prime=a^x\ln a\) directly. It also changes to base \(e\) but later it differentiate using the chain rule.
-            \begin{align*}
-                \frac{\mathrm{d}a^x}{\mathrm{d}x} & =\frac{\mathrm{d}e^{x\ln a}}{\mathrm{d}x}\\
-                                                 & =\frac{\mathrm{d}e^{x\ln a}}{\mathrm{d}(x\ln a)}\cdot\frac{\mathrm{d}(x\ln a)}{\mathrm{d}x}\\
-                                                 & =e^{x\ln a}\ln a\\
-                                                 & =a^x\ln a
-            \end{align*}
-        \end{proof}
-\end{enumerate}
+\subsection{Properties of Exponents}
+Let $a$ be a positive real number.
+\begin{itemize}
+\item $a^0=1$;
+\item $a^1=a$;
+\item $a^m a^n=a^{m+n}$;
+\item $(a^m)^n=a^{mn}$;
+\item $a^{m/n}=\sqrt[n]{a^m}$.
+\end{itemize}
 
+\subsection{Properties of Exponential Functions}
+The function $f(x)=a^x$ has base $a$ for a positive real number.
+\begin{itemize}
+\item The function $a^x$ is a continuous function.
+\item The domain of $a^x$ is $\R$.
+\item The range of $a^x$ is $\R^+$.
+\end{itemize}
+
+\subsection{The Derivative of an Exponential Function}
+The derivative of the exponential function is
+\[
+\frac\dd{\dd x}a^x=\frac{a^{x+\dd x}-a^x}{\dd x}=\frac{a^{\dd x}-1}{\dd x}\cdot a^x=M(a)a^x,
+\]
+where the mystery number $M(a)$ is the slope of the tangent line at zero:
+\[M(a)=\evalat{\frac\dd{\dd x}a^x}{x=0}=\frac{a^{\dd x}-1}{\dd x}.\]
+
+\subsection{The Definition of $\bm e$}
+The base $e$ is the unique real number which has $M(e)=1$. Then
+\[\frac\dd{\dd x}e^x=e^x.\]
+
+Since $M(e)$ always equals $1$:
+\begin{alignat*}{2}
+         && \frac{e^{\dd x} -1}{\dd x} & =1\\
+  \equiv &&                  e^{\dd x} & =1+\dd x\\
+  \equiv &&                          e & =(1+\dd x)^{\frac{1}{\dd x}},
+\end{alignat*}
+Let $\frac1{\dd x}=n$, $n\to+\infty$, We get the formal definition of $e$:
+\[e=\lim_{n\to+\infty}(1+\frac{1}{n})^n.\]
+
+\subsection{Differentiating Exponential Functions with Other Bases}
+For any positive constant $a$,
+\[\frac\dd{\dd x}a^x=a^x\ln a.\]
+\begin{proof}
+  \begin{alignat*}{2}
+         && M(a) & =\frac{a^{\dd x}-1}{\dd x}\\
+  \equiv &&      & =\frac{e^{\dd x\ln a}-1}{\dd x}.
+  \end{alignat*}
+  Since $\dd x\ln a\to0$, we can rewrite the definition of $e$ to
+  \[e=(1+\dd x\ln a)^\frac1{\dd x\ln a}\]
+  then
+  \[M(a)=\frac{\dd x\ln a}{\dd x}=\ln a.\]
+  \hfill\qed
+
+  There exists another method to proof $(a^x)^\prime=a^x\ln a$ directly. It also changes to base $e$ but later it differentiate using the chain rule:
+  \begin{align*}
+    \frac{\dd a^x}{\dd x} & =\frac{\dd e^{x\ln a}}{\dd x}\\
+                          & =\frac{\dd e^{x\ln a}}{\dd(x\ln a)}\cdot\frac{\dd(x\ln a)}{\dd x}\\
+                          & =e^{x\ln a}\ln a\\
+                          & =a^x\ln a
+  \end{align*}
+\end{proof}
+
+\todo{here}
 \section{Logarithms}
 \begin{enumerate}
     \item \textbf{Some properties of Logarithms}\\
