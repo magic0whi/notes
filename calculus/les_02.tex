@@ -63,9 +63,9 @@ at any point $x=a$ where the derivatives on the right side are defined.
 
 Immediately differentiating $y=x^{m/n}$ is hard. But differentiating the implicit function $y^n=x^m$ is a whole lot easier. This happens any time your function is more simply described implicitly.
 \begin{align*}
-  \phantom{\equiv}\ & \frac{\dd }{\dd x}(y^n=x^m)\\
-            \equiv\ & ny^{n-1}\frac{\dd y}{\dd x}=mx^{m-1}\\
-            \equiv\ & \frac{\dd y}{\dd x}=\frac m n\cdot\frac{x^{m-1}}{y^{n-1}}.
+  \phantom{\equiv{}} & \frac{\dd }{\dd x}(y^n=x^m)\\
+            \equiv{} & ny^{n-1}\frac{\dd y}{\dd x}=mx^{m-1}\\
+            \equiv{} & \frac{\dd y}{\dd x}=\frac m n\cdot\frac{x^{m-1}}{y^{n-1}}.
 \end{align*}
 \begin{eg}[Which of the following equations given $y$ as an implicit function of $x$?]
   \leavevmode
@@ -191,7 +191,7 @@ For any positive constant $a$,
 
 \todo{here}
 \section{Logarithms}
-\subsection{Some properties of Logarithms}
+\subsection{Some Properties of Logarithms}
 \begin{itemize}
 \item$\log x$ implicitly denotes $\log_{10}x$, which is the inverse function of $10^x$.
 \item The natural log, denoted by $\ln x$, is the inverse function of $e^x$.
@@ -199,31 +199,31 @@ For any positive constant $a$,
 \item$\ln(ab)=\ln a+\ln b$
 \item$\ln a^b=b\ln a$
 \end{itemize}
-\subsection{The derivative of the natural logarithm}
+\subsection{The Derivative of the Natural Logarithm}
 \[\frac\dd{\dd x}\ln x=\frac1 x\]
 \begin{proof}
-  Differentiate \(e^{\ln x}=x\) with \(x\)
+  Change $\ln x$ to base $e^{\ln x}$, then differentiate
   \begin{alignat*}{2}
-            &&        \frac\dd{\dd x}e^{\ln x} & =\frac\dd{\dd x}x\\
-    \equiv\ && \frac{\dd e^{\ln x}}{\dd\ln x}\cdot\frac{\dd\ln x}{\dd x} & =1\\
-    \equiv\ && e^{\ln x}\frac{\dd\ln x}{\dd x} & =1\\
-    \equiv\ &&         x\frac{\dd\ln x}{\dd x} & =1\\
-    \equiv\ &&          \frac{\dd\ln x}{\dd x} & =\frac{1}{x}.
+             &&        \frac\dd{\dd x}e^{\ln x} & =\frac\dd{\dd x}x\\
+    \equiv{} && \frac{\dd e^{\ln x}}{\dd\ln x}\cdot\frac{\dd\ln x}{\dd x} & =1\\
+    \equiv{} && e^{\ln x}\frac{\dd\ln x}{\dd x} & =1\\
+    \equiv{} &&         x\frac{\dd\ln x}{\dd x} & =1\\
+    \equiv{} &&          \frac{\dd\ln x}{\dd x} & =\frac{1}{x}.
   \end{alignat*}
 \end{proof}
 
-\subsection{Differentiation methods}
+\subsection{Differentiation Methods}
 \begin{itemize}
 \item Method 1: Change to base $\bm{e}$\\
-To calculate $[f^g]^\prime$ for functions $f$ and $g$, first change base $f^g=e^{g\ln f}$, then differentiate using the chain rule.
+To calculate $[f^g]^\prime$ for functions $f$ and $g$, first change base $f^g=e^{g\ln f}$, then differentiate and use the chain rule.
 \item Method 2: Logarithmic differentiation\\
 To calculate $u^\prime$, first calculate $(\ln u)^\prime$, then use the formula $u^\prime=u(\ln u)^\prime$ and solve for $u^\prime$
   \begin{proof}[$u^\prime=u(\ln u)^\prime$]
     \begin{alignat*}{2}
       && \frac{\dd }{\dd x}\ln u & =\frac{\dd \ln u}{\dd u}\cdot\frac{\dd u}{\dd x}\\
                               && & =\frac1 u\cdot\frac{\dd u}{\dd x}\\
-      \equiv\ && (\ln u)^\prime & =\frac{u^\prime}{u}\\
-      \equiv\ && u^\prime & =u(\ln u)^\prime .
+      \equiv && (\ln u)^\prime & =\frac{u^\prime}{u}\\
+      \equiv && u^\prime & =u(\ln u)^\prime .
     \end{alignat*}
   \end{proof}
 \end{itemize}
