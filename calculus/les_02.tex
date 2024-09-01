@@ -102,9 +102,9 @@ at all $x$ where $f^\prime\circ g$ exists and is non-zero.
 \subsection{Derivatives of Arctrig Functions}
 Where defined,
 \begin{itemize}
-  \item$\frac\dd{\dd x}\arcsin x=\frac1{\sqrt{1-x^2}}$;
-  \item$\frac\dd{\dd x}\arccos x=-\frac1{\sqrt{1-x^2}}$;
-  \item$\frac\dd{\dd x}\arctan x=\frac1{x^2+1}$.
+\item$\frac\dd{\dd x}\arcsin x=\frac1{\sqrt{1-x^2}}$;
+\item$\frac\dd{\dd x}\arccos x=-\frac1{\sqrt{1-x^2}}$;
+\item$\frac\dd{\dd x}\arctan x=\frac1{x^2+1}$.
 \end{itemize}
 \begin{proof}\leavevmode
   \begin{itemize}
@@ -191,41 +191,39 @@ For any positive constant $a$,
 
 \todo{here}
 \section{Logarithms}
-\begin{enumerate}
-    \item \textbf{Some properties of Logarithms}\\
-        \indent\(\log x\) implicitly denotes \(\log_{10}x\), which is the inverse function of \(10^x\).\par
-        The natural log, denoted by \(\ln x\), is the inverse function of \(e^x\).
-        \begin{itemize}
-            \item \(e^{\ln x}=x\)
-            \item \(\ln(ab)=\ln a+\ln b\)
-            \item \(\ln a^b=b\ln a\)
-        \end{itemize}
-    \item \textbf{The derivative of the natural logarithm}
-        \[
-            \frac{\mathrm{d}}{\mathrm{d}x}\ln x=\frac{1}{x}
-        \]
-        \begin{proof}
-            Differentiate \(e^{\ln x}=x\) with \(x\)
-            \begin{align*}
-                \frac{\mathrm{d}}{\mathrm{d}x}e^{\ln x} & =\frac{\mathrm{d}}{\mathrm{d}x}x\\
-                \frac{\mathrm{d}e^{\ln x}}{\mathrm{d}\ln x}\cdot\frac{\mathrm{d}\ln x}{\mathrm{d}x} & =1\\
-                e^{\ln x}\cdot\frac{\mathrm{d}\ln x}{\mathrm{d}x} & =1\\
-                x\cdot\frac{\mathrm{d}\ln x}{\mathrm{d}x} & =1\\
-                \frac{\mathrm{d}\ln x}{\mathrm{d}x} & =\frac{1}{x}.
-            \end{align*}
-        \end{proof}
-    \item \textbf{Differentiation methods}\\
-        \indent\textbf{Method 1: Change to base \(\bm{e}\)}\\
-        \indent To calculate \(\left[f(x)^{g(x)}\right]^\prime\), first change base \(f(x)^{g(x)}=e^{g(x)\ln f(x)}\), then differentiate using the chain rule, and the derivatives of the exponential and natural logarithm functions.\par
-        \textbf{Method 2: Logarithmic differentiation}\\
-        \indent To calculate \(u^\prime\), first calculate \((\ln u)^\prime\), then use the formula \(u^\prime=u(\ln u)^\prime\) and solve for \(u^\prime\)
-        \begin{proof}
-            \begin{alignat*}{2}
-                & & \frac{\mathrm{d}}{\mathrm{d}x}\ln u & =\frac{\mathrm{d}\ln u}{\mathrm{d}u}\cdot\frac{\mathrm{d}u}{\mathrm{d}x}\\
-                & & & =\frac{1}{u}\cdot\frac{\mathrm{d}u}{\mathrm{d}x}\\
-                \Leftrightarrow\, & & (\ln u)^\prime & =\frac{u^\prime}{u}\\
-                \Leftrightarrow\, & & u^\prime & =u(\ln u)^\prime .
-            \end{alignat*}
-        \end{proof}
-\end{enumerate}
+\subsection{Some properties of Logarithms}
+\begin{itemize}
+\item$\log x$ implicitly denotes $\log_{10}x$, which is the inverse function of $10^x$.
+\item The natural log, denoted by $\ln x$, is the inverse function of $e^x$.
+\item$e^{\ln x}=x$
+\item$\ln(ab)=\ln a+\ln b$
+\item$\ln a^b=b\ln a$
+\end{itemize}
+\subsection{The derivative of the natural logarithm}
+\[\frac\dd{\dd x}\ln x=\frac1 x\]
+\begin{proof}
+  Differentiate \(e^{\ln x}=x\) with \(x\)
+  \begin{alignat*}{2}
+            &&        \frac\dd{\dd x}e^{\ln x} & =\frac\dd{\dd x}x\\
+    \equiv\ && \frac{\dd e^{\ln x}}{\dd\ln x}\cdot\frac{\dd\ln x}{\dd x} & =1\\
+    \equiv\ && e^{\ln x}\frac{\dd\ln x}{\dd x} & =1\\
+    \equiv\ &&         x\frac{\dd\ln x}{\dd x} & =1\\
+    \equiv\ &&          \frac{\dd\ln x}{\dd x} & =\frac{1}{x}.
+  \end{alignat*}
+\end{proof}
 
+\subsection{Differentiation methods}
+\begin{itemize}
+\item Method 1: Change to base $\bm{e}$\\
+To calculate $[f^g]^\prime$ for functions $f$ and $g$, first change base $f^g=e^{g\ln f}$, then differentiate using the chain rule.
+\item Method 2: Logarithmic differentiation\\
+To calculate $u^\prime$, first calculate $(\ln u)^\prime$, then use the formula $u^\prime=u(\ln u)^\prime$ and solve for $u^\prime$
+  \begin{proof}[$u^\prime=u(\ln u)^\prime$]
+    \begin{alignat*}{2}
+      && \frac{\dd }{\dd x}\ln u & =\frac{\dd \ln u}{\dd u}\cdot\frac{\dd u}{\dd x}\\
+                              && & =\frac1 u\cdot\frac{\dd u}{\dd x}\\
+      \equiv\ && (\ln u)^\prime & =\frac{u^\prime}{u}\\
+      \equiv\ && u^\prime & =u(\ln u)^\prime .
+    \end{alignat*}
+  \end{proof}
+\end{itemize}
