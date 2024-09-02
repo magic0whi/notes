@@ -17,7 +17,7 @@ The linear approximation for a function $f$ near point $x=a$ is given by the fol
                         & =\frac{\dd f\dd g+g\dd f+f\dd g+\cancel{fg-fg}}{\dd x}\\
                         & =\frac{\dd f\dd g}{\dd x}+g\frac{\dd f}{\dd x}+f\frac{\dd g}{\dd x}.
   \end{align*}
-  The $\frac{\dd f\dd g}{\dd x}\) can be transformed into $\frac{\dd f}{\dd x}\cdot\frac{\dd g}{\dd x}\cdot\dd x$ which would be 0 because the extra $\dd x$ at the end. Finally
+  The $\dd f\dd g/\dd x\) can be transformed into $\dd f/\dd x\cdot\dd g/\dd x\cdot\dd x$ which would be 0 because the extra $\dd x$ at the end. Finally
   \[\frac{\dd h}{\dd x}=g\frac{\dd f}{\dd x}+f\frac{\dd g}{\dd x}.\]
 \end{proof}
 
@@ -26,7 +26,7 @@ The linear approximation for a function $f$ near point $x=a$ is given by the fol
 For functions $f$ and $g$,
 \[\text{if}\ h=\frac f g\ ,\ \text{then}\ h^\prime=\frac{f^\prime g-fg^\prime}{g^2}\] at all points where $f$ and $g$ are differentiable and $g\neq0$.
 \begin{proof}[The Quotient Rule]
-If $h=\frac f g$, the first thing to do is to rewrite $\frac 1 g$ in the terms of a fractional power $h=fg^{-1}$. Thus the last step is a product, then we start by product rule:
+If $h=f/g$, the first thing to do is to rewrite $1/g$ in the terms of a fractional power $h=fg^{-1}$. Thus the last step is a product, then we start by product rule:
     \begin{align*}
         h^\prime & =f^\prime g^{-1}+(g^{-1})^\prime f\\
                  & =\frac{f^\prime}g+(-g^{-2}g^\prime)f\\
@@ -102,13 +102,13 @@ at all $x$ where $f^\prime\circ g$ exists and is non-zero.
 \subsection{Derivatives of Arctrig Functions}
 Where defined,
 \begin{itemize}
-\item$\frac\dd{\dd x}\arcsin x=\frac1{\sqrt{1-x^2}}$;
-\item$\frac\dd{\dd x}\arccos x=-\frac1{\sqrt{1-x^2}}$;
-\item$\frac\dd{\dd x}\arctan x=\frac1{x^2+1}$.
+\item$\arcsin^\prime x=1/\sqrt{1-x^2}$;
+\item$\arccos^\prime x=-1/\sqrt{1-x^2}$;
+\item$\arctan^\prime x=1/(x^2+1)$.
 \end{itemize}
 \begin{proof}\leavevmode
   \begin{itemize}
-  \item Assume $\arcsin x=\theta\ \left(\theta\in\left[-\frac\pi 2,\frac\pi 2\right]\right)$,
+  \item Assume $\arcsin x=\theta\ \left(\theta\in\left[-\pi/2,\pi/2\right]\right)$,
     \[
     \frac\dd{\dd x}\arcsin x=\frac1{\cos\theta}=\frac1{\sqrt{1-\sin^2 \theta}}=\frac1{\sqrt{1-x^2}};
     \]
@@ -116,7 +116,7 @@ Where defined,
     \[
     \frac\dd{\dd x}\arccos x=\frac1{-\sin\theta}=\frac1{-\sqrt{1-\cos^2 \theta}}=-\frac1{\sqrt{1-x^2}};
     \]
-  \item Assume $\arctan x=\theta\ \left(\theta\in\left(-\frac\pi 2,\frac\pi 2\right)\right)$,
+  \item Assume $\arctan x=\theta\ \left(\theta\in\left(-\pi/2,\pi/2\right)\right)$,
     \begin{align*}
       \frac\dd{\dd x}\arctan x=\frac1{\sec^2 \theta}=\frac1{\cos^{-2}\theta}
       & =\cos^2 \theta\\
@@ -163,7 +163,7 @@ Since $M(e)$ always equals $1$:
   \equiv &&                  e^{\dd x} & =1+\dd x\\
   \equiv &&                          e & =(1+\dd x)^{\frac{1}{\dd x}},
 \end{alignat*}
-Let $\frac1{\dd x}=n$, $n\to+\infty$, We get the formal definition of $e$:
+Let $1/\dd x=n$, $n\to+\infty$, We get the formal definition of $e$:
 \[e=\lim_{n\to+\infty}(1+\frac{1}{n})^n.\]
 
 \subsection{Differentiating Exponential Functions with Other Bases}
@@ -189,7 +189,6 @@ For any positive constant $a$,
   \end{align*}
 \end{proof}
 
-\todo{here}
 \section{Logarithms}
 \subsection{Some Properties of Logarithms}
 \begin{itemize}

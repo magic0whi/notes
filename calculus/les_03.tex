@@ -45,10 +45,10 @@ A function $f$ on the order $x^n$ near $x=0$ can be denoted using big ``O'' nota
 
 \subsection{Some Quadratic Approximations}
 \begin{itemize}
-\item$e^x=1+x+\frac{x^2}2+O(x^3)$
+\item$e^x=1+x+x^2/2+O(x^3)$
 \item$\sin x=x+O(x^3)$
-\item$\cos x=1-\frac{x^2}2+O(x^3)$
-\item$\ln(1+x)=x-\frac{x^2}2+O(x^3)$
+\item$\cos x=1-x^2/2+O(x^3)$
+\item$\ln(1+x)=x-x^2/2+O(x^3)$
 \item$(1+x)^n=1+rx+x^2\frac{n(n-1)}2+O(x^3)$
 \end{itemize}
 
@@ -64,7 +64,7 @@ Given a function $f(x)$, find $x$ such that $f(x)=0$.
 \item Name $x_1$ the $x$-intercept of the tangent line through $(x_0,f(x_0))$, which has the form
   \[\boxed{x_1=x_0-\frac{f(x_0)}{f^\prime(x_0)};}\]
   \begin{proof}
-    Plug in $(x_1, 0)$ to the tangent line through $(x_0, f(x_0))$ is $y=f(x_0)+f^\prime(x_0)(x-x_0)$ will gets $x_1=x_0-\frac{f(x_0)}{f^\prime(x_0)}$.
+    Plug in $(x_1, 0)$ to the tangent line through $(x_0, f(x_0))$ is $y=f(x_0)+f^\prime(x_0)(x-x_0)$, leave $x_1$ on the left-side will get $x_1=x_0-f(x_0)/f^\prime(x_0)$.
   \end{proof}
 \item Repeat, the general formula is
   \[\boxed{x_{n+1}=x_n-\frac{f(x_n)}{f^\prime(x_n)};}\]
