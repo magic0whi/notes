@@ -63,9 +63,9 @@ at any point $x=a$ where the derivatives on the right side are defined.
 
 Immediately differentiating $y=x^{m/n}$ is hard. But differentiating the implicit function $y^n=x^m$ is a whole lot easier. This happens any time your function is more simply described implicitly.
 \begin{align*}
-  \phantom{\equiv{}} & \frac{\dd }{\dd x}(y^n=x^m)\\
-            \equiv{} & ny^{n-1}\frac{\dd y}{\dd x}=mx^{m-1}\\
-            \equiv{} & \frac{\dd y}{\dd x}=\frac m n\cdot\frac{x^{m-1}}{y^{n-1}}.
+  \phantom{\iff{}} & \frac{\dd }{\dd x}(y^n=x^m)\\
+            \iff{} & ny^{n-1}\frac{\dd y}{\dd x}=mx^{m-1}\\
+            \iff{} & \frac{\dd y}{\dd x}=\frac m n\cdot\frac{x^{m-1}}{y^{n-1}}.
 \end{align*}
 \begin{eg}[Which of the following equations given $y$ as an implicit function of $x$?]
   \leavevmode
@@ -159,9 +159,9 @@ The base $e$ is the unique real number which has $M(e)=1$. Then
 
 Since $M(e)$ always equals $1$:
 \begin{alignat*}{2}
-         && \frac{e^{\dd x} -1}{\dd x} & =1\\
-  \equiv &&                  e^{\dd x} & =1+\dd x\\
-  \equiv &&                          e & =(1+\dd x)^{\frac{1}{\dd x}},
+       && \frac{e^{\dd x} -1}{\dd x} & =1\\
+  \iff &&                  e^{\dd x} & =1+\dd x\\
+  \iff &&                          e & =(1+\dd x)^{\frac{1}{\dd x}},
 \end{alignat*}
 Let $1/\dd x=n$, $n\to+\infty$, We get the formal definition of $e$:
 \[e=\lim_{n\to+\infty}(1+\frac{1}{n})^n.\]
@@ -171,8 +171,8 @@ For any positive constant $a$,
 \[\frac\dd{\dd x}a^x=a^x\ln a.\]
 \begin{proof}
   \begin{alignat*}{2}
-         && M(a) & =\frac{a^{\dd x}-1}{\dd x}\\
-  \equiv &&      & =\frac{e^{\dd x\ln a}-1}{\dd x}.
+       && M(a) & =\frac{a^{\dd x}-1}{\dd x}\\
+  \iff &&      & =\frac{e^{\dd x\ln a}-1}{\dd x}.
   \end{alignat*}
   Since $\dd x\ln a\to0$, we can rewrite the definition of $e$ to
   \[e=(1+\dd x\ln a)^\frac1{\dd x\ln a}\]
@@ -204,10 +204,10 @@ For any positive constant $a$,
   Change $\ln x$ to base $e^{\ln x}$, then differentiate
   \begin{alignat*}{2}
              &&        \frac\dd{\dd x}e^{\ln x} & =\frac\dd{\dd x}x\\
-    \equiv{} && \frac{\dd e^{\ln x}}{\dd\ln x}\cdot\frac{\dd\ln x}{\dd x} & =1\\
-    \equiv{} && e^{\ln x}\frac{\dd\ln x}{\dd x} & =1\\
-    \equiv{} &&         x\frac{\dd\ln x}{\dd x} & =1\\
-    \equiv{} &&          \frac{\dd\ln x}{\dd x} & =\frac{1}{x}.
+    \iff{} && \frac{\dd e^{\ln x}}{\dd\ln x}\cdot\frac{\dd\ln x}{\dd x} & =1\\
+    \iff{} && e^{\ln x}\frac{\dd\ln x}{\dd x} & =1\\
+    \iff{} &&         x\frac{\dd\ln x}{\dd x} & =1\\
+    \iff{} &&          \frac{\dd\ln x}{\dd x} & =\frac{1}{x}.
   \end{alignat*}
 \end{proof}
 
@@ -220,9 +220,9 @@ To calculate $u^\prime$, first calculate $(\ln u)^\prime$, then use the formula 
   \begin{proof}[$u^\prime=u(\ln u)^\prime$]
     \begin{alignat*}{2}
       && \frac{\dd }{\dd x}\ln u & =\frac{\dd \ln u}{\dd u}\cdot\frac{\dd u}{\dd x}\\
-                              && & =\frac1 u\cdot\frac{\dd u}{\dd x}\\
-      \equiv && (\ln u)^\prime & =\frac{u^\prime}{u}\\
-      \equiv && u^\prime & =u(\ln u)^\prime .
+      &&                         & =\frac1 u\cdot\frac{\dd u}{\dd x}\\
+      \iff && (\ln u)^\prime     & =\frac{u^\prime}{u}\\
+      \iff && u^\prime           & =u(\ln u)^\prime .
     \end{alignat*}
   \end{proof}
 \end{itemize}
