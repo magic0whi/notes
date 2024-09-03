@@ -8,10 +8,10 @@
 
 \subsection{Definition of Limits}
 \begin{itemize}
-\item If either $f(a)$ or $\lim_{x\to a} f(x)$ fails to exist, then $f$ is discontinuous at $a$.
-\item Right-hand limit: $\lim_{x\to a^+}f(x)=R$, or $f(x)\to R$ as $x\to a^+$;
-\item Left-hand limit: $\lim_{x\to a^-}f(x)=L$, or $f(x)\to L$ as $x\to a^-$;
-\item Overall limit: If $\lim_{x\to a^+}f(x)=\lim_{x\to a^-}f(x)=L$, then $\lim_{x\to a}f(x)=L$.
+\item If either $f(a)$ or $\svlim_{x\to a} f(x)$ fails to exist, then $f$ is discontinuous at $a$.
+\item Right-hand limit: $\svlim_{x\to a^+}f(x)=R$, or $f(x)\to R$ as $x\to a^+$;
+\item Left-hand limit: $\svlim_{x\to a^-}f(x)=L$, or $f(x)\to L$ as $x\to a^-$;
+\item Overall limit: If $\svlim_{x\to a^+}f(x)=\svlim_{x\to a^-}f(x)=L$, then $\svlim_{x\to a}f(x)=L$.
 \end{itemize}
 
 \begin{note}Remember that $x$ is approaching $a$ but not necessary equals $a$.\end{note}
@@ -24,34 +24,34 @@ That is, no matter how small $\epsilon$ gets, we can satisfy the condition $\lve
 
 \subsection{Possible Limit Behaviors}
 \begin{itemize}
-\item $\lim_{x\to a^+}f(x)=\lim_{x\to a^-}f(x)=\lim_{x\to a}f(x)$;
-\item $\lim_{x\to a^+}f(x)\neq\lim_{x\to a^-}f(x)$;
-\item Left\slash Right-hand limit could fail to exist due to $\lim_{x\to a^+}f(x)=\pm\infty$ or $\lim_{x\to a^-}f(x)=\pm\infty$, because $\infty$ is not a real number;
+\item $\svlim_{x\to a^+}f(x)=\svlim_{x\to a^-}f(x)=\svlim_{x\to a}f(x)$;
+\item $\svlim_{x\to a^+}f(x)\neq\svlim_{x\to a^-}f(x)$;
+\item Left\slash Right-hand limit could fail to exist due to $\svlim_{x\to a^+}f(x)=\pm\infty$ or $\svlim_{x\to a^-}f(x)=\pm\infty$, because $\infty$ is not a real number;
 \item Left\slash Right-hand limit could fail to exist because it oscillates between many values and never settle down.
 \end{itemize}
 
 \subsection{The Limit Laws}
 \begin{itemize}
-\item Addition: $\lim_{x\to a}[f(x)+g(x)]=L+M$;
-\item Subtraction: $\lim_{x\to a}[f(x)-g(x)]=L-M$;
-\item Multiplication: $\lim_{x\to a}[f(x)\cdot g(x)]=L\cdot M$;
-\item Division (Part 1): If $M\neq 0$, then $\lim_{x\to a}f(x)/g(x)=L/M$.
+\item Addition: $\svlim_{x\to a}[f(x)+g(x)]=L+M$;
+\item Subtraction: $\svlim_{x\to a}[f(x)-g(x)]=L-M$;
+\item Multiplication: $\svlim_{x\to a}[f(x)\cdot g(x)]=L\cdot M$;
+\item Division (Part 1): If $M\neq 0$, then $\svlim_{x\to a}f(x)/g(x)=L/M$.
 \end{itemize}
 
 
 \section{Continuity}
 \subsection{Definition of Continuity at a Point}
 \begin{itemize}
-\item A function $f$ is \textbf{continuous at} $x=a$ if $\lim_{x\to a}f(x)=f(a)$;
-\item If either $f(a)$ or $\lim_{x\to a} f(x)$ fails to exist, then $f$ is discontinuous at $a$;
-\item We say that a function $f$ is \textit{right-continuous} at $x=a$ if $\lim_{x\to a^+}f(x)=f(a)$;
-\item We say that a function $f$ is \textit{left-continuous} at $x=a$ if $\lim_{x\to a^-}f(x)=f(a)$.
+\item A function $f$ is \textbf{continuous at} $x=a$ if $\svlim_{x\to a}f(x)=f(a)$;
+\item If either $f(a)$ or $\svlim_{x\to a} f(x)$ fails to exist, then $f$ is discontinuous at $a$;
+\item We say that a function $f$ is \textit{right-continuous} at $x=a$ if $\svlim_{x\to a^+}f(x)=f(a)$;
+\item We say that a function $f$ is \textit{left-continuous} at $x=a$ if $\svlim_{x\to a^-}f(x)=f(a)$.
 \end{itemize}
 
 \subsection{Types of Discontinuities}
 \begin{itemize}
-  \item If $\lim_{x\to a^-}f(x)$ and $\lim_{x\to a^+}f(x)$ exist but not equal, then we can say $f$ has a \textbf{jump discontinuity} at $x=a$.
-  \item If $\lim_{x\to a}f(x)$ exists but doesn't equal $f(a)$, then we say that $f$ has a \textbf{removable discontinuity} at $x=a$.
+  \item If $\svlim_{x\to a^-}f(x)$ and $\svlim_{x\to a^+}f(x)$ exist but not equal, then we can say $f$ has a \textbf{jump discontinuity} at $x=a$.
+  \item If $\svlim_{x\to a}f(x)$ exists but doesn't equal $f(a)$, then we say that $f$ has a \textbf{removable discontinuity} at $x=a$.
 \end{itemize}
 \begin{figure}[H]\centering\incfig{1limit_2.1}\caption{Jump discontinuity}\end{figure}
 \begin{figure}[H]\centering\incfig{1limit_2.2}\caption{Removable discontinuity}\end{figure}
@@ -97,11 +97,11 @@ If $f$ is a function which is continuous on the interval $\left[a,b\right]$ and 
 
 
 \section{Limits of Quotients}
-If $\lim_{x\to a}f(x)=T$ and $\lim_{x\to a}g(x)=B$, then:
+If $\svlim_{x\to a}f(x)=T$ and $\svlim_{x\to a}g(x)=B$, then:
 \begin{itemize}
-\item If $T\neq0$, then $\lim_{x\to a}f(x)/g(x)=T/B$;
-\item If $B=0$ but $T\neq0$, then $\lim_{x\to a}f(x)/g(x)$ does not exist;
-\item If both $T=B=0$, then $\lim_{x\to a}f(x)/g(x)$ might exist, or it might not exist. More work is necessary to determine whether the last type of limit exists and what it is if it does exist.
+\item If $T\neq0$, then $\svlim_{x\to a}f(x)/g(x)=T/B$;
+\item If $B=0$ but $T\neq0$, then $\svlim_{x\to a}f(x)/g(x)$ does not exist;
+\item If both $T=B=0$, then $\svlim_{x\to a}f(x)/g(x)$ might exist, or it might not exist. More work is necessary to determine whether the last type of limit exists and what it is if it does exist.
 \end{itemize}
 
 
@@ -203,7 +203,7 @@ Where
 \begin{gather*}
 \dd f(x)=f(x+\dd x)-f(x)\iff\lim_{\Delta x\to0}\Delta f(x)=\lim_{\Delta x\to0}[f(x+\Delta x)-f(x)],
 \end{gather*}
-\begin{corollary}[$\dd x=\lim_{\Delta x\to0}\Delta x$]
+\begin{corollary}[$\dd x=\svlim_{\Delta x\to0}\Delta x$]
   Substitute $f(x)=x$ gets
   \begin{gather*}
     \dd x=(x+\dd x)-x\iff\lim_{\Delta x\to0}\Delta x=\lim_{\Delta x\to0}(x+\Delta x)-x\\
