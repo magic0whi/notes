@@ -1,6 +1,28 @@
 % basics
-\usepackage[T1]{fontenc}
-\usepackage{textcomp}
+\usepackage{fontspec}
+\setmonofont{Iosevka Term}[
+  BoldFont=*-BoldExtended,
+  UprightFont=*-Extended,
+  ItalicFont=*-ExtendedItalic,
+  BoldItalicFont=*-BoldExtendedItalic
+]
+\usepackage{luatexja}
+\usepackage{luatexja-fontspec}
+\setmainjfont{Noto Serif CJK JP}[
+  BoldFont=*-Bold,
+  UprightFont=*-Regular
+]
+\setsansjfont{Noto Sans CJK JP}[
+  BoldFont=*-Bold,
+  UprightFont=*-Regular
+]
+\setmonojfont{Noto Sans Mono CJK JP}[
+  BoldFont=*-Bold,
+  UprightFont=*-Regular
+]
+\usepackage{luatexja-ruby}
+\usepackage{setspace} % Change paragraph spacing
+%\usepackage{pxrubrica} % Ruby annotations
 \usepackage{url}
 % \usepackage{hyperref}
 % \hypersetup{
@@ -28,7 +50,6 @@
 
 % \usepackage{cmbright}
 
-
 \usepackage{amsmath, amsfonts, mathtools, amsthm, amssymb}
 \usepackage{mathrsfs}
 \usepackage{cancel}
@@ -39,44 +60,38 @@
 \renewcommand\O{\ensuremath{\emptyset}}
 \newcommand\Q{\ensuremath{\mathbb{Q}}}
 \newcommand\C{\ensuremath{\mathbb{C}}}
+\newcommand\dd{\mathrm{d}}
+\newcommand\evalat[2]{\left.#1\right|_{#2}}
 \DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\Ker}{ker}
+\DeclareMathOperator{\im}{Im}
 \let\svlim\lim\def\lim{\svlim\limits}
-\let\implies\Rightarrow
-\let\impliedby\Leftarrow
-\let\iff\Leftrightarrow
-\let\epsilon\varepsilon
+\let\implies\Rightarrow%
+\let\impliedby\Leftarrow%
+\let\iff\Leftrightarrow%
+\let\epsilon\varepsilon%
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}
 \usepackage{stmaryrd} % for \lightning
 \newcommand\contra{\scalebox{1.1}{$\lightning$}}
 % \let\phi\varphi
-
-
-
-
 
 % correct
 \definecolor{correct}{HTML}{009900}
 \newcommand\correct[2]{\ensuremath{\:}{\color{red}{#1}}\ensuremath{\to }{\color{correct}{#2}}\ensuremath{\:}}
 \newcommand\green[1]{{\color{correct}{#1}}}
 
-
-
 % horizontal rule
-\newcommand\hr{
-    \noindent\rule[0.5ex]{\linewidth}{0.5pt}
-}
-
+\newcommand\hr{\noindent\rule[0.5ex]{\linewidth}{0.5pt}}
 
 % hide parts
 \newcommand\hide[1]{}
 
-
-
 % si unitx
 \usepackage{siunitx}
-\sisetup{locale = FR}
+\sisetup{locale = US}
 % \renewcommand\vec[1]{\mathbf{#1}}
 \newcommand\mat[1]{\mathbf{#1}}
-
 
 % tikz
 \usepackage{tikz}
@@ -85,104 +100,101 @@
 \usetikzlibrary{arrows.meta}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.13}
-
-
-\tikzset{
-    force/.style={thick, {Circle[length=2pt]}-stealth, shorten <=-1pt}
+\tikzset{force/.style={thick,{Circle[length=2pt]}-stealth,shorten<=-1pt}}
+\newcommand{\tikzmark}[2]{\tikz[overlay,remember picture,baseline] \node[anchor=base] (#1) {$#2$};}
+\newcommand{\drawline}[3][]{%
+  \begin{tikzpicture}[overlay,remember picture]
+    \draw[#1] (#2) -- (#3);
+  \end{tikzpicture}
+}
+\newcommand{\drawvline}[3][]{%
+  \begin{tikzpicture}[overlay,remember picture]
+    \draw[#1] (#2.north) -- (#3.south);
+  \end{tikzpicture}
+}
+\newcommand{\drawhline}[3][]{%
+  \begin{tikzpicture}[overlay,remember picture]
+    \draw[#1] (#2.west) -- (#3.east);
+  \end{tikzpicture}
 }
 
+\usepackage{geometry}
+\geometry{a4paper,total={170mm,257mm},twoside}
+\usepackage{layout}
 % theorems
-\makeatother
 \usepackage{thmtools}
 \usepackage[framemethod=TikZ]{mdframed}
 \mdfsetup{skipabove=1em,skipbelow=0em}
-
-
 \theoremstyle{definition}
-
 \declaretheoremstyle[
-    headfont=\bfseries\sffamily\color{ForestGreen!70!black}, bodyfont=\normalfont,
-    mdframed={
-        linewidth=2pt,
-        rightline=false, topline=false, bottomline=false,
-        linecolor=ForestGreen, backgroundcolor=ForestGreen!5,
-    }
+  headfont=\bfseries\sffamily\color{ForestGreen!70!black}, bodyfont=\normalfont,
+  mdframed={
+    linewidth=2pt,
+    rightline=false, topline=false, bottomline=false,
+    linecolor=ForestGreen, backgroundcolor=ForestGreen!5,
+  }
 ]{thmgreenbox}
-
 \declaretheoremstyle[
-    headfont=\bfseries\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
-    mdframed={
-        linewidth=2pt,
-        rightline=false, topline=false, bottomline=false,
-        linecolor=NavyBlue, backgroundcolor=NavyBlue!5,
-    }
+  headfont=\bfseries\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
+  mdframed={
+    linewidth=2pt,
+    rightline=false, topline=false, bottomline=false,
+    linecolor=NavyBlue, backgroundcolor=NavyBlue!5,
+  }
 ]{thmbluebox}
-
 \declaretheoremstyle[
-    headfont=\bfseries\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
-    mdframed={
-        linewidth=2pt,
-        rightline=false, topline=false, bottomline=false,
-        linecolor=NavyBlue
-    }
+  headfont=\bfseries\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
+  mdframed={
+    linewidth=2pt,
+    rightline=false, topline=false, bottomline=false,
+    linecolor=NavyBlue
+  }
 ]{thmblueline}
-
 \declaretheoremstyle[
-    headfont=\bfseries\sffamily\color{RawSienna!70!black}, bodyfont=\normalfont,
-    mdframed={
-        linewidth=2pt,
-        rightline=false, topline=false, bottomline=false,
-        linecolor=RawSienna, backgroundcolor=RawSienna!5,
-    }
+  headfont=\bfseries\sffamily\color{RawSienna!70!black}, bodyfont=\normalfont,
+  mdframed={
+    linewidth=2pt,
+    rightline=false, topline=false, bottomline=false,
+    linecolor=RawSienna, backgroundcolor=RawSienna!5,
+  }
 ]{thmredbox}
-
 \declaretheoremstyle[
-    headfont=\bfseries\sffamily\color{RawSienna!70!black}, bodyfont=\normalfont,
-    numbered=no,
-    mdframed={
-        linewidth=2pt,
-        rightline=false, topline=false, bottomline=false,
-        linecolor=RawSienna, backgroundcolor=RawSienna!1,
-    },
-    qed=\qedsymbol
+  headfont=\bfseries\sffamily\color{RawSienna!70!black}, bodyfont=\normalfont,
+  numbered=no,
+  mdframed={
+    linewidth=2pt,
+    rightline=false, topline=false, bottomline=false,
+    linecolor=RawSienna, backgroundcolor=RawSienna!1,
+  },
+  qed=\qedsymbol%
 ]{thmproofbox}
-
 \declaretheoremstyle[
-    headfont=\bfseries\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
-    numbered=no,
-    mdframed={
-        linewidth=2pt,
-        rightline=false, topline=false, bottomline=false,
-        linecolor=NavyBlue, backgroundcolor=NavyBlue!1,
-    },
+  headfont=\bfseries\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
+  numbered=no,
+  mdframed={
+    linewidth=2pt,
+    rightline=false, topline=false, bottomline=false,
+    linecolor=NavyBlue, backgroundcolor=NavyBlue!1,
+  },
 ]{thmexplanationbox}
-
-
-
-% \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, mdframed={ nobreak } ]{thmgreenbox}
-% \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, mdframed={ nobreak } ]{thmredbox}
-% \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont]{thmbluebox}
-% \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont]{thmblueline}
-% \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, numbered=no, mdframed={ rightline=false, topline=false, bottomline=false, }, qed=\qedsymbol ]{thmproofbox}
-% \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, numbered=no, mdframed={ nobreak, rightline=false, topline=false, bottomline=false } ]{thmexplanationbox}
-
 \declaretheorem[style=thmgreenbox, name=Definition]{definition}
 \declaretheorem[style=thmbluebox, numbered=no, name=Example]{eg}
 \declaretheorem[style=thmredbox, name=Proposition]{prop}
 \declaretheorem[style=thmredbox, name=Theorem]{theorem}
 \declaretheorem[style=thmredbox, name=Lemma]{lemma}
 \declaretheorem[style=thmredbox, numbered=no, name=Corollary]{corollary}
-
 \declaretheorem[style=thmproofbox, name=Proof]{replacementproof}
-\renewenvironment{proof}[1][\proofname]{\vspace{-10pt}\begin{replacementproof}}{\end{replacementproof}}
-
-
+\renewenvironment{proof}[1][]{%
+  \vspace{-10pt}\ifthenelse{\isempty{#1}}{%
+    \begin{replacementproof}%
+  }{%
+    \begin{replacementproof}[#1]%
+  }%
+}{\end{replacementproof}}
 \declaretheorem[style=thmexplanationbox, name=Proof]{tmpexplanation}
 \newenvironment{explanation}[1][]{\vspace{-10pt}\begin{tmpexplanation}}{\end{tmpexplanation}}
-
 \declaretheorem[style=thmblueline, numbered=no, name=Remark]{remark}
 \declaretheorem[style=thmblueline, numbered=no, name=Note]{note}
-
 \newtheorem*{uovt}{UOVT}
 \newtheorem*{notation}{Notation}
 \newtheorem*{previouslyseen}{As previously seen}
@@ -190,7 +202,6 @@
 \newtheorem*{observe}{Observe}
 \newtheorem*{property}{Property}
 \newtheorem*{intuition}{Intuition}
-
 
 \usepackage{etoolbox}
 \AtEndEnvironment{vb}{\null\hfill$\diamond$}%
@@ -204,44 +215,39 @@
 % }
 
 \newcommand{\oefening}[1]{%
-    \def\@oefening{#1}%
-    \subsection*{Oefening #1}
+  \def\@oefening{#1}%
+  \subsection*{Oefening #1}
 }
-
 \newcommand{\suboefening}[1]{%
-    \subsubsection*{Oefening \@oefening.#1}
+  \subsubsection*{Oefening \@oefening.#1}
 }
-
 \newcommand{\exercise}[1]{%
-    \def\@exercise{#1}%
-    \subsection*{Exercise #1}
+  \def\@exercise{#1}%
+  \subsection*{Exercise #1}
 }
-
 \newcommand{\subexercise}[1]{%
-    \subsubsection*{Exercise \@exercise.#1}
+  \subsubsection*{Exercise \@exercise.#1}
 }
-
 
 \usepackage{xifthen}
 
 \def\testdateparts#1{\dateparts#1\relax}
-\def\dateparts#1 #2 #3 #4 #5\relax{
-    \marginpar{\small\textsf{\mbox{#1 #2 #3 #5}}}
+\def\dateparts#1 #2 #3 #4\relax{
+  \marginpar{\scriptsize\textsf{\mbox{#1 #2 #3 #4}}}
 }
 
 \def\@lesson{}%
 \newcommand{\lesson}[3]{
-    \ifthenelse{\isempty{#3}}{%
-        \def\@lesson{Lecture #1}%
-    }{%
-        \def\@lesson{Lecture #1: #3}%
-    }%
-    \subsection*{\@lesson}
-    \testdateparts{#2}
+  \ifthenelse{\isempty{#3}}{%
+    \def\@lesson{Lecture #1}%
+  }{%
+    \def\@lesson{Lecture #1: #3}%
+  }%
+  \subsection*{\@lesson}
+  \testdateparts{#2}
 }
 
 % \renewcommand\date[1]{\marginpar{#1}}
-
 
 % fancy headers
 \usepackage{fancyhdr}
@@ -254,45 +260,33 @@
 \fancyfoot[C]{\leftmark}
 
 \makeatother
-
-
-
-
 % notes
 \usepackage{todonotes}
 \usepackage{tcolorbox}
 
 \tcbuselibrary{breakable}
 \newenvironment{verbetering}{\begin{tcolorbox}[
-    arc=0mm,
-    colback=white,
-    colframe=green!60!black,
-    title=Opmerking,
-    fonttitle=\sffamily,
-    breakable
+  arc=0mm,
+  colback=white,
+  colframe=green!60!black,
+  title=Opmerking,
+  fonttitle=\sffamily,
+  breakable
 ]}{\end{tcolorbox}}
-
 \newenvironment{noot}[1]{\begin{tcolorbox}[
-    arc=0mm,
-    colback=white,
-    colframe=white!60!black,
-    title=#1,
-    fonttitle=\sffamily,
-    breakable
+  arc=0mm,
+  colback=white,
+  colframe=white!60!black,
+  title=#1,
+  fonttitle=\sffamily,
+  breakable
 ]}{\end{tcolorbox}}
-
 
 % figure support
 \usepackage{import}
 \usepackage{pdfpages}
 \newcommand{\incfig}[1]{%
-    \def\svgwidth{\columnwidth}
-    \import{./figures/}{#1.pdf_tex}
+  \def\svgwidth{\columnwidth}
+  \import{./figures/}{#1.pdf_tex}
 }
-\usepackage[showframe]{geometry}
-\geometry{
-    a4paper,total={170mm,257mm},twoside
-}
-\usepackage{layout}
 \author{Proteus Ndoskrnl}
-

@@ -25,6 +25,9 @@ Suppose that $x=a$ is a critical point of $f$, with $f^\prime(a)=0$.
 \item If $f^{\prime\prime}(a)<0$, then $f$ has a local maximum at $x=a$.
 \item If $f^{\prime\prime}(a)=0$ or does not exist, then the test is inconclusive\textemdash there might be a local minimum, or a local maximum, or neither.
 \end{itemize}
+\begin{definition}[Critical points]
+Critical points are where $f^\prime=0$ or where $f$ is not differentiable.
+\end{definition}
 \begin{figure}[H]
   \centering
   \incfig{4applications_1.3}
@@ -33,3 +36,38 @@ Suppose that $x=a$ is a critical point of $f$, with $f^\prime(a)=0$.
 \begin{note}
   In cases where the first derivative test is inconclusive, we can try the third derivative to determine whether critical point is a local minimum or maximum. But in most cases use interval sampling of first derivative is less efforts.
 \end{note}
+
+\section{The Big Picture: Limits and Asymptotics}
+\subsection{Curve Sketching}
+\begin{enumerate}
+\item Plot
+  \begin{itemize}
+  \item discontinuities;
+  \item end points ($x\to\pm\infty$);
+  \item easy points ($x=0$ or $y=0$).
+  \end{itemize}
+\item Plot critical points and values (Try solve $f^\prime=0$).
+\item Decide whether $f^\prime<0$ or $f^\prime>0$ on each interval between discontinuities, end points, and critical points.
+\item Identify where $f^{\prime\prime}<0$ (Concave down) and $f^{\prime\prime}>0$ (Concave up). Identify inflection points.
+\end{enumerate}
+
+\subsection{L'H\^opital's Rule}
+\begin{itemize}
+\item (Version 1) Indeterminate form $0/0$\\
+  If functions $f(x)\to0$, $g(x)\to0$ as $x\to a$, and $f$, $g$ are differentiable near the point $x=a$, then limit
+  \[\lim_{x\to a}\frac{f(x)}{g(x)}=\lim_{x\to a}\frac{f^\prime(x)}{g^\prime(x)}\]
+  provided that the right hand limit exists or is $\pm\infty$.
+\item (Version 2) Indeterminate form $\infty/\infty$\\
+  If functions $f(x)\to\infty$, $g(x)\to\infty$ as $x\to a$, and $f$, $g$ are differentiable near the point $x=a$, then limit
+  \[\lim_{x\to a}\frac{f(x)}{g(x)}=\lim_{x\to a}\frac{f^\prime(x)}{g^\prime(x)}\]
+  provided that the right hand limit exists or is $\pm\infty$.
+\item Other indeterminate forms $0\cdot\infty$, $\infty-\infty$, $0^0$, $1^\infty$ and $\infty^0$ should be rearranged to be of the form $0/0$ or $\infty/\infty$ in order to apply L'H\^opital's rule (By using differentiation metholds like change base to $e$).
+\end{itemize}
+\begin{note}
+  \begin{itemize}\leavevmode
+  \item We can replace $a$ with $\pm\infty$; or $a^+$, $a^-$ and the results still hold.
+  \item It's worth to look again before L'Hop. Apply L'Hop to non-indeterminate form is probably got a wrong result.
+  \end{itemize}
+\end{note}
+\todo{General proof after learned some $\inf$ and $\sup$ of the order theory}
+\todo{Review: Order theory is mentioned in discrete mathematics, but I wrote it in Chinese, rewrite is required to mapping verbs into English}

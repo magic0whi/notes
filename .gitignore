@@ -1,14 +1,17 @@
 *.aux
-*.fls
-*.toc
-
+*.bbl
+*.blg
 *.fdb_latexmk
+*.fls
 *.log
+*.ltjruby
+*.ninja_deps
+*.ninja_log
 *.pdf
 *.synctex.gz
+*.toc
 *.xdv
 
-.ninja_deps
 
 tags
 # Whitelist

@@ -1,12 +1,28 @@
 % basics
-\usepackage[T1]{fontenc}
-\usepackage{textcomp}
-\usepackage{xeCJK}
-\setCJKmainfont[BoldFont=Noto Serif CJK JP-Bold]{Noto Serif CJK JP-Regular}
-\setCJKsansfont[BoldFont=Noto Sans CJK JP-Bold]{Noto Sans CJK JP-Regular}
-\setCJKmonofont[BoldFont=Noto Sans Mono CJK JP-Bold]{Noto Sans Mono CJK JP-Regular}
+\usepackage{fontspec}
+\setmonofont{Iosevka Term}[
+  BoldFont=*-BoldExtended,
+  UprightFont=*-Extended,
+  ItalicFont=*-ExtendedItalic,
+  BoldItalicFont=*-BoldExtendedItalic
+]
+\usepackage{luatexja}
+\usepackage{luatexja-fontspec}
+\setmainjfont{Noto Serif CJK JP}[
+  BoldFont=*-Bold,
+  UprightFont=*-Regular
+]
+\setsansjfont{Noto Sans CJK JP}[
+  BoldFont=*-Bold,
+  UprightFont=*-Regular
+]
+\setmonojfont{Noto Sans Mono CJK JP}[
+  BoldFont=*-Bold,
+  UprightFont=*-Regular
+]
+\usepackage{luatexja-ruby}
 \usepackage{setspace} % Change paragraph spacing
-\usepackage{pxrubrica} % Ruby annotations
+%\usepackage{pxrubrica} % Ruby annotations
 \usepackage{url}
 % \usepackage{hyperref}
 % \hypersetup{
@@ -83,7 +99,7 @@
 \usetikzlibrary{intersections, angles, quotes, calc, positioning}
 \usetikzlibrary{arrows.meta}
 \usepackage{pgfplots}
-\pgfplotsset{compat=1.13}
+\pgfplotsset{compat=1.18}
 \tikzset{force/.style={thick,{Circle[length=2pt]}-stealth,shorten<=-1pt}}
 \newcommand{\tikzmark}[2]{\tikz[overlay,remember picture,baseline] \node[anchor=base] (#1) {$#2$};}
 \newcommand{\drawline}[3][]{%
@@ -105,7 +121,6 @@
 \usepackage{geometry}
 \geometry{a4paper,total={170mm,257mm},twoside}
 % theorems
-\makeatother
 \usepackage{thmtools}
 \usepackage[framemethod=TikZ]{mdframed}
 \mdfsetup{skipabove=1em,skipbelow=0em}
@@ -197,7 +212,6 @@
 % \def\thm@space@setup{%
 %   \thm@preskip=\parskip \thm@postskip=0pt
 % }
-\makeatother
 
 \newcommand{\oefening}[1]{%
   \def\@oefening{#1}%
