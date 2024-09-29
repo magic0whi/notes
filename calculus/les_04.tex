@@ -34,7 +34,7 @@ Critical points are where $f^\prime=0$ or where $f$ is not differentiable.
   \caption{Second Derivative Test}
 \end{figure}
 \begin{note}
-  In cases where the first derivative test is inconclusive, we can try the third derivative to determine whether critical point is a local minimum or maximum. But in most cases use interval sampling of first derivative is less efforts.
+  In cases where the first derivative test is inconclusive, we can try the third derivative to determine whether critical point is a local minimum or maximum. But in most cases use interval sampling of first derivative is fewer efforts.
 \end{note}
 
 \section{The Big Picture: Limits and Asymptotics}
@@ -46,7 +46,7 @@ Critical points are where $f^\prime=0$ or where $f$ is not differentiable.
   \item end points ($x\to\pm\infty$);
   \item easy points ($x=0$ or $y=0$).
   \end{itemize}
-\item Plot critical points and values (Try solve $f^\prime=0$).
+\item Plot critical points and values (Try to solve $f^\prime=0$).
 \item Decide whether $f^\prime<0$ or $f^\prime>0$ on each interval between discontinuities, end points, and critical points.
 \item Identify where $f^{\prime\prime}<0$ (Concave down) and $f^{\prime\prime}>0$ (Concave up). Identify inflection points.
 \end{enumerate}
@@ -56,12 +56,12 @@ Critical points are where $f^\prime=0$ or where $f$ is not differentiable.
 \item (Version 1) Indeterminate form $0/0$\\
   If functions $f(x)\to0$, $g(x)\to0$ as $x\to a$, and $f$, $g$ are differentiable near the point $x=a$, then limit
   \[\lim_{x\to a}\frac{f(x)}{g(x)}=\lim_{x\to a}\frac{f^\prime(x)}{g^\prime(x)}\]
-  provided that the right hand limit exists or is $\pm\infty$.
+  provided that the right-hand limit exists or is $\pm\infty$.
 \item (Version 2) Indeterminate form $\infty/\infty$\\
   If functions $f(x)\to\infty$, $g(x)\to\infty$ as $x\to a$, and $f$, $g$ are differentiable near the point $x=a$, then limit
   \[\lim_{x\to a}\frac{f(x)}{g(x)}=\lim_{x\to a}\frac{f^\prime(x)}{g^\prime(x)}\]
-  provided that the right hand limit exists or is $\pm\infty$.
-\item Other indeterminate forms $0\cdot\infty$, $\infty-\infty$, $0^0$, $1^\infty$ and $\infty^0$ should be rearranged to be of the form $0/0$ or $\infty/\infty$ in order to apply L'H\^opital's rule (By using differentiation metholds like change base to $e$).
+  provided that the right-hand limit exists or is $\pm\infty$.
+\item Other indeterminate forms $0\cdot\infty$, $\infty-\infty$, $0^0$, $1^\infty$ and $\infty^0$ should be rearranged to be of the form $0/0$ or $\infty/\infty$ in order to apply L'H\^opital's rule (By using differentiation methods like change base to $e$).
 \end{itemize}
 \begin{note}
   \begin{itemize}\leavevmode
@@ -91,3 +91,13 @@ The maximum and minimum can only be attained at critical points or endpoints. So
 \begin{note}
 The Extreme Value Theorem guarantees the attain of maximum or minimum value.
 \end{note}
+
+\section{Related rates}
+\subsection{Related Rates Strategy}
+\begin{enumerate}
+\item Start with a good picture;
+\item Identify the relevant variables and rates;
+\item Find an equation relating the relevant variables that always holds;
+\item Differentiate implicitly;
+\item Plug in and solve.
+\end{enumerate}
