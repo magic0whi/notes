@@ -1,26 +1,21 @@
 % basics
 \usepackage{fontspec}
-\setmonofont{Iosevka Term}[
-  BoldFont=*-BoldExtended,
-  UprightFont=*-Extended,
-  ItalicFont=*-ExtendedItalic,
-  BoldItalicFont=*-BoldExtendedItalic
-]
+\setmonofont{Iosevka Nerd Font Propo}
+\makeatletter
+\def\ltj@stdmcfont{"Noto Serif CJK JP:style=Regular"} % luatexja requires this
+\def\ltj@stdgtfont{"Noto Serif CJK JP:style=Medium"} % Otherwise it use HaranoAjiMincho defaultly
+\makeatother
 \usepackage{luatexja}
-\usepackage{luatexja-fontspec}
-\setmainjfont{Noto Serif CJK JP}[
-  BoldFont=*-Bold,
-  UprightFont=*-Regular
+\usepackage[match]{luatexja-fontspec} % 'match' let \rmfamily, \textrm, \sffamily also change Japanese font family
+\jfontspec[CJKShape=NLC]{Noto Serif CJK JP}
+\setmainjfont{Noto Serif CJK JP}[ % If you want to specify different fonts for a style
+  % BoldFont=*-Bold,
+  % UprightFont=*-Regular
 ]
-\setsansjfont{Noto Sans CJK JP}[
-  BoldFont=*-Bold,
-  UprightFont=*-Regular
-]
-\setmonojfont{Noto Sans Mono CJK JP}[
-  BoldFont=*-Bold,
-  UprightFont=*-Regular
-]
+\setsansjfont{Noto Sans CJK JP}
+\setmonojfont{Noto Sans Mono CJK JP}
 \usepackage{luatexja-ruby}
+
 \usepackage{setspace} % Change paragraph spacing
 %\usepackage{pxrubrica} % Ruby annotations
 \usepackage{url}
@@ -50,7 +45,7 @@
 
 % \usepackage{cmbright}
 
-\usepackage{amsmath, amsfonts, mathtools, amsthm, amssymb}
+\usepackage{amsmath, amsfonts, amssymb, mathtools, amsthm}
 \usepackage{mathrsfs}
 \usepackage{cancel}
 \usepackage{bm}
@@ -287,4 +282,4 @@
   \def\svgwidth{\columnwidth}
   \import{./figures/}{#1.pdf_tex}
 }
-\author{Proteus Ndoskrnl}
+\author{Proteus Qian}
