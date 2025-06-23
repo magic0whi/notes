@@ -1,6 +1,14 @@
 % basics
 \usepackage{fontspec}
-\setmonofont{Iosevka Nerd Font Propo}
+\IfFontExistsTF{Iosevka Nerd Font Propo}
+  {\setmonofont{Iosevka Nerd Font Propo}[Renderer=HarfBuzz]}
+  {\setmonofont{Iosevka Term}[%
+    Renderer=HarfBuzz,
+    BoldFont=*-BoldExtended,
+    UprightFont=*-Extended,
+    ItalicFont=*-ExtendedItalic,Add commentMore actions
+    BoldItalicFont=*-BoldExtendedItalic%
+  ]}
 \makeatletter
 \def\ltj@stdmcfont{"Noto Serif CJK JP:style=Regular"} % luatexja requires this
 \def\ltj@stdgtfont{"Noto Serif CJK JP:style=Medium"} % Otherwise it use HaranoAjiMincho defaultly
@@ -8,12 +16,13 @@
 \usepackage{luatexja}
 \usepackage[match]{luatexja-fontspec} % 'match' let \rmfamily, \textrm, \sffamily also change Japanese font family
 \jfontspec[CJKShape=NLC]{Noto Serif CJK JP}
-\setmainjfont{Noto Serif CJK JP}[ % If you want to specify different fonts for a style
+\setmainjfont{Noto Serif CJK JP}[% If you want to specify different fonts for a style
+  Renderer=HarfBuzz%
   % BoldFont=*-Bold,
   % UprightFont=*-Regular
 ]
-\setsansjfont{Noto Sans CJK JP}
-\setmonojfont{Noto Sans Mono CJK JP}
+\setsansjfont{Noto Sans CJK JP}[Renderer=HarfBuzz]
+\setmonojfont{Noto Sans Mono CJK JP}[Renderer=HarfBuzz]
 \usepackage{luatexja-ruby}
 
 \usepackage{setspace} % Change paragraph spacing

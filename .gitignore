@@ -8,6 +8,7 @@
 *.ninja_deps
 *.ninja_log
 *.pdf
+*.synctex(busy)
 *.synctex.gz
 *.toc
 *.xdv
