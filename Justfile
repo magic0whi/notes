@@ -13,4 +13,9 @@ clean_output_dir:
 clean: clean_lualatex clean_output_dir
 
 build: # Building LuaLaTeX object
-  find . -mindepth 1 -maxdepth 1 -type d ! -path './dummy' -printf '%f\0' | xargs -0 -P{{CORES}} -I{} sh -c 'if [ -e "{}/master.tex" ]; then cd {}; latexmk -pdflua -halt-on-error master.tex -jobname={} -output-directory=../"{{OUT_DIR}}"; fi'
+  find . -mindepth 1 -maxdepth 1 -type d ! -path './dummy' -printf '%f\0' | xargs -0 -P{{CORES}} -I{} sh -c '\
+    if [ -e "{}/master.tex" ]; then \
+      cd {};\
+      latexmk -pdflua -halt-on-error master.tex -jobname={} -output-directory=../"{{OUT_DIR}}";\
+      fi\
+  '\
