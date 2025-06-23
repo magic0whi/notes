@@ -1,14 +1,6 @@
 % basics
 \usepackage{fontspec}
-\IfFontExistsTF{Iosevka Term}
-  {\setmonofont{Iosevka Term}[%
-    Renderer=HarfBuzz,
-    BoldFont=*-BoldExtended,
-    UprightFont=*-Extended,
-    ItalicFont=*-ExtendedItalic,Add commentMore actions
-    BoldItalicFont=*-BoldExtendedItalic%
-  ]}
-  {\setmonofont{Iosevka Nerd Font Propo}[Renderer=HarfBuzz]}
+\setmonofont{Iosevka Nerd Font Propo}[Renderer=HarfBuzz]
 \makeatletter
 \def\ltj@stdmcfont{"Noto Serif CJK JP:style=Regular"} % luatexja requires this
 \def\ltj@stdgtfont{"Noto Serif CJK JP:style=Medium"} % Otherwise it use HaranoAjiMincho defaultly
