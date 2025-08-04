@@ -192,6 +192,30 @@ We've seen that derivatives ``respects'' addition and multiplication by a consta
 \subsection{The Power Rule}
 If $n$ is any fixed number, and $f(x)=x^n$, then $f^\prime(x)=nx^{n-1}$.
 
+\begin{proof}
+  Write the limit form of the derivative function $f(x)=x^n$:
+  \begin{gather*}
+    f^\prime(x)=\lim_{b\to x}\frac{f(b)-f(x)}{b-x}=\lim_{b\to x}\frac{b^n-x^n}{b-x}\\
+    \because\frac{b^n-x^n}{b-x}=\frac{\cancel{(b-x)}(b^{n-1}+b^{n-2}x+b^{n-3}x^2+\cdots+bx^{n-2}+x^{n-1})}{\cancel{b-x}}\\
+    \therefore\begin{align*}
+      f^\prime(x) & =\lim_{b\to x}(b^{n-1}+b^{n-2}x+b^{n-3}x^2+\cdots+bx^{n-2}+x^{n-1})\\
+      & =\lim_{b\to x}x^{n-1}+x^{n-2}x+x^{n-3}x^2+\cdots+xx^{n-2}+x^{n-1}\\
+      & =\lim_{b\to x}nx^{n-1}
+    \end{align*}
+  \end{gather*}
+\end{proof}
+\begin{proof}[Factoring $b^n-x^n$]
+  \begin{align*}
+    & (b-x)(b+x)=b^2-x^2\\
+    & (b-x)(b^2+bx+x^2)=b^3-x^3
+  \end{align*}
+  \begin{align*}
+    (b-x)(b^{n-1}+b^{n-2}x+b^{n-3}x^2+\cdots+bx^{n-2}+x^{n-1}) & =b^n+\cancel{b^{n-1}x}+\cancel{b^{n-2}x^2}+\cdots+\cancel{bx^{n-1}}\\
+    & \mathbin{\phantom{=}}-(\cancel{b^{n-1}x}+\cancel{b^{n-2}x^2}+\cdots+\cancel{bx^{n-1}}+x^n)\\
+    & =b^n-x^n
+  \end{align*}
+\end{proof}
+
 \section{Leibniz Notation}
 \subsection{Why do we use Leibniz notation?}
 The biggest reason is that it reminds us what the independent variable is. The derivative is measuring the instantaneous rate of change of the implicit variable of a function respects to the independent variable. Sometimes, if there are lots of quantities that have variables representing them, it's easy to lose track of what is what. Leibniz notation helps to remind us.
