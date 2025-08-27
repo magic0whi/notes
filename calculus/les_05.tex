@@ -1,0 +1,38 @@
+\chapter{The Integral}
+\section{Mean Value Theorem}
+\subsection{The Mean Value Theorem (MVT)}
+If $x(t)$ is continuous on $a\le t\le b$, and differentiable on $a<t<b$, that is, $x^\prime(t)$ is defined for all $t$, $a<t<b$, then
+\[
+\frac{x(b)-x(a)}{b-a}=x^\prime(c)\text{ for some $c$, with $a<c<b$.}
+\]
+Equivalently, in geometric terms, there is at least one point $c$, with $a<c<b$, at which the tangent line is parallel to the secant line through $(a,x(a))$ and $(b,x(b))$:
+\todo{Supplement figure}
+\subsection{Upper and Lower Bounds}
+A number $M$ is an \textbf{upper bound} of a function $f(x)$ if
+\[f(x)\le M\text{ for all }x\]
+and a number $m$ is a \textbf{lower bound} of a function $f(x)$ if
+\[m\le f(x)\text{ for all }x\]
+
+We can consider upper and lower bounds on the entire real number line, or on an interval.
+\[m\le f(x)\le M\]
+\todo{Supplement figure}
+In other words, an upper bound of a function is a number that is larger than or equal to all value of the function. A lower bound of a function is a number which is smaller than or equal to all values of the function.
+\subsection{Old News}
+We have been relying on the following fundamental facts whenever we try to understand a function using its derivative. But in face, these faces are consequences of the mean value theorem.
+\begin{itemize}
+\item If $x^\prime(t)\ge0$ for all $t$ in $(A,B)$, then $x(t)$ is \textbf{increasing or staying the same} over $[A,B]$.
+\item IF $x^\prime(t)>0$ for all $t$ in $(A,B)$, then $x(t)$ is \textbf{strictly increasing} over $[A,B]$.
+\item IF $x^\prime(t)\le0$ for all $t$ in $(A,B)$, then $x(t)$ is \textbf{decreasing or staying the same} over $[A,B]$.
+\item IF $x^\prime(t)<0$ for all $t$ in $(A,B)$, then $x(t)$ is \textbf{strictly decreasing} over $[A,B]$.
+\item IF $x^\prime(t)=0$ for all $t$ in $(A,B)$, then $x(t)$ is \textbf{constant} over $[A,B]$.
+\end{itemize}
+\subsection{Bounding the Average Rate of Change}
+The equality in the MVT can be used to restrict the range of possible values of the average rate of change and the total change. More precisely, if there are numbers $m$ and $M$ such that
+\[m\le x^\prime(c)\le M\text{ for all $c$ with }a<c<b,\]
+that is, $m$ is a lower bound and $M$ is an upper bound on $x^\prime(c)$ over $(a,b)$, then the MVT implies the following
+\begin{gather*}
+m\le\frac{x(b)-x(a)}{b-a}\le M\text{ (Bounds on the average rate of change)}\\
+m(b-a)\le x(b)-x(a)\le M(b-a)\text{ (Bounds on the total change)}
+\end{gather*}
+In other words, the average rate of change must be in between the maximum and the minimum of the derivative, and the total change must be in between the maximum and minimum of the derivative multiplied by the length of the interval.
+\section{Differentials and Antiderivatives}

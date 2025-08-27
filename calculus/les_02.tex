@@ -8,6 +8,7 @@ The linear approximation for a function $f$ near point $x=a$ is given by the fol
 
 \section{The Product Rule}
 \[\text{If}\ h=f\cdot g,\ \text{then}\ h^\prime=f\cdot g^\prime+f^\prime\cdot g.\]
+\todo{Add geometric proof}% https://openlearninglibrary.mit.edu/courses/course-v1:MITx+18.01.1x+2T2019/courseware/unit2/diff_2-sequential/?child=first
 \begin{proof}
   To proof the product rule, we can write $f(x+\dd x)=\dd f(x)+f(x)$, the reason why this equation is important is that if we differentiate the $h=fg$:
   \begin{align*}
@@ -25,6 +26,7 @@ The linear approximation for a function $f$ near point $x=a$ is given by the fol
 \subsection{The Quotient Rule}
 For functions $f$ and $g$,
 \[\text{if}\ h=\frac f g\ ,\ \text{then}\ h^\prime=\frac{f^\prime g-fg^\prime}{g^2}\] at all points where $f$ and $g$ are differentiable and $g\neq0$.
+\todo{Add a proof without using the chain rule}% https://openlearninglibrary.mit.edu/courses/course-v1:MITx+18.01.1x+2T2019/courseware/unit2/diff_3-sequential/?child=first
 \begin{proof}[The Quotient Rule]
 If $h=f/g$, the first thing to do is to rewrite $1/g$ in the terms of a fractional power $h=fg^{-1}$. Thus the last step is a product, then we start by product rule:
     \begin{align*}
@@ -165,6 +167,7 @@ Since $M(e)$ always equals $1$:
 \end{alignat*}
 Let $1/\dd x=n$, $n\to+\infty$, We get the formal definition of $e$:
 \[e=\lim_{n\to+\infty}(1+\frac{1}{n})^n.\]
+\todo{Add another way to proof, tip: proof $e^{\lim_{n\to\infty}(1+\frac{1}{n})^n}=e^1$ (with limit to the form $\frac{\ln(1+\dd x)-\ln1)}{\dd x}$}
 
 \subsection{Differentiating Exponential Functions with Other Bases}
 For any positive constant $a$,
@@ -216,6 +219,7 @@ For any positive constant $a$,
 \item Method 1: Change base to $\bm{e}$\\
 To calculate $[f^g]^\prime$ for functions $f$ and $g$, first change base $f^g=e^{g\ln f}$, then differentiate and use the chain rule.
 \item Method 2: Logarithmic differentiation\\
+\todo{Add example to differentiate $x^x$}
 To calculate $u^\prime$, first calculate $(\ln u)^\prime$, then use the formula $u^\prime=u(\ln u)^\prime$ and solve for $u^\prime$
   \begin{proof}[$u^\prime=u(\ln u)^\prime$]
     \begin{alignat*}{2}
@@ -226,3 +230,4 @@ To calculate $u^\prime$, first calculate $(\ln u)^\prime$, then use the formula 
     \end{alignat*}
   \end{proof}
 \end{itemize}
+\begin{note}These two methods can be used to proof the power rule for all real powers $x^r$\end{note}
