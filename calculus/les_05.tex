@@ -36,3 +36,87 @@ m(b-a)\le x(b)-x(a)\le M(b-a)\text{ (Bounds on the total change)}
 \end{gather*}
 In other words, the average rate of change must be in between the maximum and the minimum of the derivative, and the total change must be in between the maximum and minimum of the derivative multiplied by the length of the interval.
 \section{Differentials and Antiderivatives}
+\subsection{Differential notation}
+Let $y=F(x)$, the \textbf{differential of $\bm{y}$} is defined as
+\[\dd y=F^\prime\dd x.\]
+This is also called the \textbf{differential of $\bm{F}$} and denoted $\bm{\dd F}$.
+
+\begin{note}
+Rearranging this question, we get the Leibniz notation for the derivative, which says the derivative is the ratio of the two differentials $\dd y$ and $\dd x$.
+\[F^\prime=\frac{\dd y}{\dd x}\text{ or }\frac{\dd F}{\dd x}.\]
+\end{note}
+
+We may think of the differential of $x$, $\dd x$ as a ``little bit'' of $x$, and the differential of $y$, $\dd y$, as a ``little bit'' of $y$. Here, what we mean by a ``little bit'' is really an infinitely small bit, we call these infinitely small quantities ``infinitesimal.'' The point is that even though both $\dd y$ and $\dd x$ are infinitely small, their ratio is \textbf{not}. Their ratio is the derivative $F^\prime(x)$. In other words, the differential notation says that $\dd y$ is proportional to $\dd x$ with constant of proportionality $F^\prime(x)$ even though both $\dd y$ and $\dd x$ are infinitely small. We use the differential notation as a tool to keep track of how much $y$ changes when $x$ changes by a tiny tiny\ldots tiny bit.
+
+The geometric picture for the differential is the same as that for linear approximation.
+\todo{Supplement figure}
+Let us compare the differential notation with the formula for linear approximations.
+\begin{alignat*}{3}
+& \text{Linear approximation at $x$:} & \: & \Delta F\approx F^\prime\Delta x\text{, $\Delta x$ is a finite change in $x$;}\\
+& \text{Differential notation:}       &    & \dd F=F^\prime\dd x\text{, $\Delta x$ is a tiny tiny\ldots tiny bit of $x$.}
+\end{alignat*}
+
+\subsection{Antiderivatives}
+\textbf{An antiderivative} of $f$ is any function $f$ such that
+\[F^\prime=f.\]
+
+\subsection{Indefinite Integral}
+Given a function $f$, the \textbf{indefinite integral} or \textbf{the antiderivative} of $f$ is denoted $\int f\dd x$. It is the family of functions
+\[\int f\dd x=F(x)+C\]
+where $F$ is any antiderivative of $f$, and $C$ is any constant.
+
+We call $\int$ the \textbf{integral sign}, $f$ the \textbf{integrand}, and $C$ the \textbf{constant of integration}.
+
+\begin{note}
+The constant of integration is present in this definition because the derivative of a function determines only the shape of the function, but the derivative does not change if the function is shifted up or down by the same constant everywhere.
+\end{note}
+
+\subsection{Uniqueness of the indefinite integral}
+The indefinite integral
+\[\int f\dd x=F(x)+C\]
+is termed ``indefinite'' since it contains an undetermined constant $C$ and is not just one function but a family of infinitely many functions, parameterized by $C$.
+
+On the other hand, the constant is the only ambiguity of the indefinite integral due to the MVT, which guarantees that any two antiderivatives of the same function can differ only by a constant.
+\begin{proof}[Why MVT applies to the statement that ``$F_1-F_2=C$'']
+Suppose $G=F_1-F_2$, $F_1$ and $F_2$ are differentiable on interval $(a,b)$ (which requires $F_1$, $F_2$ to be continuous, a standard assumption), then $G^\prime=F_1^\prime-F_2^\prime=f-f=0$.
+
+Take any two points $x_1, x_2\in(a,b)$ with $x_1<x_2$. By the MVT, since $G$ is differentiable on $(x_1, x_2)$ and continuous on $[x_1, x_2]$, there exists some $c\in(x_1,x_2)$ such that:
+\[G^\prime(c)=\frac{G(x_2)-G(x_1)}{x_2-x_1}.\]
+
+But we know $G^\prime=0$ everywhere. Thus:
+\[\frac{G(x_2)-G(x_1)}{x_2-x_1}=0,\]
+this implies:
+\[G(x_2)-G(x_1)=0\iff G(x_2)=G(x_1).\]
+
+Since $x_1$ and $x_2$ are arbitrary points in the interval, $G=F_1-F_2$ must be constant throughout the interval. Thus:
+\[F_1-F_2=C,\]
+where $C$ is a constant.
+\end{proof}
+\subsection{Integrals of Powers}
+\[\int x^p\dd x=\begin{cases}
+  \frac{x^{p+1}}{p+1}+C\text{ if p\neq-1,}\\
+  \ln\abs x+C\text{ if p=-1.}
+\end{cases}\]
+\subsection{First Rules of Integration}
+\begin{table}[H]\begin{tabular}{lll}
+                   & Integration Rules                                     & Differentiation Rules \\
+Constant multiple: & $\int kf(x)\dd x=k\int f(x)\dd x$                     & $\dd(kF)=k\dd F$      \\
+Sum:               & $\int (f+g)\dd x=\int f\dd x+\int g\dd x$ & $\dd(F+G)=\dd F+\dd G$ 
+\end{tabular}\end{table}
+On the other hand, the following naive product and quotient rules do \textbf{not} work:
+\begin{gather*}
+\int fg\dd x\neq\int f\dd x\cdot\int g\dd x,\\
+\int \frac f g\dd x\neq\frac{\int f\dd x}{\int g\dd x}.
+\end{gather*}
+\subsection{Method of Substitution}
+The method of substitution is the integration analogue of the chain rule.
+
+If
+\[g\dd x=f(u)u^\prime\dd x,\]
+that is, the differential $g\dd x$ is the result of a chain rule, then
+\begin{alignat*}{1}
+\int g\dd x & =\int f(u)u^\prime\dd x\\
+            & =\int f(u)\dd u\\
+			& =F(u)+C,
+\end{alignat*}
+where $F(u)$ is an antiderivative of $f(u)$.
