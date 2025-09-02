@@ -17,7 +17,7 @@ We can consider upper and lower bounds on the entire real number line, or on an 
 \[m\le f(x)\le M\]
 \todo{Supplement figure}
 In other words, an upper bound of a function is a number that is larger than or equal to all value of the function. A lower bound of a function is a number which is smaller than or equal to all values of the function.
-\subsection{Old News}
+\subsection{Old news}
 We have been relying on the following fundamental facts whenever we try to understand a function using its derivative. But in face, these faces are consequences of the mean value theorem.
 \begin{itemize}
 \item If $x^\prime(t)\ge0$ for all $t$ in $(A,B)$, then $x(t)$ is \textbf{increasing or staying the same} over $[A,B]$.
@@ -26,7 +26,7 @@ We have been relying on the following fundamental facts whenever we try to under
 \item IF $x^\prime(t)<0$ for all $t$ in $(A,B)$, then $x(t)$ is \textbf{strictly decreasing} over $[A,B]$.
 \item IF $x^\prime(t)=0$ for all $t$ in $(A,B)$, then $x(t)$ is \textbf{constant} over $[A,B]$.
 \end{itemize}
-\subsection{Bounding the Average Rate of Change}
+\subsection{Bounding the average rate of change}
 The equality in the MVT can be used to restrict the range of possible values of the average rate of change and the total change. More precisely, if there are numbers $m$ and $M$ such that
 \[m\le x^\prime(c)\le M\text{ for all $c$ with }a<c<b,\]
 that is, $m$ is a lower bound and $M$ is an upper bound on $x^\prime(c)$ over $(a,b)$, then the MVT implies the following
@@ -60,7 +60,7 @@ Let us compare the differential notation with the formula for linear approximati
 \textbf{An antiderivative} of $f$ is any function $f$ such that
 \[F^\prime=f.\]
 
-\subsection{Indefinite Integral}
+\subsection{Indefinite integral}
 Given a function $f$, the \textbf{indefinite integral} or \textbf{the antiderivative} of $f$ is denoted $\int f\dd x$. It is the family of functions
 \[\int f\dd x=F(x)+C\]
 where $F$ is any antiderivative of $f$, and $C$ is any constant.
@@ -92,12 +92,12 @@ Since $x_1$ and $x_2$ are arbitrary points in the interval, $G=F_1-F_2$ must be 
 \[F_1-F_2=C,\]
 where $C$ is a constant.
 \end{proof}
-\subsection{Integrals of Powers}
+\subsection{Integrals of powers}
 \[\int x^p\dd x=\begin{cases}
   \frac{x^{p+1}}{p+1}+C\text{ if p\neq-1,}\\
   \ln\abs x+C\text{ if p=-1.}
 \end{cases}\]
-\subsection{First Rules of Integration}
+\subsection{First rules of integration}
 \begin{table}[H]\begin{tabular}{lll}
                    & Integration Rules                                     & Differentiation Rules \\
 Constant multiple: & $\int kf(x)\dd x=k\int f(x)\dd x$                     & $\dd(kF)=k\dd F$      \\
@@ -108,7 +108,7 @@ On the other hand, the following naive product and quotient rules do \textbf{not
 \int fg\dd x\neq\int f\dd x\cdot\int g\dd x,\\
 \int \frac f g\dd x\neq\frac{\int f\dd x}{\int g\dd x}.
 \end{gather*}
-\subsection{Method of Substitution}
+\subsection{Method of substitution}
 The method of substitution is the integration analogue of the chain rule.
 
 If
@@ -120,3 +120,35 @@ that is, the differential $g\dd x$ is the result of a chain rule, then
 			& =F(u)+C,
 \end{alignat*}
 where $F(u)$ is an antiderivative of $f(u)$.
+
+\section{Differential equation}
+\subsection{Separation of variables}
+A differential equation is \textbf{separable} is it can be written in the form $\frac{\dd y}{\dd x}=f(x)g(y)$.
+
+To solve a separable differential equation, separate all terms involving $x$ from terms involving $y$, and anti-differentiate both sides.
+\begin{gather*}
+\frac{\dd y}{\dd x}=f(x)g(y)\\
+\frac{\dd y}{g(y)}=f(x)\dd x\\
+\int\frac{\dd y}{g(y)}=\int f(x)\dd x\\
+\end{gather*}
+\subsection{Initial conditions}
+\subsubsection{Theorem}
+Given a differential equation $\frac{\dd y}{\dd x}=f(x)g(y)$ and an \textbf{initial condition} $y(a)=b$, if $f$, $g$, and $g^\prime$ are continuous near $(a,b)$, then there is a unique function $y$ whose derivative is given by $f(x)g(y)$ and that passes through the point $(a,b)$.
+\subsubsection{Slope fields}
+The \textbf{slope field} is a diagram that helps us to visualize the information in a first order differential equation. The slope field is obtained as follows. At each point $(x,y)$. The solution curves must be tangent to the slope field at all points.
+\subsubsection{Euler's method}
+Given the differential equation $\frac{\dd y}{\dd x}=x+y$:
+\begin{enumerate}
+\item Choose a step size $h$ (The smaller the step size, the more accurate the approximation.)
+\item Let $(x_0,y_0)$ be the initial condition.
+\item We can use the differential equation and step size to determine the value of the function at $x_1$:
+  \begin{align*}
+  & x_1=x_0+h\\
+  & y_1=y_0+(x_0+y_0)h\quad\text{(linear approximation)}
+  \end{align*}
+\item Iterate this process:
+  \begin{align*}
+  & x_{k+1}=x_k+h\\
+  & y_{k+1}=y_k+(x_k+y_k)h\quad\text{(linear approximation)}
+  \end{align*}
+\end{enumerate}
