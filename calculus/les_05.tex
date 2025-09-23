@@ -169,3 +169,50 @@ A circle of radius 1 centered at the origin is plotted in the $xy$-plane. A poin
 The point labeled in the image, $(\cosh t, \sinh t)$, is defined to be the point on the hyperbola $x^2-y^2=1$ such that the area of the shaded region is $t$.
 \todo{Supplement figure}
 \todo{Supplement modeling of the zipline in part 4}
+\section{The definite integral}
+\subsection{Geometric definition of the definite integral}
+The \textbf{definite integral of $f$ from $a$ to $b$}, denoted by
+\[\int_a^bf(x)\dd x,\]
+is the area of the region above the $x$-axis, below the curve $y=f(x)$, and in between the two vertical lines $x=a$ and $x=b$, as shown shaded in the figure below.
+
+The $x$-values $a$ and $b$ are called the \textbf{lower} and \textbf{upper limits of the integral}. (This is a different sense of the word ``limit'' from when we take the limit of a function.)
+\todo{Supplement figure}
+
+The only difference between the notation for definite and indefinite integrals is that definite integrals have limits but indefinite integrals do not.
+\subsection{Summation notation}
+The $\sum$ notation in a compact way to denote a sum in which each term is obtained from a formula:
+\[\sum_{i=1}^na_i=a_1+a_2+\cdots+a_{n-1}+a_n\]
+where $i$ indexes the terms, and $a_i$ is a formula for the $i$\textsuperscript{th} term of the sum.
+
+The notation $\sum_{i=1}^na_i$ reads ``the sum of $a_i$ from $i=1$ to $i=n$.''
+
+For example, if $a_i=i^2$, that is, the formula for the term indexed by $i$ is $i^2$, then
+\[\sum_{i=1}^ni^2=1^2+2^2+3^2+\cdots+(n-1)^2+n^2\]
+\subsection{Riemann sums}
+Let us summarize in precise terms the steps for evaluating $\int_a^bf(x)\dd x$ using a Riemann Sum.
+\begin{enumerate}
+\item Divide $[a,b]$ into $n$ equal subintervals.
+  \todo{Supplement figure}\\
+  Then each interval is of length
+  \[\Delta x=\frac{b-a}n.\]
+  Let the $i$\textsuperscript{th} subinterval be the \textbf{base} of $i$\textsuperscript{th} rectangle.
+\item Choose a point $c_i$ within the $i$\textsuperscript{th} subinterval. Choose $f(c_i)$ be the \textbf{height} of the $i$\textsuperscript{th} rectangle.\todo{Supplement figure}
+\item Add up the areas of the $n$ rectangles. The total area of $n$ rectangles is:
+  \[\underbrace{f(c_1)}_{\text{height}}\underbrace{\Delta x}_{\text{base}}
+  +\underbrace{f(c_2)}_{\text{height}}\underbrace{\Delta x}_{\text{base}}
+  +\cdots
+  +\underbrace{f(c_n)}_{\text{height}}\underbrace{\Delta x}_{\text{base}}
+  =\sum_{i=1}^nf(c_i)\Delta x
+  \]
+\item Take the limit as the rectangles become infinitesimally thin, ($\Delta x\to0$, or equivalent $n\to\infty$). This limit is the actual area under the curve between $a$ and $b$.
+  \[\lim_{n\to\infty}\sum_{i=1}^nf(c_i)\Delta x=\int_a^bf(x)\dd x\]
+  The sum of the areas of the $n$ rectangles, $\sum_{i=1}^nf(c_i)\Delta x$, is called a \textbf{Riemann Sum}. If we pick $c_i$ to be the left endpoint of the $i$\textsuperscript{th} subinterval, the Riemann sum is called a \textbf{left Riemann Sum}. Similarly, if $c_i$ is the right endpoint of the $i$\textsuperscript{th} interval, the Riemann sum is called a \textbf{right Riemann Sum}.
+
+  However, in the limit $n\to\infty$ (so that $\Delta x\to0$), this distinction is no longer needed. The limit of any Riemann Sum, no matter what the $c_i$'s within the subinterval are, is equal to the exact area under the curve.
+\end{enumerate}
+\subsection{Cumulative sums}
+We have been defining the definite integral $\int_a^bf(x)\dd x$ geometrically as the area under a curve. But $f(x)$ and $x$ can represent quantities other than length.
+
+For instance, if $x$ represents time, with units of hours, and $f(x)$ represents velocity, with units of \unit[per-mode=single-symbol]{\km\per\hour}. So the units of the integral, $\int_a^bf(x)\dd x$, is \unit{\km}, which are the units of distance. But the integral $\int_a^bf(x)\dd x$ still represents the area under the curve, so the units of this area are \unit{\km}.
+
+Most applications of the integral will involve seeing it as a cumulative sum.
