@@ -1,0 +1,31 @@
+\chapter{Progressions}
+\subsection{Arithmetic progression}
+\begin{itemize}
+\item $n$-th term: $a_n=a_1+(n-1)d$.
+\item Sum: $S_n=\frac{n(a_1+a_n)}2\text{ or }na_1+\frac{n(n-1)}2d$.
+\end{itemize}
+\todo{Supplement attributes}
+\subsection{Geometric progression}
+\begin{itemize}
+\item $n$-th term: $a_n=a_1q^{n-1}$.
+\item Sum: $S_n=\frac{a_1-a_nq}{1-q}\text{ or }\frac{a_1(1-q^n)}{1-q}\quad(q\neq 1)$
+\end{itemize}
+\todo{Supplement attributes}
+\chapter{Binomial Theorem}
+\[
+(x+y)^n=\binom{n}{k}x^ny^0+\binom{n}{1}x^{n-1}y^1+\binom{n}{2}x^{n-2}y^2+\cdots+\binom{n}{n}x^0y^n,
+\]
+where each $\binom{n}{k}$ is a positive integer known as a binomial coefficient, defined as
+\[
+\binom{n}{k}=\frac{n!}{k!(n-k)!}
+\]
+\begin{note}
+The definition of combination is equal to the binomial coefficient
+\[
+C_k^n=\binom{n}{k}=\frac{n!}{k!(n-k)!},
+\]
+so the binomial theorem can also be written as
+\[
+(x+y)^n=C_n^0x^ny^0+C_n^1x^{n-1}y^1+C_n^2x^{n-2}y^2+\cdots+C_n^nx^0y^n
+\]
+\end{note}
