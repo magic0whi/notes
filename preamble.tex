@@ -57,7 +57,8 @@
 \newcommand\Q{\ensuremath{\mathbb{Q}}}
 \newcommand\C{\ensuremath{\mathbb{C}}}
 \newcommand\dd{\mathrm{d}}
-\newcommand\evalat[2]{\left.#1\right|_{#2}}
+\newcommand\evalat[3][]{\left.#2\right\rvert_{#3}\ifthenelse{\isempty{#1}}{}{^#1}}
+% \newcommand\evalat[2][]{\left.#2\right\rvert_{#3}^[]}
 \DeclareMathOperator{\sgn}{sgn}
 \DeclareMathOperator{\Ker}{ker}
 \DeclareMathOperator{\im}{Im}
