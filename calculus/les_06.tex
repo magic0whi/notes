@@ -58,4 +58,66 @@ In other words, the definite integral of a function is the difference between th
 We will abbreviate the \textbf{First Fundamental Theorem of Calculus} as \textbf{FTC1}.
 
 The FTC1 connects the definite integral to the antiderivative. With this connection, we can now compute definite integrals using antiderivatives, and dispense with Riemann sums.
-TODO
+\subsection{The definite integral of any continuous function}
+Since the equation in the statement of FTC1 makes sense for general functions, we can use the FTC1 to extend the \textbf{definition of the definite integral} to functions that are not necessarily non-negative. That is:
+
+For any continuous function $f$ with an antiderivative $F$,
+\[\int_a^bf(x)\dd x=F(b)-F(a)\quad\text{(for any continuous $f$)}.\]
+It turns out that to be consistent with FTC1, the Riemann sum formula for definite integrals does not need to change. Consequently, the \textbf{geometric definition} of $\int_a^bf(x)\dd x$ that is consistent with FTC1 is as follows.
+\todo{Supplement figure}
+\[\int_a^bf(x)\dd x=[\text{Area above $x$-axis and below $y=f(x)$}]-[\text{Area below $x$-axis and above $y=f(x)$}]\]
+where the areas considered are between the vertical lines $x=a$ and $x=b$. The important point is that the area above the $x$-axis is counted with a positive sign and the area below the $x$-axis is counted with a negative sign. In other words, the definite integral of a general function is the \textbf{signed area bounded by the curve $\bm{y=f(x)}$}.
+
+We will continue to use FTC1, not Riemann sums, to evaluate definite integrals. We will also often use the area interpretation to deduce properties of definite integrals, for example when looking for symmetry.
+\subsection{Velocity and speed, displacement and distance travelled}
+Suppose you are travelling between time $a$ and time $b$, and your velocity is given by $v(t)$ and your position by $x(t)$ at time $t$.
+
+Recall that \textbf{Speed} is $\abs{v(t)}$, the absolute value of the velocity function. Then
+\[\int_a^bv(t)\dd t=x(b)-x(a)\quad\text{(Displacement)}.\]
+That is, the integral of the velocity function is the (net) change of position between time $a$ and $b$, also called the \textbf{displacement}.
+
+On the other hand, $\int_a^b\abs{v(t)}\dd t$ gives the \textbf{total distance travelled} between time $a$ and $b$.
+
+In the case when $v(t)>0$ for all $t$, $\abs{v(t)}=v(t)$, and therefore $\int_a^bv(t)\dd t=\int_a^b\abs{v(t)}\dd t$. In other words, when you are always travelling in the same direction, then speed is equal to velocity, and total distance traveled is equal to displacement.
+\subsection{Properties of definite integrals}
+Here are some properties of definite integrals. We have discussed and used most of these properties for $f>0$. The properties below are true for definite integrals for functions which can be negative as well.
+\begin{itemize}
+\item Sums: \[\int_a^b\lparen f(x)+g(x)\rparen\dd x=\int_a^bf(x)\dd x+\int_a^bg(x)\dd x.\]
+\item Constant Multiples: \[\int_a^bcf(x)\dd x=c\int_a^bf(x)\dd x\quad\text{for any constant $c$}.\]
+\item Reversing Limits of Integrals: \[\int_b^af(x)\dd x=-\int_a^bf(x)\dd x\quad\text{for any $a$, $b$}.\]
+  \begin{note}
+    This is the definition of a definite integral with its lower limit greater than its upper limit. It is defined this way to be consistent with FTC1.
+  \end{note}
+\item Combining integrals: \[\int_a^cf(x)\dd x=\int_a^bf(x)\dd x+\int_b^cf(x)\dd x\quad\text{for any $a$, $b$, $c$}.\]
+  \begin{note}We have seen this property in the last section with $a<b<c$. With the property above on reversing the limits of a definite integral, we can now use this property with $a$, $b$, $c$ in any order.\end{note}
+\end{itemize}
+\subsection{Estimation}
+If $f(x)\leq g(x)$, and $a\leq b$, then
+\[\int_a^bf\dd x\leq\int_a^bg\dd x.\]
+Notice that the order of $a$ and $b$ matters for this inequality. If instead of $a\leq b$ we have $b\leq a$, then
+\[\int_a^bf\dd x\geq\int_a^bg\dd x.\]
+In other words, if the limits of the integrals are reversed, the inequality is also reversed.
+\subsection{Change of variables of definite integrals}
+When we make a change of variables of an integral in order to evaluate it, we are using the method of substitution. The method of substitution of definite integrals is exactly analogous to the method of substitution for indefinite integrals, except we now need to pay attention to the limits of the integrals.
+
+If
+\[\int_a^bf(x)\dd x=\int_a^b g\lparen u(x)\rparen u^\prime(x)\dd x,\]
+and $u^\prime$ does not change sign between $a$ and $b$, then
+\[\int_a^bf(x)\dd x=\int_a^bg\lparen u(x)\rparen u^\prime(x)\dd x=\int_{u(a)}^{u(b)}g(u)\dd u.\]
+That is, the limits of the integral over $u$ are the values of $u$ corresponding to the limits of the integral over $x$.
+\begin{note}[Caution]
+When we use the method of substitution, we need to be very careful about when $u^\prime$ (or $\dd u$) changes sign. If $u^\prime$ changes sign within the integration interval $[a,b]$, the method of substitution may give the wrong answer. In this case, we need to first rewrite the integral as a sum of two integrals such that within the limits of each integral $u^\prime$ does not change sign, and then use the method of substitution on each integral separately.
+\end{note}
+\subsection{Comparing FTC1 and MVT}
+If $F(x)$ is differentiable and $F^\prime(x)$ is continuous on $[a,b]$. And let
+\begin{gather*}
+\Delta F=F(b)-F(a)\\
+\Delta x=b-a.
+\end{gather*}
+Then, the MVT stats that
+\[\frac{\Delta F}{\Delta x}=F^\prime(c)\quad\text{for some $c$, $a<c<b$}.\]
+On the other hand, the FTC1 gives
+\[\frac{\Delta F}{\Delta x}=\frac1{b-a}\int_a^bF^\prime\dd x.\]
+We see that the FTC1 gives a specific value for $\frac{\Delta F}{\Delta x}$, the average rate of change of $F$ over $[a,b]$, but the MVT does not, since it does not tell us where $c$ is.
+
+Therefore, the First Fundamental Theorem is much more useful than the Mean Value Theorem. Once we have FTC1 at our disposal, we do not need to use MVT anymore. Nonetheless, the Mean Value Theorem is important as the basis of calculus. We needed it to establish the fact that two antiderivatives of the same function can only differ by a constant. We will need this fact again in order to prove FTC1 in the next section.
