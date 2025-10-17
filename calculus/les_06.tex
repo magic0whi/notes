@@ -121,3 +121,86 @@ On the other hand, the FTC1 gives
 We see that the FTC1 gives a specific value for $\frac{\Delta F}{\Delta x}$, the average rate of change of $F$ over $[a,b]$, but the MVT does not, since it does not tell us where $c$ is.
 
 Therefore, the First Fundamental Theorem is much more useful than the Mean Value Theorem. Once we have FTC1 at our disposal, we do not need to use MVT anymore. Nonetheless, the Mean Value Theorem is important as the basis of calculus. We needed it to establish the fact that two antiderivatives of the same function can only differ by a constant. We will need this fact again in order to prove FTC1 in the next section.
+\section{Second Fundamental Theorem of Calculus}
+\subsection{The Second Fundamental Theorem of Calculus}
+The \textbf{Second Fundamental Theorem of Calculus} states the following.
+
+Given a continuous function $f(x)$, if
+\[G(x)=\int_a^xf(t)\dd t\quad\text{($t$ between $a$ and $x$)},\]
+then
+\[G^\prime(x)=f(x)\]
+\todo{Supplement figure}
+We will abbreviate this theorem by \textbf{FTC2}.
+
+In terms of differential equations, FTC2 says that $G(x)$ is the solution to the following differential equation and initial condition:
+\begin{align*}
+  y^\prime=f\quad & \text{(differential equation)}\\
+  y(a)=0\quad & \text{(initial condition).}
+\end{align*}
+The initial condition $y(a)=0$ is satisfied because $G(a)=\int_a^af(t)\dd t=0$
+
+Recall that any function $G$ such that $G^\prime=f$ is an antiderivative of $f$. Hence, FTC2 gives us a formula for an antiderivative of $f(x)$. This formula is different from the formulas you have seen. It is in terms of a definite integral, and is called an \textbf{integral formula}.
+\begin{note}
+The integrand $f(x)$ can be any continuous function, not just the ones whose antiderivative we know how to find. These integral formulas are still useful there are numerical methods that allow us to compute them.
+\end{note}
+\subsection{FTC2 and the chain rule}
+For any continuous function $f$, and differentiable function $u(x)$,
+\[\frac\dd{\dd x}\int_a^{u(x)}f(t)\dd t=f\left(u(x)\right)u^\prime(x).\]
+This is because
+\[
+  \int_a^{u(x)}f(t)\dd t=G\left(u(x)\right)
+  \quad\text{where}\quad
+  \frac{\dd G\left(u(x)\right)}{\dd u(x)}\cdot\frac{\dd u(x)}{\dd x}=f\left(u(x)\right)u^\prime(x).
+\]
+In other words, the integral $\int_a^{u(x)}f(t)\dd t$ can be written as a composition of the two functions $G$ and $u$. We can then apply the chain rule and FTC2 to get the derivative.
+\subsection{The two fundamental theorems of calculus}
+Here is another point of view of the two fundamental theorems of calculus together.
+\begin{itemize}
+\item Given a differentiable function $F$ with continuous derivative $F^\prime$,
+  \[\int_a^xF^\prime(t)\dd t=F(x)-F(a).\]
+\item Given a continuous function $f$,
+  \[\frac\dd{\dd x}\int_a^xf(t)\dd t=f(x).\]
+\end{itemize}
+In other words, FTC1 says that if we start with a function $F$, and first differentiate and then integrate (from $a$ to $x$), we will get back the function $F$ up to a constant, which is given by $F(a)$.
+
+On the other hand, FTC2 says that if we start with a function $f$, and first integrate (from $a$ to $x$) and then differentiate, we will get back to $f$. Notice there is no ambiguity of a constant here.
+
+So, the two fundamental theorems together say that differentiation and integration (from $a$ to $x$) are ``inverse'' operations of one another, up to a constant.
+\subsection{Constructing functions using integrals}
+Recall the FTC2 gives the integral formula \[G(x)=\int_a^xf(t)\dd t\]
+as the solution to the following differential equation and initial condition:
+\begin{align*}
+y^\prime=f\quad & \text{(differential equation)}\\
+y(a)=0\quad & \text{(initial condition).}
+\end{align*}
+Depending on what the differential equation is, $G(x)$ can be a function we already know, or one that cannot be expressed (without an integral) in terms of any function we already know, There are many functions of either kind.
+
+For example, the logarithmic function can be defined using an integral:
+\[L(x)=\int_1^x\frac{\dd t}t=\ln t\quad\text{where $x>0$}.\]
+On the other hand, the integral of $e^{-t^2}$, the \textbf{bell curve}, is a function defined by an integral and cannot be expressed in terms of functions we already know:
+\[F(x)=\int_0^xe^{-t^2}\dd t.\]
+This function is central in probability and will be discussed more in the next unit.
+
+Finally, even though we may not have explicit formulas for the functions defined by integral formulas, we can apply FTC2 to find their derivatives. Therefore, we have all of our usual tools at our disposal. For example, we can graph them, or approximate them by linear and quadratic approximations.
+\subsection{Summary of the logarithm}
+We have now seen the exponential and the logarithmic functions in two different ways. Let us summarize.
+
+In Calculus 1A, we defined the exponential function $E(y)$ to be the solution to the differential equation and initial condition:
+\begin{align*}
+  E^\prime=E(y)\quad & \text{(differential equation)}\\
+  E(0)=1\quad & \text{(initial condition).}
+\end{align*}
+We then let $e=E(1)$ and denoted $E(y)$ by $e^y$.
+
+We defined the logarithm as the inverse of $E(y)$
+\[\text{Definition of the logarithm:}\ln(x)=E^{-1}(x).\]
+The properties of the logarithm were derived from the properties of the exponential.
+\[\begin{array}{llcl}
+  \text{Product:} & e^a\cdot e^b=e^{a+b} & \implies & \ln(A\cdot B)=\ln A+\ln B,\\
+  \text{Reciprocal:} & \frac1{e^a}=e^{-a} & \implies & \ln(\frac1{A})=-\ln A.
+\end{array}\]
+The FTC2 gives the integral formula for $L$.
+\[\text{Definition of the logarithm: }L(x)=\int_1^x\frac{\dd t}t.\]
+We then define $e$ to be the number such that $L(e)=1$, and the exponential function to be the inverse of $L$.
+\[\text{Definition of the exponential: }e^y=L^{-1}(y).\]
+To derive the properties of logarithm, we perform different changes of variable to the integral formula $L(x)=\int_1^x\frac{\dd t}t$.
