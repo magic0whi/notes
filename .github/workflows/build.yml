@@ -15,9 +15,18 @@ jobs:
         uses: DeterminateSystems/magic-nix-cache-action@v13
 
       - name: Compile LaTeX document
-        # This opens the devShell for the 'latex' output and runs 'just build'
-        # inside it
-        run: nix develop github:magic0whi/dev_flake#latex --command just build
+        run: |
+          # 1. Download the font and get its path (without installing it
+          # globally)
+          FONT_PATH=$(nix build nixpkgs#nerd-fonts.iosevka --print-out-paths --no-link)/share/fonts
+          
+          # 2. Enter the flake's environment and run the build
+          # 'nix develop' sets up the LaTeX tools.
+          # '--command' runs the build script.
+          # 'nix run nixpkgs#just' downloads and runs 'just' temporarily.
+          nix develop github:magic0whi/dev_flake#latex --command \
+            env OSFONTDIR="$FONT_PATH" \
+            nix run nixpkgs#just -- build
 
       - name: Upload PDF file
         uses: actions/upload-artifact@v6.0.0
