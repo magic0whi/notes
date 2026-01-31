@@ -14,30 +14,27 @@ jobs:
       - name: Magic Nix Cache
         uses: DeterminateSystems/magic-nix-cache-action@v13
 
+      # # Debug
+      # - name: Setup tmate session
+      #   uses: mxschmitt/action-tmate@v3.23
+
       - name: Compile LaTeX document (Pass 1)
         run: |
-          # 1. Build all 3 fonts, append '/share/fonts' to paths, and join with ':'
+          # 1. Build fonts and construct the OSFONTDIR path dynamically.
+          # We use 'sed' to append the critical '//' for recursive search.
           FONT_DIRS=$(nix build \
             nixpkgs#nerd-fonts.iosevka \
             nixpkgs#noto-fonts-cjk-sans \
             nixpkgs#noto-fonts-cjk-serif \
             --print-out-paths --no-link \
-            | sed 's|$|/share/fonts|' \
+            | sed 's|$|/share/fonts//|' \
             | paste -sd ":" -)
-
-      # Debug
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3.23
-
-      - name: Compile LaTeX document (Psss 2)
-        run: |
-          # 2. Enter the flake's environment and run the build
-          # 'nix develop' sets up the LaTeX tools.
-          # '--command' runs the build script.
-          # 'nix run nixpkgs#just' downloads and runs 'just' temporarily.
+          # 2. Run the build
+          # The variable FONT_DIRS now contains the store paths with '//' appended
           nix develop github:magic0whi/dev_flake#latex --command \
             env OSFONTDIR="$FONT_DIRS" \
             nix run nixpkgs#just -- build
+
       - name: Upload PDF file
         uses: actions/upload-artifact@v6.0.0
         with:
