@@ -10,17 +10,16 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install Nix
-        uses: determinate/nix-installer-action@v21
-
+        uses: DeterminateSystems/nix-installer-action@v21
       - name: Magic Nix Cache
-        uses: determinate/magic-nix-cache-action@v13
+        uses: DeterminateSystems/magic-nix-cache-action@v13
 
       - name: Compile LaTeX document
         # This opens the devShell for the 'latex' output and runs 'just build' inside it
         run: nix develop .#latex --command just build
 
       - name: Upload PDF file
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6.0.0
         with:
           name: notes
           path: ${{ env.OUT_DIR }}/*.pdf
