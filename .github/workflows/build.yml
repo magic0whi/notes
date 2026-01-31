@@ -33,6 +33,10 @@ jobs:
             env OSFONTDIR="$FONT_DIRS" \
             nix run nixpkgs#just -- build
 
+      # Debug
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3.23
+
       - name: Upload PDF file
         uses: actions/upload-artifact@v6.0.0
         with:
