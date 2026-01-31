@@ -18,7 +18,7 @@ jobs:
       # - name: Setup tmate session
       #   uses: mxschmitt/action-tmate@v3.23
 
-      - name: Compile LaTeX document (Pass 1)
+      - name: Compile LaTeX document
         run: |
           # 1. Build fonts and construct the OSFONTDIR path dynamically.
           # We use 'sed' to append the critical '//' for recursive search.
