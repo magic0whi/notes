@@ -14,7 +14,7 @@ jobs:
       - name: Magic Nix Cache
         uses: DeterminateSystems/magic-nix-cache-action@v13
 
-      - name: Compile LaTeX document
+      - name: Compile LaTeX document (Pass 1)
         run: |
           # 1. Build all 3 fonts, append '/share/fonts' to paths, and join with ':'
           FONT_DIRS=$(nix build \
@@ -24,7 +24,13 @@ jobs:
             --print-out-paths --no-link \
             | sed 's|$|/share/fonts|' \
             | paste -sd ":" -)
-          
+
+      # Debug
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3.23
+
+      - name: Compile LaTeX document (Psss 2)
+        run: |
           # 2. Enter the flake's environment and run the build
           # 'nix develop' sets up the LaTeX tools.
           # '--command' runs the build script.
@@ -32,11 +38,6 @@ jobs:
           nix develop github:magic0whi/dev_flake#latex --command \
             env OSFONTDIR="$FONT_DIRS" \
             nix run nixpkgs#just -- build
-
-      # Debug
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3.23
-
       - name: Upload PDF file
         uses: actions/upload-artifact@v6.0.0
         with:
