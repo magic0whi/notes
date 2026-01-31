@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6.0.2
 
       - name: Install Nix
         uses: DeterminateSystems/nix-installer-action@v21
@@ -15,8 +15,9 @@ jobs:
         uses: DeterminateSystems/magic-nix-cache-action@v13
 
       - name: Compile LaTeX document
-        # This opens the devShell for the 'latex' output and runs 'just build' inside it
-        run: nix develop .#latex --command just build
+        # This opens the devShell for the 'latex' output and runs 'just build'
+        # inside it
+        run: nix develop github:magic0whi/dev_flake#latex --command just build
 
       - name: Upload PDF file
         uses: actions/upload-artifact@v6.0.0
