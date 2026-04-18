@@ -2,6 +2,7 @@ name: Build XeLaTeX documents
 on: [push]
 env:
   OUT_DIR: output
+  ARTIFACT_NAME: math-notes
 jobs:
   build_latex:
     runs-on: ubuntu-latest
@@ -35,8 +36,18 @@ jobs:
             env OSFONTDIR="$FONT_DIRS" \
             nix run nixpkgs#just -- build
 
-      - name: Upload PDF file
+      # --- GitHub specific upload ---
+      - name: Upload artifact for Github
+        if: github.server_url == 'https://github.com'
         uses: actions/upload-artifact@v6.0.0
         with:
-          name: notes
+          name: ${{ env.ARTIFACT_NAME }}
           path: ${{ env.OUT_DIR }}/*.pdf
+
+      # --- Forgejo specific upload ---
+      - name: Upload artifact for Forgejo
+        if: github.server_url != 'https://github.com'
+        uses: ChristopherHX/gitea-upload-artifact@v4
+        with:
+          name: ${{ env.ARTIFACT_NAME }}
+          path: "${{ env.OUT_DIR }}/*.pdf"
