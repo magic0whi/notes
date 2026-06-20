@@ -1,27 +1,18 @@
 \chapter{Introduction to Vectors}
 \section{Vectors and Linear Combinations}
-\begin{enumerate}
+
+\begin{itemize}
   \item \textbf{Linear combination:} Forms like \(3\bm{v}+5\bm{w}\), \(\bm{v}\) and \(\bm{w}\) are vectors.
-\end{enumerate}
+\end{itemize}
 
-\section{Why equations fail}
+\section{Why some equations fail}
 
-For example:
-\(
-  \begin{array}{l}
-    c+2d = 1 \\
-    c+3d=0 \\
-    c+4d=0
-  \end{array}
-\) fail?
-Because it's actually a linear combination \(
-  \begin{bmatrix}
-    1 \\ 1 \\ 1
-  \end{bmatrix}
-  +d
-  \begin{bmatrix}
-    2 \\ 3 \\ 4
-  \end{bmatrix}
-\)
-and the solve is the intersect vector, if no vector can satisfies the conditions then there is no solve.
-
+For example $\begin{smallmatrix} c+2d=1\\ c+3d=0\\ c+4d=0 \end{smallmatrix}$.
+It's actually a linear combination $
+  c\begin{bsmallmatrix} 1 \\ 1 \\ 1 \end{bsmallmatrix}
+  +d\begin{bsmallmatrix} 2 \\ 3 \\ 4 \end{bsmallmatrix}
+  =\begin{bsmallmatrix} 1 \\ 0 \\ 0
+  \end{bsmallmatrix}
+$,
+and the solution is found eligible $c$ and $d$ on LHS. But $\begin{bsmallmatrix} 1 \\ 0 \\ 0 \end{bsmallmatrix}$
+if no vector can satisfy the conditions, then there is no solve.
