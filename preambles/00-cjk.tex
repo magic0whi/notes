@@ -1,0 +1,13 @@
+% Tectonic uses XeTeX, so we use xeCJK instead of luatexja
+\usepackage{xeCJK}
+
+\setCJKmainfont{Noto Serif CJK JP}[% If you want to specify different fonts for a style
+  % BoldFont=*-Bold,
+  % UprightFont=*-Regular
+]
+\setCJKsansfont{Noto Sans CJK JP}
+\setCJKmonofont{Noto Sans Mono CJK JP}
+
+% Replaced luatexja-ruby with pxrubrica for XeTeX ruby annotations
+\usepackage{pxrubrica}
+

@@ -1,0 +1,26 @@
+\documentclass{report}
+\usepackage{import}
+\import{../preambles/}{preamble.tex}
+% \input{../preambles/00-fonts.tex}
+% \input{../preambles/01-basics.tex}
+% \input{../preambles/10-colors.tex}
+% \input{../preambles/10-amsmath.tex}
+% \input{../preambles/20-theorems.tex}
+% \input{../preambles/90-misc.tex}
+\title{Linear Algebra}
+\begin{document}
+  \maketitle
+  \tableofcontents
+  % start lessons
+  \input{chapter_01.tex}
+  % \input{les_02.tex}
+  % \input{les_03.tex}
+  % \input{les_04.tex}
+  % \input{les_05.tex}
+  % \input{les_06.tex}
+  % end lessons
+\phantom{\cite{*}}
+\bibliographystyle{ieeetr} % We choose the "plain" reference style
+\bibliography{refs} % Entries are in the refs.bib file
+\end{document}
+

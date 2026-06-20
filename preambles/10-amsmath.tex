@@ -1,0 +1,25 @@
+\usepackage{amsmath, amsfonts, amssymb, mathtools, amsthm}
+\usepackage{mathrsfs}
+\usepackage{cancel}
+\usepackage{bm}
+\newcommand\N{\ensuremath{\mathbb{N}}}
+\newcommand\R{\ensuremath{\mathbb{R}}}
+\newcommand\Z{\ensuremath{\mathbb{Z}}}
+\renewcommand\O{\ensuremath{\emptyset}}
+\newcommand\Q{\ensuremath{\mathbb{Q}}}
+\newcommand\C{\ensuremath{\mathbb{C}}}
+\newcommand\dd{\mathrm{d}}
+\newcommand\evalat[3][]{\left.#2\right\rvert_{#3}\ifthenelse{\isempty{#1}}{}{^#1}}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\Ker}{ker}
+\DeclareMathOperator{\im}{Im}
+\let\svlim\lim\def\lim{\svlim\limits}
+\let\implies\Rightarrow%
+\let\impliedby\Leftarrow%
+\let\iff\Leftrightarrow%
+\let\epsilon\varepsilon%
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}
+\usepackage{stmaryrd} % for \lightning
+\newcommand\contra{\scalebox{1.1}{$\lightning$}}
+% \let\phi\varphi

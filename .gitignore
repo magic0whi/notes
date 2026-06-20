@@ -14,7 +14,9 @@
 *.toc
 *.xdv
 
-
 tags
+
+/.direnv
+
 # Whitelist
 !**/figures/*.pdf

@@ -1,0 +1,19 @@
+\usepackage{setspace} % Change paragraph spacing
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\setlist[enumerate]{leftmargin=!,labelindent=0pt,labelwidth=10pt,labelsep=2pt,itemindent=\labelwidth+\labelsep,listparindent=\parindent}
+% Because the package enumitem has algorithm:
+% leftmargin = labelindent + (labelwidth + labelsep) - itemindent.
+% To make paragraph align with label, we need itemindent cancels the length of "labelwidth + lalbelsep", and labelindent = 0pt, so the leftmargin becomes 0pt
+% A debug command \DrawEnumitemLabel draws 4 rules from top to bottom: labelindent, labelwidth, labelsep, itemindent.
+% The * and ! value let the parameter calculate from the other parameters, while the ! will automatically set \labelwidth with a guessed value first.
+ 
+% \usepackage{parskip}
+\usepackage{emptypage}
+\usepackage{subcaption}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+
+% \usepackage{cmbright}

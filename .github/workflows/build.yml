@@ -18,6 +18,7 @@ jobs:
       # # Debug
       # - name: Setup tmate session
       #   uses: mxschmitt/action-tmate@v3.23
+      # You can also try https://upterm.dev/
 
       - name: Compile LaTeX document
         run: |
@@ -36,7 +37,6 @@ jobs:
             env OSFONTDIR="$FONT_DIRS" \
             nix run nixpkgs#just -- build
 
-      # --- GitHub specific upload ---
       - name: Upload artifact for Github
         if: github.server_url == 'https://github.com'
         uses: actions/upload-artifact@v6.0.0
@@ -44,10 +44,9 @@ jobs:
           name: ${{ env.ARTIFACT_NAME }}
           path: ${{ env.OUT_DIR }}/*.pdf
 
-      # --- Forgejo specific upload ---
       - name: Upload artifact for Forgejo
         if: github.server_url != 'https://github.com'
         uses: ChristopherHX/gitea-upload-artifact@v4
         with:
           name: ${{ env.ARTIFACT_NAME }}
-          path: "${{ env.OUT_DIR }}/*.pdf"
+          path: ${{ env.OUT_DIR }}/*.pdf
