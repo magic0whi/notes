@@ -15,4 +15,19 @@ It's actually a linear combination $
 $,
 because $\begin{bsmallmatrix} 1 \\ 0 \\ 0 \end{bsmallmatrix}$ is not on that plane.
 
-\subsection{Worked Examples}
+\section{Lengths and Dot Products}
+\subsection{Pythagoras theorem for a 3D Vector}
+
+To find the length of a 3D vector, you can apply the Pythagorean theorem twice. For example, consider the vector
+\((1,2,3)\). First, calculate the length of its projection onto the \(xy\)-plane, which is \((1,2,0)\). By the
+Pythagorean theorem, this base length is \(\sqrt{1^2 + 2^2} = \sqrt{5}\).
+
+Next, because this base vector is perpendicular to the vertical component \((0,0,3)\), you can apply the theorem a
+second time. The total length of the vector, representing the diagonal of the box, is therefore \(\norm{\bm{v}} =
+\sqrt{(\sqrt{5})^2 + 3^2} = \sqrt{5+9} = \sqrt{14}\).
+
+\begin{figure}[H]
+  \centering
+  \incfig{chapter_01_1.1}
+  \caption{The length of a three-dimensional vector.}
+\end{figure}
