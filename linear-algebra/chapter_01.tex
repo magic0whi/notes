@@ -15,7 +15,16 @@ It's actually a linear combination $
 $,
 because $\begin{bsmallmatrix} 1 \\ 0 \\ 0 \end{bsmallmatrix}$ is not on that plane.
 
-\section{Lengths and Dot Products}
+\section{Lengths and Dot Products}\
+\begin{definition}[Vectors dot procuct (aka. inner product)]\leavevmode
+  \label{def:vector dot_product}
+  \[\bm{v}\cdot\bm{w}=v_1 w_1+v_2 w_2\]
+  \begin{note} The dot product of vectors is commutative, meaning the order does not matter: $\bm{v}\cdot\bm{w} = \bm{w}\cdot\bm{v}$ \end{note}
+\end{definition}
+
+\begin{definition}[vector's length]
+  \label{def:vector_length}
+  $\norm{v}=\sqrt{\bm{v}\cdot\bm{v}}=(v_1^2+v_2^2+\cdots+v_n^2)^{\frac{1}{2}}$\end{definition}
 \subsection{Pythagoras theorem for a 3D Vector}
 
 To find the length of a 3D vector, we apply the Pythagorean theorem twice. For example, consider the vector
@@ -27,7 +36,6 @@ second time. The total length of the vector, representing the diagonal of the bo
 \sqrt{(\sqrt{5})^2 + 3^2} = \sqrt{5+9} = \sqrt{14}\).
 
 \begin{figure}[H]
-  \centering
   \incfig{chapter_01_1.1}
   \caption{The length of a three-dimensional vector.}
 \end{figure}
@@ -35,11 +43,21 @@ second time. The total length of the vector, representing the diagonal of the bo
 \subsection{The Angle Between Two Vectors}
 \phantom{}
 \begin{proof}[The dot product is $\bm{v}\cdot\bm{w}=0$ when $\bm{v}$ is perpendicular to $\bm{w}$.]
-  When $\bm{v}$ and $\bm{w}$ are perpendicular, they form two sides of a right triangle. The third side is $\pm(\bm{v}-\bm{w})$
+  When $\bm{v}$ and $\bm{w}$ are perpendicular, they form the legs of a right triangle. The third side is $\pm(\bm{v}-\bm{w})$. Apply \textit{Pythagoras Law} gets:
+  \begin{equation} \label{eq:1} \norm{\bm{v}}^2+\norm{\bm{w}}^2=\norm{\bm{v}-\bm{w}}^2 \end{equation}
+  Apply Definition \ref{def:vector_length} to the RHS gets
+  \[\norm{\bm{v}}^2-\bm{v}\cdot\bm{w}-\bm{w}\cdot\bm{v}+\norm{\bm{w}}^2\]
+  As in Definition \ref{def:vector dot_product}, vectors dot product is commutative, so the RHS could be simplified to:
+  \begin{equation}\label{eq:2}\norm{\bm{v}}^2-2(\bm{v}\cdot\bm{w})+\norm{\bm{w}}^2\end{equation}
+  substitute the expanded form (\ref{eq:2}) back into the (\ref{eq:1}):
+  \begin{DispWithArrows*}[format=lrl]
+         & \norm{\bm{v}}^2 + \norm{\bm{w}}^2 & {}= \norm{\bm{v}}^2 - 2(\bm{v}\cdot\bm{w}) + \norm{\bm{w}}^2
+    \Arrow{cancel $\norm{\bm{v}}^2$ and $\norm{\bm{w}}^2$}                                                  \\
+    \iff & 0                                 & {}= -2(\bm{v}\cdot\bm{w}) \Arrow{$\div -2$}                  \\
+    \iff & \bm{v}\cdot\bm{w}                 & {}= 0
+  \end{DispWithArrows*}
+  \begin{figure}[H]
+    \incfig{chapter_01_1.2}
+    \caption{Perpendicular vectors}
+  \end{figure}
 \end{proof}
-
-\begin{figure}[H]
-  \centering
-  \incfig{chapter_01_1.2}
-  \caption{Perpendicular vectors}
-\end{figure}
