@@ -1,6 +1,6 @@
 %% Creator: Inkscape 1.4.4 (dcaf3e7d9e, 2026-05-05), www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
-%% Accompanies image file 'chapter_01_1.1.pdf' (pdf, eps, ps)
+%% Accompanies image file 'chapter_01_1.2.pdf' (pdf, eps, ps)
 %%
 %% To include the image in your LaTeX document, write
 %%   \input{<filename>.pdf_tex}
@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{258.6664347bp}%
+    \setlength{\unitlength}{389.50711468bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,19 +50,14 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.83278732)%
+  \begin{picture}(1,0.22025411)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{chapter_01_1.1.pdf}}%
-    \put(0.18992829,0.80200422){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$(0,0,3)$\end{tabular}}}}%
-    \put(0.46119178,0.64163352){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$(1,2,3)$ has lengh $\sqrt{14}$\end{tabular}}}}%
-    \put(0.30505751,0.43818589){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\sqrt{14}$\end{tabular}}}}%
-    \put(0.20412233,0.47288228){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}3\end{tabular}}}}%
-    \put(0.12684377,0.14799711){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1\end{tabular}}}}%
-    \put(0.43753501,0.24104666){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}2\end{tabular}}}}%
-    \put(0.66957564,0.23626896){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$(0,2,0)$\end{tabular}}}}%
-    \put(-0.00042686,0.00894065){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$(1,0,0)$\end{tabular}}}}%
-    \put(0.47538573,0.00921121){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$(1,2,0)$ has length $\sqrt 5$\end{tabular}}}}%
-    \put(0.27982373,0.11803194){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\sqrt 5$\end{tabular}}}}%
+    \put(-0.00028349,0.16471232){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\bm{w}=\begin{bmatrix}-1\\ 2\end{bmatrix}$\end{tabular}}}}%
+    \put(0.51510097,0.16434498){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\bm{v}=\begin{bmatrix}4\\ 2\end{bmatrix}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{chapter_01_1.2.pdf}}%
+    \put(0.27368245,0.16203399){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\sqrt{25}$\end{tabular}}}}%
+    \put(0.12813208,0.04559357){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\sqrt 5$\end{tabular}}}}%
+    \put(0.37556772,0.04559357){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\sqrt{20}$\end{tabular}}}}%
   \end{picture}%
 \endgroup%

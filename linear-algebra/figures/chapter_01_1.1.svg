@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="91.25177mm"
+   height="75.993317mm"
+   viewBox="0 0 91.25177 75.993317"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25, custom)"
+   sodipodi:docname="tex_dummy.svg"
+   inkscape:export-filename="linear-algebra/figures/chapter_01"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.8384776"
+     inkscape:cx="168.88973"
+     inkscape:cy="843.36081"
+     inkscape:window-width="1364"
+     inkscape:window-height="1100"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     showgrid="false">
+    <inkscape:page
+       x="0"
+       y="0"
+       width="91.25177"
+       height="75.993317"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="DartArrow"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Dart arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path29" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-17.927725,-170.2212)">
+    <path
+       style="fill:#00ffff;stroke:#919cd5;stroke-width:0.265;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow)"
+       d="m 39.720363,226.23337 24.490058,14.13934"
+       id="path28"
+       inkscape:export-filename="linear-algebra/figures/chapter_01_1.1.pdf"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.265;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow)"
+       d="M 39.720363,226.23337 V 175.57552"
+       id="path1" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow)"
+       d="M 39.720363,226.23337 25.42914,240.52459"
+       id="path2"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow)"
+       d="M 39.720363,226.23337 H 78.45426"
+       id="path4"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-dasharray:none;stroke-opacity:1"
+       d="M 64.262668,240.42496 78.45426,226.23337"
+       id="path5"
+       sodipodi:nodetypes="cc" />
+    <g
+       id="g26">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-dasharray:0.529998, 1.58999;stroke-dashoffset:0;stroke-opacity:1"
+         d="M 64.210542,240.41661 25.42914,240.52459"
+         id="path3"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.265;stroke-dasharray:0.53, 1.59;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 64.21042,189.84746 v 50.56915"
+         id="path19"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.265;stroke-dasharray:0.53, 1.59;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 78.45426,175.66422 v 50.56915"
+         id="path20"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.265;stroke-dasharray:0.53, 1.59;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 25.42914,189.95544 v 50.56915"
+         id="path21"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-dasharray:0.529998, 1.58999;stroke-dashoffset:0;stroke-opacity:1"
+         d="M 39.720363,175.57552 25.42914,189.86674"
+         id="path22"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-dasharray:0.529998, 1.58999;stroke-dashoffset:0;stroke-opacity:1"
+         d="M 64.210542,189.75876 25.42914,189.86674"
+         id="path23"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-dasharray:0.529998, 1.58999;stroke-dashoffset:0;stroke-opacity:1"
+         d="M 39.720363,175.57552 H 78.45426"
+         id="path24"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-dasharray:0.529998, 1.58999;stroke-dashoffset:0;stroke-opacity:1"
+         d="M 64.262668,189.76711 78.45426,175.57552"
+         id="path25"
+         sodipodi:nodetypes="cc" />
+    </g>
+    <path
+       style="fill:#00ffff;fill-opacity:1;stroke:#919cd5;stroke-width:0.264999;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow)"
+       d="M 39.720363,226.23337 64.210419,189.84746"
+       id="path26" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;font-family:'Iosevka Nerd Font';-inkscape-font-specification:'Iosevka Nerd Font';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#919cd5;stroke-width:0.264999;stroke-dasharray:0.529997, 1.59;stroke-dashoffset:0;stroke-opacity:1"
+       x="35.259018"
+       y="173.03021"
+       id="text29"><tspan
+         sodipodi:role="line"
+         id="tspan29"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Iosevka Nerd Font';-inkscape-font-specification:'Iosevka Nerd Font';fill:#000000;fill-opacity:1;stroke-width:0.265"
+         x="35.259018"
+         y="173.03021">$(0,0,3)$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;font-family:'Iosevka Nerd Font';-inkscape-font-specification:'Iosevka Nerd Font';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#919cd5;stroke-width:0.264999;stroke-dasharray:0.529997, 1.59;stroke-dashoffset:0;stroke-opacity:1"
+       x="60.012291"
+       y="187.66432"
+       id="text30"><tspan
+         sodipodi:role="line"
+         id="tspan30"
+         style="stroke-width:0.265"
+         x="60.012291"
+         y="187.66432">$(1,2,3)$ has lengh $\sqrt{14}$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;font-family:'Iosevka Nerd Font';-inkscape-font-specification:'Iosevka Nerd Font';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#919cd5;stroke-width:0.264999;stroke-dasharray:0.529997, 1.59;stroke-dashoffset:0;stroke-opacity:1"
+       x="45.764763"
+       y="206.22928"
+       id="text31"><tspan
+         sodipodi:role="line"
+         id="tspan31"
+         style="stroke-width:0.265"
+         x="45.764763"
+         y="206.22928">$\sqrt{14}$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;font-family:'Iosevka Nerd Font';-inkscape-font-specification:'Iosevka Nerd Font';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#919cd5;stroke-width:0.264999;stroke-dasharray:0.529997, 1.59;stroke-dashoffset:0;stroke-opacity:1"
+       x="36.554249"
+       y="203.06317"
+       id="text32"><tspan
+         sodipodi:role="line"
+         id="tspan32"
+         style="stroke-width:0.265"
+         x="36.554249"
+         y="203.06317">3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;font-family:'Iosevka Nerd Font';-inkscape-font-specification:'Iosevka Nerd Font';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#919cd5;stroke-width:0.264999;stroke-dasharray:0.529997, 1.59;stroke-dashoffset:0;stroke-opacity:1"
+       x="29.502443"
+       y="232.70952"
+       id="text33"><tspan
+         sodipodi:role="line"
+         id="tspan33"
+         style="stroke-width:0.265"
+         x="29.502443"
+         y="232.70952">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;font-family:'Iosevka Nerd Font';-inkscape-font-specification:'Iosevka Nerd Font';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#919cd5;stroke-width:0.264999;stroke-dasharray:0.529997, 1.59;stroke-dashoffset:0;stroke-opacity:1"
+       x="57.853569"
+       y="224.21858"
+       id="text34"><tspan
+         sodipodi:role="line"
+         id="tspan34"
+         style="stroke-width:0.265"
+         x="57.853569"
+         y="224.21858">2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;font-family:'Iosevka Nerd Font';-inkscape-font-specification:'Iosevka Nerd Font';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#919cd5;stroke-width:0.264999;stroke-dasharray:0.529997, 1.59;stroke-dashoffset:0;stroke-opacity:1"
+       x="79.027687"
+       y="224.65456"
+       id="text35"><tspan
+         sodipodi:role="line"
+         id="tspan35"
+         style="stroke-width:0.265"
+         x="79.027687"
+         y="224.65456">$(0,2,0)$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;font-family:'Iosevka Nerd Font';-inkscape-font-specification:'Iosevka Nerd Font';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#919cd5;stroke-width:0.264999;stroke-dasharray:0.529997, 1.59;stroke-dashoffset:0;stroke-opacity:1"
+       x="17.888773"
+       y="245.39867"
+       id="text36"><tspan
+         sodipodi:role="line"
+         id="tspan36"
+         style="stroke-width:0.265"
+         x="17.888773"
+         y="245.39867">$(1,0,0)$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;font-family:'Iosevka Nerd Font';-inkscape-font-specification:'Iosevka Nerd Font';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#919cd5;stroke-width:0.264999;stroke-dasharray:0.529997, 1.59;stroke-dashoffset:0;stroke-opacity:1"
+       x="61.307514"
+       y="245.37398"
+       id="text38"><tspan
+         sodipodi:role="line"
+         id="tspan38"
+         style="stroke-width:0.265"
+         x="61.307514"
+         y="245.37398">$(1,2,0)$ has length $\sqrt 5$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;font-family:'Iosevka Nerd Font';-inkscape-font-specification:'Iosevka Nerd Font';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#919cd5;stroke-width:0.264999;stroke-dasharray:0.529997, 1.59;stroke-dashoffset:0;stroke-opacity:1"
+       x="43.462135"
+       y="235.44389"
+       id="text39"><tspan
+         sodipodi:role="line"
+         id="tspan39"
+         style="stroke-width:0.265"
+         x="43.462135"
+         y="235.44389">$\sqrt 5$</tspan></text>
+  </g>
+</svg>
